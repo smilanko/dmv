@@ -19,6 +19,8 @@ contract VehicleRegistrationRenewal {
 		// nothing for now
 	}
 
+	function registerVehicle() public {}
+
 	function processRegistration(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {
 		registrationCount++;
 		registrations[registrationCount] = Registration(_vin, _year, _model, _ssn, _firstName ,_lastName);

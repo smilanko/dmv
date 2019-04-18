@@ -6,38 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DMV</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
   </head>
   <body>
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="text-center">DMV Registration</h1>
+          <h1 class="text-center">DMV Vehicle Registration</h1>
           <hr/>
           <br/>
           <div id="loader">
-            <p class="text-center">Loading...</p>
+            <p class="text-center">No vehicle registrations present currently...</p>
           </div>
           <div id="content" style="display: none;">
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Votes</th>
+                  <th scope="col">Vin</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Ssn</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
                 </tr>
               </thead>
-              <tbody id="candidatesResults">
+              <tbody id="registrationResults">
               </tbody>
             </table>
             <hr/>
-            <form onSubmit="App.castVote(); return false;">
+            <form onSubmit="App.registerVehicle(); return false;">
               <div class="form-group">
-                <label for="candidatesSelect">Select Candidate</label>
-                <select class="form-control" id="candidatesSelect">
-                </select>
+
+                <label for="vin">Vin</label>
+                <input id="vin" type="text" class="form-control" />
+
+                <label for="year">Year</label>
+                <input id="year" type="text" class="form-control" />
+
+                <label for="model">Model</label>
+                <input id="model" type="text" class="form-control" />
+
+                <label for="ssn">Ssn</label>
+                <input id="ssn" type="text" class="form-control" />
+
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" class="form-control" />
+
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" class="form-control" />
+
               </div>
-              <button type="submit" class="btn btn-primary">Vote</button>
+              <button type="submit" class="btn btn-primary">Registrater your vehicle</button>
               <hr />
             </form>
             <p id="accountAddress" class="text-center"></p>
@@ -46,9 +65,7 @@
       </div>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
