@@ -2,33 +2,25 @@ pragma solidity ^0.5.0;
 
 contract VehicleRegistrationRenewal {
 
-	struct Vehicle {
-		uint vin;
-		uint year;
-		string model;
+	struct Registration {
+		uint car_vin;
+		uint car_year;
+		string car_model;
+		uint owner_ssn;
+		string owner_first_name;
+		string owner_last_name;
 	}
 
-	struct Owner {
-		uint ssn;
-		string first_name;
-		string last_name;
-	}
-
-	mapping(uint => Vehicle) public vehicles;
-	mapping(uint => Owner) public owners;
-
-	uint public ownerCount;
-	uint public vehicleCount;
+	mapping(uint => Registration) public registrations;
+	uint public registrationCount;
 
 	constructor() public {
-		
+		// nothing for now
 	}
 
-	function registerVehicle(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {
-		ownerCount++;
-		vehicleCount++;
-		vehicles[vehicleCount] = Vehicle(_vin, _year, _model);
-		owners[ownerCount] = Owner(_ssn, _firstName ,_lastName);
+	function processRegistration(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {
+		registrationCount++;
+		registrations[registrationCount] = Registration(_vin, _year, _model, _ssn, _firstName ,_lastName);
 	}
 
 }

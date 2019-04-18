@@ -9,10 +9,10 @@
           "type": "uint256"
         }
       ],
-      "name": "owners",
+      "name": "registrationCount",
       "outputs": [
         {
-          "name": "ssn",
+          "name": "",
           "type": "uint256"
         },
         {
@@ -27,28 +27,53 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function",
-      "signature": "0x77ec2b55"
+      "signature": "0xe7811c36"
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "ownerCount",
-      "outputs": [
+      "inputs": [
         {
           "name": "",
           "type": "uint256"
         }
       ],
+      "name": "registrations",
+      "outputs": [
+        {
+          "name": "car_vin",
+          "type": "uint256"
+        },
+        {
+          "name": "car_year",
+          "type": "uint256"
+        },
+        {
+          "name": "car_model",
+          "type": "string"
+        },
+        {
+          "name": "owner_ssn",
+          "type": "uint256"
+        },
+        {
+          "name": "owner_first_name",
+          "type": "string"
+        },
+        {
+          "name": "owner_last_name",
+          "type": "string"
+        }
+      ],
       "payable": false,
       "stateMutability": "view",
       "type": "function",
-      "signature": "0xee26fac3"
+      "signature": "0xf4ddb5be"
     },
     {
       "inputs": [],
       "payable": false,
-      "stateMutability": "view",
-      "type": "function",
+      "stateMutability": "nonpayable",
+      "type": "constructor",
       "signature": "constructor",
       "constant": true,
       "name": "vehicleCount",
@@ -84,7 +109,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xb8ba95fa"
     },
     {
       "inputs": [],
@@ -93,21 +119,21 @@
       "type": "constructor"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"owners\",\"outputs\":[{\"name\":\"ssn\",\"type\":\"uint256\"},{\"name\":\"first_name\",\"type\":\"string\"},{\"name\":\"last_name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ownerCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"vehicleCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"vehicles\",\"outputs\":[{\"name\":\"vin\",\"type\":\"uint256\"},{\"name\":\"year\",\"type\":\"uint256\"},{\"name\":\"model\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/online_services/vehicle_registration_renewal/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/online_services/vehicle_registration_renewal/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0xa178cae2ba304a105b12c41a73b224cbaeadc707629baa0c3b9a7820f444facd\",\"urls\":[\"bzzr://8a8767c6f010afdbda2455a7d6878129c847280a9f52d559a315e704255af144\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506104fa806100206000396000f3fe608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025e7c27146100675780630db026221461018e57806399704937146101b9578063b8ba95fa146101e4575b600080fd5b34801561007357600080fd5b506100a06004803603602081101561008a57600080fd5b81019080803590602001909291905050506102a6565b604051808481526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156100ea5780820151818401526020810190506100cf565b50505050905090810190601f1680156101175780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610150578082015181840152602081019050610135565b50505050905090810190601f16801561017d5780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561019a57600080fd5b506101a3610400565b6040518082815260200191505060405180910390f35b3480156101c557600080fd5b506101ce610406565b6040518082815260200191505060405180910390f35b3480156101f057600080fd5b5061021d6004803603602081101561020757600080fd5b810190808035906020019092919050505061040c565b6040518084815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561026957808201518184015260208101905061024e565b50505050905090810190601f1680156102965780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103585780601f1061032d57610100808354040283529160200191610358565b820191906000526020600020905b81548152906001019060200180831161033b57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103f65780601f106103cb576101008083540402835291602001916103f6565b820191906000526020600020905b8154815290600101906020018083116103d957829003601f168201915b5050505050905083565b60025481565b60035481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104c45780601f10610499576101008083540402835291602001916104c4565b820191906000526020600020905b8154815290600101906020018083116104a757829003601f168201915b505050505090508356fea165627a7a723058200851e6381f2ffecb936c5b8f78be79ab2c286a75446352415e828607f75ed2600029",
-  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025e7c27146100675780630db026221461018e57806399704937146101b9578063b8ba95fa146101e4575b600080fd5b34801561007357600080fd5b506100a06004803603602081101561008a57600080fd5b81019080803590602001909291905050506102a6565b604051808481526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156100ea5780820151818401526020810190506100cf565b50505050905090810190601f1680156101175780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610150578082015181840152602081019050610135565b50505050905090810190601f16801561017d5780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561019a57600080fd5b506101a3610400565b6040518082815260200191505060405180910390f35b3480156101c557600080fd5b506101ce610406565b6040518082815260200191505060405180910390f35b3480156101f057600080fd5b5061021d6004803603602081101561020757600080fd5b810190808035906020019092919050505061040c565b6040518084815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561026957808201518184015260208101905061024e565b50505050905090810190601f1680156102965780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103585780601f1061032d57610100808354040283529160200191610358565b820191906000526020600020905b81548152906001019060200180831161033b57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103f65780601f106103cb576101008083540402835291602001916103f6565b820191906000526020600020905b8154815290600101906020018083116103d957829003601f168201915b5050505050905083565b60025481565b60035481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104c45780601f10610499576101008083540402835291602001916104c4565b820191906000526020600020905b8154815290600101906020018083116104a757829003601f168201915b505050505090508356fea165627a7a723058200851e6381f2ffecb936c5b8f78be79ab2c286a75446352415e828607f75ed2600029",
-  "sourceMap": "27:671:1:-;;;359:30;8:9:-1;5:2;;;30:1;27;20:12;5:2;359:30:1;27:671;;;;;;",
-  "deployedSourceMap": "27:671:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;261:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:36:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;261:36:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;261:36:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;261:36:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;303:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;303:22:1;;;;;;;;;;;;;;;;;;;;;;;329:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;329:24:1;;;;;;;;;;;;;;;;;;;;;;;217:40;;8:9:-1;5:2;;;30:1;27;20:12;5:2;217:40:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;217:40:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;217:40:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;261:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;303:22::-;;;;:::o;329:24::-;;;;:::o;217:40::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract VehicleRegistrationRenewal {\r\n\r\n\tstruct Vehicle {\r\n\t\tuint vin;\r\n\t\tuint year;\r\n\t\tstring model;\r\n\t}\r\n\r\n\tstruct Owner {\r\n\t\tuint ssn;\r\n\t\tstring first_name;\r\n\t\tstring last_name;\r\n\t}\r\n\r\n\tmapping(uint => Vehicle) public vehicles;\r\n\tmapping(uint => Owner) public owners;\r\n\r\n\tuint public ownerCount;\r\n\tuint public vehicleCount;\r\n\r\n\tconstructor() public {\r\n\t\t\r\n\t}\r\n\r\n\tfunction registerVehicle(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {\r\n\t\townerCount++;\r\n\t\tvehicleCount++;\r\n\t\tvehicles[vehicleCount] = Vehicle(_vin, _year, _model);\r\n\t\towners[ownerCount] = Owner(_ssn, _firstName ,_lastName);\r\n\t}\r\n\r\n}",
-  "sourcePath": "C:/dev/projects/dmv/online_services/vehicle_registration_renewal/contracts/VehicleRegistrationRenewal.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"registrationCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"registrations\",\"outputs\":[{\"name\":\"car_vin\",\"type\":\"uint256\"},{\"name\":\"car_year\",\"type\":\"uint256\"},{\"name\":\"car_model\",\"type\":\"string\"},{\"name\":\"owner_ssn\",\"type\":\"uint256\"},{\"name\":\"owner_first_name\",\"type\":\"string\"},{\"name\":\"owner_last_name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0x7179960ccd364f1a659691c371181191c88156c939595a2d1706ea5e83aace34\",\"urls\":[\"bzzr://980017395cb0d90490fd434a7d97381f1bd12f42cb5a77b70678d0d6d13713ab\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610453806100206000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd614610051578063f4ddb5be1461007c575b600080fd5b34801561005d57600080fd5b5061006661021d565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100b56004803603602081101561009f57600080fd5b8101908080359060200190929190505050610223565b60405180878152602001868152602001806020018581526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561010f5780820151818401526020810190506100f4565b50505050905090810190601f16801561013c5780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b8381101561017557808201518184015260208101905061015a565b50505050905090810190601f1680156101a25780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101db5780820151818401526020810190506101c0565b50505050905090810190601f1680156102085780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102db5780601f106102b0576101008083540402835291602001916102db565b820191906000526020600020905b8154815290600101906020018083116102be57829003601f168201915b505050505090806003015490806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561037f5780601f106103545761010080835404028352916020019161037f565b820191906000526020600020905b81548152906001019060200180831161036257829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561041d5780601f106103f25761010080835404028352916020019161041d565b820191906000526020600020905b81548152906001019060200180831161040057829003601f168201915b505050505090508656fea165627a7a72305820a770fba2550095613de8eeebae28fa993b55d703485fa1d65ddc9b3063ce9f760029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd614610051578063f4ddb5be1461007c575b600080fd5b34801561005d57600080fd5b5061006661021d565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100b56004803603602081101561009f57600080fd5b8101908080359060200190929190505050610223565b60405180878152602001868152602001806020018581526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561010f5780820151818401526020810190506100f4565b50505050905090810190601f16801561013c5780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b8381101561017557808201518184015260208101905061015a565b50505050905090810190601f1680156101a25780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101db5780820151818401526020810190506101c0565b50505050905090810190601f1680156102085780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102db5780601f106102b0576101008083540402835291602001916102db565b820191906000526020600020905b8154815290600101906020018083116102be57829003601f168201915b505050505090806003015490806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561037f5780601f106103545761010080835404028352916020019161037f565b820191906000526020600020905b81548152906001019060200180831161036257829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561041d5780601f106103f25761010080835404028352916020019161041d565b820191906000526020600020905b81548152906001019060200180831161040057829003601f168201915b505050505090508656fea165627a7a72305820a770fba2550095613de8eeebae28fa993b55d703485fa1d65ddc9b3063ce9f760029",
+  "sourceMap": "27:624:1:-;;;318:48;8:9:-1;5:2;;;30:1;27;20:12;5:2;318:48:1;27:624;;;;;;",
+  "deployedSourceMap": "27:624:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;283:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;283:29:1;;;;;;;;;;;;;;;;;;;;;;;229:50;;8:9:-1;5:2;;;30:1;27;20:12;5:2;229:50:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;229:50:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;229:50:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;229:50:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;229:50:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;283:29;;;;:::o;229:50::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract VehicleRegistrationRenewal {\r\n\r\n\tstruct Registration {\r\n\t\tuint car_vin;\r\n\t\tuint car_year;\r\n\t\tstring car_model;\r\n\t\tuint owner_ssn;\r\n\t\tstring owner_first_name;\r\n\t\tstring owner_last_name;\r\n\t}\r\n\r\n\tmapping(uint => Registration) public registrations;\r\n\tuint public registrationCount;\r\n\r\n\tconstructor() public {\r\n\t\t// nothing for now\r\n\t}\r\n\r\n\tfunction processRegistration(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {\r\n\t\tregistrationCount++;\r\n\t\tregistrations[registrationCount] = Registration(_vin, _year, _model, _ssn, _firstName ,_lastName);\r\n\t}\r\n\r\n}",
+  "sourcePath": "C:/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
   "ast": {
-    "absolutePath": "/C/dev/projects/dmv/online_services/vehicle_registration_renewal/contracts/VehicleRegistrationRenewal.sol",
+    "absolutePath": "/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
     "exportedSymbols": {
       "VehicleRegistrationRenewal": [
-        131
+        114
       ]
     },
-    "id": 132,
+    "id": 115,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -127,20 +153,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 114,
         "linearizedBaseContracts": [
-          131
+          114
         ],
         "name": "VehicleRegistrationRenewal",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 65,
-            "name": "Vehicle",
+            "id": 71,
+            "name": "Registration",
             "nodeType": "StructDefinition",
-            "scope": 131,
-            "src": "69:64:1",
+            "scope": 114,
+            "src": "69:155:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -159,15 +185,15 @@
             },
             "value": null,
             "visibility": "public",
-            "canonicalName": "VehicleRegistrationRenewal.Vehicle",
+            "canonicalName": "VehicleRegistrationRenewal.Registration",
             "members": [
               {
                 "constant": false,
                 "id": 60,
-                "name": "vin",
+                "name": "car_vin",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "89:8:1",
+                "scope": 71,
+                "src": "94:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -178,7 +204,7 @@
                   "id": 59,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "89:4:1",
+                  "src": "94:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -190,10 +216,10 @@
               {
                 "constant": false,
                 "id": 62,
-                "name": "year",
+                "name": "car_year",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "102:9:1",
+                "scope": 71,
+                "src": "111:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -204,7 +230,7 @@
                   "id": 61,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "102:4:1",
+                  "src": "111:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -216,10 +242,10 @@
               {
                 "constant": false,
                 "id": 64,
-                "name": "model",
+                "name": "car_model",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "116:12:1",
+                "scope": 71,
+                "src": "129:16:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -230,7 +256,85 @@
                   "id": 63,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "116:6:1",
+                  "src": "129:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 66,
+                "name": "owner_ssn",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "150:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 65,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "150:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 68,
+                "name": "owner_first_name",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "169:23:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 67,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "169:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 70,
+                "name": "owner_last_name",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "197:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 69,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "197:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -243,25 +347,47 @@
           },
           {
             "constant": false,
-            "id": 72,
-            "name": "Owner",
-            "nodeType": "StructDefinition",
-            "scope": 131,
-            "src": "138:74:1",
+            "id": 75,
+            "name": "registrations",
+            "nodeType": "VariableDeclaration",
+            "scope": 114,
+            "src": "229:50:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_string_storage",
-              "typeString": "string"
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+              "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration)"
             },
             "typeName": {
-              "id": 61,
+              "id": 74,
               "name": "string",
-              "nodeType": "ElementaryTypeName",
-              "src": "90:6:1",
+              "nodeType": "Mapping",
+              "src": "229:29:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+                "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration)"
+              },
+              "keyType": {
+                "id": 72,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "237:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 73,
+                "name": "Registration",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 71,
+                "src": "245:12:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Registration_$71_storage_ptr",
+                  "typeString": "struct VehicleRegistrationRenewal.Registration"
+                }
               }
             },
             "value": null,
@@ -459,11 +585,11 @@
               ]
             },
             "documentation": null,
-            "id": 76,
+            "id": 77,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
-            "name": "vehicles",
+            "name": "registrationCount",
             "nodeType": "VariableDeclaration",
             "parameters": {
               "id": 63,
@@ -477,8 +603,8 @@
               "parameters": [],
               "src": "155:0:1"
             },
-            "scope": 131,
-            "src": "217:40:1",
+            "scope": 114,
+            "src": "283:29:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -486,11 +612,11 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vehicle_$65_storage_$",
-              "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Vehicle)"
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
             },
             "typeName": {
-              "id": 75,
+              "id": 76,
               "keyType": {
                 "id": 73,
                 "name": "uint",
@@ -501,11 +627,11 @@
                   "typeString": "uint256"
                 }
               },
-              "nodeType": "Mapping",
-              "src": "217:24:1",
+              "nodeType": "ElementaryTypeName",
+              "src": "283:4:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vehicle_$65_storage_$",
-                "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Vehicle)"
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
               },
               "valueType": {
                 "contractScope": null,
@@ -518,17 +644,18 @@
                   "typeIdentifier": "t_struct$_Vehicle_$65_storage_ptr",
                   "typeString": "struct VehicleRegistrationRenewal.Vehicle"
                 }
-              }
+              },
+              "name": "uint"
             },
             "value": null
           },
           {
             "constant": false,
-            "id": 80,
-            "name": "owners",
-            "nodeType": "VariableDeclaration",
-            "scope": 131,
-            "src": "261:36:1",
+            "id": 81,
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "scope": 114,
+            "src": "318:48:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -567,15 +694,39 @@
               }
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "public",
+            "body": {
+              "id": 80,
+              "nodeType": "Block",
+              "src": "339:27:1",
+              "statements": []
+            },
+            "documentation": null,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "329:2:1"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "339:0:1"
+            },
+            "stateMutability": "nonpayable",
+            "superFunction": null
           },
           {
             "constant": false,
-            "id": 82,
-            "name": "ownerCount",
-            "nodeType": "VariableDeclaration",
-            "scope": 131,
-            "src": "303:22:1",
+            "id": 113,
+            "name": "processRegistration",
+            "nodeType": "FunctionDefinition",
+            "scope": 114,
+            "src": "371:275:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -593,7 +744,417 @@
               }
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "private",
+            "body": {
+              "id": 112,
+              "nodeType": "Block",
+              "src": "515:131:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "520:19:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "registrationCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 77,
+                      "src": "520:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 98,
+                  "nodeType": "ExpressionStatement",
+                  "src": "520:19:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 110,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "registrations",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 75,
+                        "src": "544:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+                          "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration storage ref)"
+                        }
+                      },
+                      "id": 101,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 100,
+                        "name": "registrationCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "558:17:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "544:32:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$71_storage",
+                        "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 103,
+                          "name": "_vin",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 83,
+                          "src": "592:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 104,
+                          "name": "_year",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 85,
+                          "src": "598:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 105,
+                          "name": "_model",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "605:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 106,
+                          "name": "_ssn",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 89,
+                          "src": "613:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "_firstName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 91,
+                          "src": "619:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 108,
+                          "name": "_lastName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 93,
+                          "src": "631:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 102,
+                        "name": "Registration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "579:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Registration_$71_storage_ptr_$",
+                          "typeString": "type(struct VehicleRegistrationRenewal.Registration storage pointer)"
+                        }
+                      },
+                      "id": 109,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "579:62:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$71_memory",
+                        "typeString": "struct VehicleRegistrationRenewal.Registration memory"
+                      }
+                    },
+                    "src": "544:97:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Registration_$71_storage",
+                      "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                    }
+                  },
+                  "id": 111,
+                  "nodeType": "ExpressionStatement",
+                  "src": "544:97:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 83,
+                  "name": "_vin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "400:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 82,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 85,
+                  "name": "_year",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "411:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 84,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 87,
+                  "name": "_model",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "423:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 89,
+                  "name": "_ssn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "445:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_firstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "456:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "456:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "_lastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "482:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:107:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:1"
+            },
+            "stateMutability": "nonpayable",
+            "superFunction": null
           },
           {
             "constant": false,
@@ -1321,20 +1882,20 @@
             "visibility": "private"
           }
         ],
-        "scope": 132,
-        "src": "27:671:1"
+        "scope": 115,
+        "src": "27:624:1"
       }
     ],
-    "src": "0:698:1"
+    "src": "0:651:1"
   },
   "legacyAST": {
-    "absolutePath": "/C/dev/projects/dmv/online_services/vehicle_registration_renewal/contracts/VehicleRegistrationRenewal.sol",
+    "absolutePath": "/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
     "exportedSymbols": {
       "VehicleRegistrationRenewal": [
-        131
+        114
       ]
     },
-    "id": 132,
+    "id": 115,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -1354,20 +1915,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 114,
         "linearizedBaseContracts": [
-          131
+          114
         ],
         "name": "VehicleRegistrationRenewal",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 65,
-            "name": "Vehicle",
+            "id": 71,
+            "name": "Registration",
             "nodeType": "StructDefinition",
-            "scope": 131,
-            "src": "69:64:1",
+            "scope": 114,
+            "src": "69:155:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1386,15 +1947,15 @@
             },
             "value": null,
             "visibility": "public",
-            "canonicalName": "VehicleRegistrationRenewal.Vehicle",
+            "canonicalName": "VehicleRegistrationRenewal.Registration",
             "members": [
               {
                 "constant": false,
                 "id": 60,
-                "name": "vin",
+                "name": "car_vin",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "89:8:1",
+                "scope": 71,
+                "src": "94:12:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1405,7 +1966,7 @@
                   "id": 59,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "89:4:1",
+                  "src": "94:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1417,10 +1978,10 @@
               {
                 "constant": false,
                 "id": 62,
-                "name": "year",
+                "name": "car_year",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "102:9:1",
+                "scope": 71,
+                "src": "111:13:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1431,7 +1992,7 @@
                   "id": 61,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "102:4:1",
+                  "src": "111:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1443,10 +2004,10 @@
               {
                 "constant": false,
                 "id": 64,
-                "name": "model",
+                "name": "car_model",
                 "nodeType": "VariableDeclaration",
-                "scope": 65,
-                "src": "116:12:1",
+                "scope": 71,
+                "src": "129:16:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1457,7 +2018,85 @@
                   "id": 63,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "116:6:1",
+                  "src": "129:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 66,
+                "name": "owner_ssn",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "150:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 65,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "150:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 68,
+                "name": "owner_first_name",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "169:23:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 67,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "169:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 70,
+                "name": "owner_last_name",
+                "nodeType": "VariableDeclaration",
+                "scope": 71,
+                "src": "197:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 69,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "197:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1470,25 +2109,47 @@
           },
           {
             "constant": false,
-            "id": 72,
-            "name": "Owner",
-            "nodeType": "StructDefinition",
-            "scope": 131,
-            "src": "138:74:1",
+            "id": 75,
+            "name": "registrations",
+            "nodeType": "VariableDeclaration",
+            "scope": 114,
+            "src": "229:50:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_string_storage",
-              "typeString": "string"
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+              "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration)"
             },
             "typeName": {
-              "id": 61,
+              "id": 74,
               "name": "string",
-              "nodeType": "ElementaryTypeName",
-              "src": "90:6:1",
+              "nodeType": "Mapping",
+              "src": "229:29:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+                "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration)"
+              },
+              "keyType": {
+                "id": 72,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "237:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 73,
+                "name": "Registration",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 71,
+                "src": "245:12:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Registration_$71_storage_ptr",
+                  "typeString": "struct VehicleRegistrationRenewal.Registration"
+                }
               }
             },
             "value": null,
@@ -1686,11 +2347,11 @@
               ]
             },
             "documentation": null,
-            "id": 76,
+            "id": 77,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
-            "name": "vehicles",
+            "name": "registrationCount",
             "nodeType": "VariableDeclaration",
             "parameters": {
               "id": 63,
@@ -1704,8 +2365,8 @@
               "parameters": [],
               "src": "155:0:1"
             },
-            "scope": 131,
-            "src": "217:40:1",
+            "scope": 114,
+            "src": "283:29:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -1713,11 +2374,11 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vehicle_$65_storage_$",
-              "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Vehicle)"
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
             },
             "typeName": {
-              "id": 75,
+              "id": 76,
               "keyType": {
                 "id": 73,
                 "name": "uint",
@@ -1728,11 +2389,11 @@
                   "typeString": "uint256"
                 }
               },
-              "nodeType": "Mapping",
-              "src": "217:24:1",
+              "nodeType": "ElementaryTypeName",
+              "src": "283:4:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vehicle_$65_storage_$",
-                "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Vehicle)"
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
               },
               "valueType": {
                 "contractScope": null,
@@ -1745,17 +2406,18 @@
                   "typeIdentifier": "t_struct$_Vehicle_$65_storage_ptr",
                   "typeString": "struct VehicleRegistrationRenewal.Vehicle"
                 }
-              }
+              },
+              "name": "uint"
             },
             "value": null
           },
           {
             "constant": false,
-            "id": 80,
-            "name": "owners",
-            "nodeType": "VariableDeclaration",
-            "scope": 131,
-            "src": "261:36:1",
+            "id": 81,
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "scope": 114,
+            "src": "318:48:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1794,15 +2456,39 @@
               }
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "public",
+            "body": {
+              "id": 80,
+              "nodeType": "Block",
+              "src": "339:27:1",
+              "statements": []
+            },
+            "documentation": null,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "parameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "329:2:1"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "339:0:1"
+            },
+            "stateMutability": "nonpayable",
+            "superFunction": null
           },
           {
             "constant": false,
-            "id": 82,
-            "name": "ownerCount",
-            "nodeType": "VariableDeclaration",
-            "scope": 131,
-            "src": "303:22:1",
+            "id": 113,
+            "name": "processRegistration",
+            "nodeType": "FunctionDefinition",
+            "scope": 114,
+            "src": "371:275:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1820,7 +2506,417 @@
               }
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "private",
+            "body": {
+              "id": 112,
+              "nodeType": "Block",
+              "src": "515:131:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "520:19:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 96,
+                      "name": "registrationCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 77,
+                      "src": "520:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 98,
+                  "nodeType": "ExpressionStatement",
+                  "src": "520:19:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 110,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "registrations",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 75,
+                        "src": "544:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Registration_$71_storage_$",
+                          "typeString": "mapping(uint256 => struct VehicleRegistrationRenewal.Registration storage ref)"
+                        }
+                      },
+                      "id": 101,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 100,
+                        "name": "registrationCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "558:17:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "544:32:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$71_storage",
+                        "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 103,
+                          "name": "_vin",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 83,
+                          "src": "592:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 104,
+                          "name": "_year",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 85,
+                          "src": "598:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 105,
+                          "name": "_model",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "605:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 106,
+                          "name": "_ssn",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 89,
+                          "src": "613:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "_firstName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 91,
+                          "src": "619:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 108,
+                          "name": "_lastName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 93,
+                          "src": "631:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 102,
+                        "name": "Registration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "579:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Registration_$71_storage_ptr_$",
+                          "typeString": "type(struct VehicleRegistrationRenewal.Registration storage pointer)"
+                        }
+                      },
+                      "id": 109,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "579:62:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$71_memory",
+                        "typeString": "struct VehicleRegistrationRenewal.Registration memory"
+                      }
+                    },
+                    "src": "544:97:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Registration_$71_storage",
+                      "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                    }
+                  },
+                  "id": 111,
+                  "nodeType": "ExpressionStatement",
+                  "src": "544:97:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 83,
+                  "name": "_vin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "400:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 82,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 85,
+                  "name": "_year",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "411:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 84,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 87,
+                  "name": "_model",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "423:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 86,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 89,
+                  "name": "_ssn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "445:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 88,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_firstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "456:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "456:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "_lastName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 113,
+                  "src": "482:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "482:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:107:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:1"
+            },
+            "stateMutability": "nonpayable",
+            "superFunction": null
           },
           {
             "constant": false,
@@ -2548,11 +3644,11 @@
             "visibility": "private"
           }
         ],
-        "scope": 132,
-        "src": "27:671:1"
+        "scope": 115,
+        "src": "27:624:1"
       }
     ],
-    "src": "0:698:1"
+    "src": "0:651:1"
   },
   "compiler": {
     "name": "solc",
@@ -2564,10 +3660,28 @@
       "links": {},
       "address": "0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be",
       "transactionHash": "0xbf310eb3ecfc3931f145bbd67c52d62ada1a3bfea954067223cd58b2ea6f7df4"
+    },
+    "1555555591773": {
+      "events": {},
+      "links": {},
+      "address": "0x59673C1ece83A6d7F3A2E692faace19cA84C228b",
+      "transactionHash": "0xc318469ab908ca26dd9ae21824f6093368afcb56ac138e49a5c59e629c0c1148"
+    },
+    "1555556212354": {
+      "events": {},
+      "links": {},
+      "address": "0x59673C1ece83A6d7F3A2E692faace19cA84C228b",
+      "transactionHash": "0xc318469ab908ca26dd9ae21824f6093368afcb56ac138e49a5c59e629c0c1148"
+    },
+    "1555556319569": {
+      "events": {},
+      "links": {},
+      "address": "0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be",
+      "transactionHash": "0x0d2c2c0f7e1d1c6b79c5dff3e5721ddf7d5a50424b4e4c6e9759fc185db5c760"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T01:57:52.620Z",
+  "updatedAt": "2019-04-18T02:59:03.272Z",
   "devdoc": {
     "methods": {}
   },
