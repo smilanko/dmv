@@ -6,12 +6,12 @@ contract VehicleRegistrationRenewal {
 		uint car_vin;
 		uint car_year;
 		string car_model;
-		uint owner_ssn;
+		address owner_pk;
 		string owner_first_name;
 		string owner_last_name;
 	}
 
-	mapping(uint => Registration) public registrations;
+	mapping(address => Registration) public registrations;
 
 	uint public registrationCount;
 
@@ -19,11 +19,13 @@ contract VehicleRegistrationRenewal {
 		// nothing for now
 	}
 
-	function registerVehicle() public {}
+	function isRegistrationPresent(address _ownerPk) public view returns (bool) {
+		return registrations[_ownerPk].car_vin > 0;
+	}
 
-	function processRegistration(uint _vin, uint _year, string memory _model, uint _ssn, string memory _firstName, string memory _lastName) private {
+	function processRegistration(uint _vin, uint _year, string memory _model, address _ownerPk, string memory _firstName, string memory _lastName) private {
 		registrationCount++;
-		registrations[registrationCount] = Registration(_vin, _year, _model, _ssn, _firstName ,_lastName);
+		registrations[_ownerPk] = Registration(_vin, _year, _model, _ownerPk, _firstName ,_lastName);
 	}
 
 }

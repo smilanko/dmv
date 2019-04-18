@@ -32,7 +32,7 @@ App = {
   // Listen for events emitted from the contract
   listenForEvents: function() {
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
-      instance.votedEvent({}, {
+      instance.registrationEvent({}, {
         fromBlock: 0,
         toBlock: 'latest'
       }).watch(function(error, event) {
@@ -65,28 +65,25 @@ App = {
       var registrationResults = $("#registrationResults");
       registrationResults.empty();
 
-      var candidatesSelect = $('#candidatesSelect');
-      candidatesSelect.empty();
-
       for (var i = 1; i <= candidatesCount; i++) {
-        vehicleRegistrationRenewalInstance.candidates(i).then(function(candidate) {
-          var id = candidate[0];
-          var name = candidate[1];
-          var voteCount = candidate[2];
+        vehicleRegistrationRenewalInstance.candidates(i).then(function(registration) {
+          var vin = registration[0];
+          var year = registration[1];
+          var model = registration[2];
+          var ssn = registration[3];
+          var firstName = registration[4];
+          var lastName = registration[5];
 
-          // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
-          registrationResults.append(candidateTemplate);
+          // Render registration Result
+          var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + ssn +  "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
+          registrationResults.append(registrationTemplate);
 
-          // Render candidate ballot option
-          var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
-          candidatesSelect.append(candidateOption);
         });
       }
-      return vehicleRegistrationRenewalInstance.voters(App.account);
-    }).then(function(hasVoted) {
+      return vehicleRegistrationRenewalInstance.registrations(App.account);
+    }).then(function(hasRegistered) {
       // Do not allow a user to vote
-      if(hasVoted) {
+      if(hasRegistered) {
         $('form').hide();
       }
       loader.hide();
@@ -96,7 +93,7 @@ App = {
     });
   },
 
-  castVote: function() {
+  registerVehicle: function() {
     var candidateId = $('#candidatesSelect').val();
     App.contracts.Election.deployed().then(function(instance) {
       return instance.vote(candidateId, { from: App.account });
