@@ -2,26 +2,21 @@ App = {
   web3Provider: null,
   contracts: {},
   account: '0x0',
-  hasVoted: false,
 
   init: function() {
+  	console.log("## we are in the init");
+  	account = '0x0';
     return App.initWeb3();
   },
 
   initWeb3: function() {
-    if (typeof web3 !== 'undefined') {
-      App.web3Provider = web3.currentProvider;
-      web3 = new Web3(web3.currentProvider);
-    } else {
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
-      web3 = new Web3(App.web3Provider);
-    }
+    App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+    web3 = new Web3(App.web3Provider);
     return App.initContract();
   },
 
   initContract: function() {
     $.getJSON("VehicleRegistrationRenewal.json", function(vehicleRegistrationRenewal) {
-    	console.log("### loaded vehicle registratin renewal");
       App.contracts.VehicleRegistrationRenewal = TruffleContract(vehicleRegistrationRenewal);
       App.contracts.VehicleRegistrationRenewal.setProvider(App.web3Provider);
       App.listenForEvents();
@@ -36,7 +31,6 @@ App = {
         fromBlock: 0,
         toBlock: 'latest'
       }).watch(function(error, event) {
-        console.log("event triggered", event)
         App.render();
       });
     });
@@ -46,12 +40,12 @@ App = {
     var vehicleRegistrationRenewalInstance;
     var loader = $("#loader");
     var content = $("#content");
+    var reg_block = $("#add_registration");
     loader.show();
     content.hide();
 
-    // Load account data
+
     web3.eth.getCoinbase(function(err, account) {
-    	console.log("### we loaded this account:: " + account);
       if (err === null) {
         App.account = account;
         $("#accountAddress").html("Your Account: " + account);
@@ -61,37 +55,30 @@ App = {
     // Load contract data
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       vehicleRegistrationRenewalInstance = instance;
-      return vehicleRegistrationRenewalInstance.registrationCount();
-    }).then(function(registrationCount) {
+      return vehicleRegistrationRenewalInstance.isRegistrationPresent({ from: App.account });
+    }).then(function(registrationPresent) {
       var registrationResults = $("#registrationResults");
       registrationResults.empty();
+      if (registrationPresent) {
+      	vehicleRegistrationRenewalInstance.registrations(App.account).then(function(registration) {
+			var vin = registration[0];
+			var year = registration[1];
+			var model = registration[2];
+			var owner_pk = registration[3];
+			var firstName = registration[4];
+			var lastName = registration[5];
+			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
+			registrationResults.append(registrationTemplate);
+			loader.hide();
+			reg_block.hide();
+			content.show();
 
-      console.log("### this is what we ahve in here:: " + registrationCount);
-
-      for (var i = 1; i <= registrationCount; i++) {
-        vehicleRegistrationRenewalInstance.registrations(i).then(function(registration) {
-          var vin = registration[0];
-          var year = registration[1];
-          var model = registration[2];
-          var owner_pk = registration[3];
-          var firstName = registration[4];
-          var lastName = registration[5];
-
-          var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
-          registrationResults.append(registrationTemplate);
-
-        });
+    	});
+      } else {
+      	reg_block.show();
+      	loader.show();
+      	content.hide();
       }
-      console.log("### we are gonna check to see if registered with :: " + App.account);
-      return vehicleRegistrationRenewalInstance.isRegistrationPresent(App.account);
-    }).then(function(isRegistrationPresent) {
-      // Do not allow a user to vote
-      console.log("### that jank be present??? " + isRegistrationPresent);
-      if(isRegistrationPresent) {
-        $('form').hide();
-      }
-      loader.hide();
-      content.show();
     }).catch(function(error) {
       console.warn(error);
     });
@@ -104,11 +91,12 @@ App = {
     var firstName = $('#firstName').val();
     var lastName = $('#lastName').val();
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
-      return instance.processRegistration(vin, year, model, { from: App.account }, firstName, lastName);
+      return instance.processRegistration(vin, year, model, firstName, lastName, { from: App.account, gas:3000000 });
     }).then(function(result) {
-      // Wait for votes to update
+      // wait for the registration to show
       $("#content").hide();
       $("#loader").show();
+      $("#add_registration").hide();
     }).catch(function(err) {
       console.error(err);
     });
