@@ -12,6 +12,7 @@ contract VehicleRegistrationRenewal {
 	}
 
 	mapping(uint => Registration) public registrations;
+
 	uint public registrationCount;
 
 	constructor() public {
