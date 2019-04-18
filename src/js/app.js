@@ -60,30 +60,30 @@ App = {
     // Load contract data
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       vehicleRegistrationRenewalInstance = instance;
-      return vehicleRegistrationRenewalInstance.registrations();
-    }).then(function(registrations) {
+      return vehicleRegistrationRenewalInstance.registrationCount();
+    }).then(function(registrationCount) {
       var registrationResults = $("#registrationResults");
       registrationResults.empty();
 
-      for (var i = 1; i <= candidatesCount; i++) {
-        vehicleRegistrationRenewalInstance.candidates(i).then(function(registration) {
+      for (var i = 1; i <= registrationCount; i++) {
+        vehicleRegistrationRenewalInstance.registrations(i).then(function(registration) {
           var vin = registration[0];
           var year = registration[1];
           var model = registration[2];
-          var ssn = registration[3];
+          var owner_pk = registration[3];
           var firstName = registration[4];
           var lastName = registration[5];
 
-          // Render registration Result
-          var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + ssn +  "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
+          var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
           registrationResults.append(registrationTemplate);
 
         });
       }
-      return vehicleRegistrationRenewalInstance.registrations(App.account);
-    }).then(function(hasRegistered) {
+      console.log("### we are gonna check to see if registered with :: " + App.account);
+      return vehicleRegistrationRenewalInstance.isRegistrationPresent(App.account);
+    }).then(function(isRegistrationPresent) {
       // Do not allow a user to vote
-      if(hasRegistered) {
+      if(isRegistrationPresent) {
         $('form').hide();
       }
       loader.hide();
@@ -94,9 +94,13 @@ App = {
   },
 
   registerVehicle: function() {
-    var candidateId = $('#candidatesSelect').val();
-    App.contracts.Election.deployed().then(function(instance) {
-      return instance.vote(candidateId, { from: App.account });
+    var vin = $('#vin').val();
+    var year = $('#year').val();
+    var model = $('#model').val();
+    var firstName = $('#firstName').val();
+    var lastName = $('#lastName').val();
+    App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
+      return instance.processRegistration(vin, year, model, { from: App.account }, firstName, lastName);
     }).then(function(result) {
       // Wait for votes to update
       $("#content").hide();
