@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.3.0",
+    "lite-server": "^2.4.0",
     "truffle": "5.0.0-beta.0"
   }
 }

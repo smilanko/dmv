@@ -15,17 +15,23 @@ contract VehicleRegistrationRenewal {
 
 	uint public registrationCount;
 
+	// registration event
+    event registrationEvent (
+        address indexed _vin
+    );
+
 	constructor() public {
 		// nothing for now
 	}
 
-	function isRegistrationPresent(address _ownerPk) public view returns (bool) {
-		return registrations[_ownerPk].car_vin > 0;
+	function isRegistrationPresent() public view returns (bool) {
+		return registrations[msg.sender].car_vin > 0;
 	}
 
-	function processRegistration(uint _vin, uint _year, string memory _model, address _ownerPk, string memory _firstName, string memory _lastName) public {
+	function processRegistration(uint _vin, uint _year, string memory _model, string memory _firstName, string memory _lastName) public {
 		registrationCount++;
-		registrations[_ownerPk] = Registration(_vin, _year, _model, _ownerPk, _firstName ,_lastName);
+		registrations[msg.sender] = Registration(_vin, _year, _model, msg.sender, _firstName ,_lastName);
+		emit registrationEvent(msg.sender);
 	}
 
 }

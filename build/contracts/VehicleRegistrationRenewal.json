@@ -13,7 +13,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x0d3eafd6"
     },
     {
       "constant": true,
@@ -52,22 +53,32 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x942e6bcf"
     },
     {
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor"
+      "type": "constructor",
+      "signature": "constructor"
     },
     {
-      "constant": true,
+      "anonymous": false,
       "inputs": [
         {
-          "name": "_ownerPk",
+          "indexed": true,
+          "name": "_vin",
           "type": "address"
         }
       ],
+      "name": "registrationEvent",
+      "type": "event",
+      "signature": "0xfefac6695864350719f7e40b0b42136322607d5e9e9dbfcb1cbaebcfbb60d5c4"
+    },
+    {
+      "constant": true,
+      "inputs": [],
       "name": "isRegistrationPresent",
       "outputs": [
         {
@@ -77,24 +88,56 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x78e29874"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_vin",
+          "type": "uint256"
+        },
+        {
+          "name": "_year",
+          "type": "uint256"
+        },
+        {
+          "name": "_model",
+          "type": "string"
+        },
+        {
+          "name": "_firstName",
+          "type": "string"
+        },
+        {
+          "name": "_lastName",
+          "type": "string"
+        }
+      ],
+      "name": "processRegistration",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xded0bcba"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"registrationCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registrations\",\"outputs\":[{\"name\":\"car_vin\",\"type\":\"uint256\"},{\"name\":\"car_year\",\"type\":\"uint256\"},{\"name\":\"car_model\",\"type\":\"string\"},{\"name\":\"owner_pk\",\"type\":\"address\"},{\"name\":\"owner_first_name\",\"type\":\"string\"},{\"name\":\"owner_last_name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_ownerPk\",\"type\":\"address\"}],\"name\":\"isRegistrationPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0xc1392b41cc0874758f7f31ee4ad8afbd8af02c6b021f7e27b3d78f2e3e421cd1\",\"urls\":[\"bzzr://3f540dac9223de2e1212737c6858fc31097059d521c9660444ef7ba42877b33f\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50610576806100206000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd61461005c578063942e6bcf146100875780639885fa9d1461026a575b600080fd5b34801561006857600080fd5b506100716102d3565b6040518082815260200191505060405180910390f35b34801561009357600080fd5b506100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102d9565b60405180878152602001868152602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561015c578082015181840152602081019050610141565b50505050905090810190601f1680156101895780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b838110156101c25780820151818401526020810190506101a7565b50505050905090810190601f1680156101ef5780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b8381101561022857808201518184015260208101905061020d565b50505050905090810190601f1680156102555780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b34801561027657600080fd5b506102b96004803603602081101561028d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104fd565b604051808215151515815260200191505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103915780601f1061036657610100808354040283529160200191610391565b820191906000526020600020905b81548152906001019060200180831161037457829003601f168201915b5050505050908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104555780601f1061042a57610100808354040283529160200191610455565b820191906000526020600020905b81548152906001019060200180831161043857829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104f35780601f106104c8576101008083540402835291602001916104f3565b820191906000526020600020905b8154815290600101906020018083116104d657829003601f168201915b5050505050905086565b6000806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905091905056fea165627a7a7230582097007a9122f2cad3171687fd594579c9240cf525ca21a49e7e2b7f011a4281aa0029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd61461005c578063942e6bcf146100875780639885fa9d1461026a575b600080fd5b34801561006857600080fd5b506100716102d3565b6040518082815260200191505060405180910390f35b34801561009357600080fd5b506100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102d9565b60405180878152602001868152602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561015c578082015181840152602081019050610141565b50505050905090810190601f1680156101895780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b838110156101c25780820151818401526020810190506101a7565b50505050905090810190601f1680156101ef5780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b8381101561022857808201518184015260208101905061020d565b50505050905090810190601f1680156102555780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b34801561027657600080fd5b506102b96004803603602081101561028d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104fd565b604051808215151515815260200191505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103915780601f1061036657610100808354040283529160200191610391565b820191906000526020600020905b81548152906001019060200180831161037457829003601f168201915b5050505050908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104555780601f1061042a57610100808354040283529160200191610455565b820191906000526020600020905b81548152906001019060200180831161043857829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104f35780601f106104c8576101008083540402835291602001916104f3565b820191906000526020600020905b8154815290600101906020018083116104d657829003601f168201915b5050505050905086565b6000806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905091905056fea165627a7a7230582097007a9122f2cad3171687fd594579c9240cf525ca21a49e7e2b7f011a4281aa0029",
-  "sourceMap": "27:766:1:-;;;325:48;8:9:-1;5:2;;;30:1;27;20:12;5:2;325:48:1;27:766;;;;;;",
-  "deployedSourceMap": "27:766:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;290:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;290:29:1;;;;;;;;;;;;;;;;;;;;;;;231:53;;8:9:-1;5:2;;;30:1;27;20:12;5:2;231:53:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;378:128;;8:9:-1;5:2;;;30:1;27;20:12;5:2;378:128:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;378:128:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;290:29;;;;:::o;231:53::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;378:128::-;448:4;500:1;466:13;:23;480:8;466:23;;;;;;;;;;;;;;;:31;;;:35;459:42;;378:128;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract VehicleRegistrationRenewal {\r\n\r\n\tstruct Registration {\r\n\t\tuint car_vin;\r\n\t\tuint car_year;\r\n\t\tstring car_model;\r\n\t\taddress owner_pk;\r\n\t\tstring owner_first_name;\r\n\t\tstring owner_last_name;\r\n\t}\r\n\r\n\tmapping(address => Registration) public registrations;\r\n\r\n\tuint public registrationCount;\r\n\r\n\tconstructor() public {\r\n\t\t// nothing for now\r\n\t}\r\n\r\n\tfunction isRegistrationPresent(address _ownerPk) public view returns (bool) {\r\n\t\treturn registrations[_ownerPk].car_vin > 0;\r\n\t}\r\n\r\n\tfunction processRegistration(uint _vin, uint _year, string memory _model, address _ownerPk, string memory _firstName, string memory _lastName) private {\r\n\t\tregistrationCount++;\r\n\t\tregistrations[_ownerPk] = Registration(_vin, _year, _model, _ownerPk, _firstName ,_lastName);\r\n\t}\r\n\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"registrationCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isRegistrationPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registrations\",\"outputs\":[{\"name\":\"car_vin\",\"type\":\"uint256\"},{\"name\":\"car_year\",\"type\":\"uint256\"},{\"name\":\"car_model\",\"type\":\"string\"},{\"name\":\"owner_pk\",\"type\":\"address\"},{\"name\":\"owner_first_name\",\"type\":\"string\"},{\"name\":\"owner_last_name\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_vin\",\"type\":\"uint256\"},{\"name\":\"_year\",\"type\":\"uint256\"},{\"name\":\"_model\",\"type\":\"string\"},{\"name\":\"_firstName\",\"type\":\"string\"},{\"name\":\"_lastName\",\"type\":\"string\"}],\"name\":\"processRegistration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_vin\",\"type\":\"address\"}],\"name\":\"registrationEvent\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0x88da8bd7b0147dcbd26bfc3a900d8173d0720449fa75d7abf21d4fc1581f6407\",\"urls\":[\"bzzr://ff296d9e9ae2d975a6948db606f5187121a7fda5423af00c20fcf4bf68180fcd\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610987806100206000396000f3fe608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd61461006757806378e2987414610092578063942e6bcf146100c1578063ded0bcba146102a4575b600080fd5b34801561007357600080fd5b5061007c6104ae565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100a76104b4565b604051808215151515815260200191505060405180910390f35b3480156100cd57600080fd5b50610110600480360360208110156100e457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104ff565b60405180878152602001868152602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561019657808201518184015260208101905061017b565b50505050905090810190601f1680156101c35780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b838110156101fc5780820151818401526020810190506101e1565b50505050905090810190601f1680156102295780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b83811015610262578082015181840152602081019050610247565b50505050905090810190601f16801561028f5780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b3480156102b057600080fd5b506104ac600480360360a08110156102c757600080fd5b810190808035906020019092919080359060200190929190803590602001906401000000008111156102f857600080fd5b82018360208201111561030a57600080fd5b8035906020019184600183028401116401000000008311171561032c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561038f57600080fd5b8201836020820111156103a157600080fd5b803590602001918460018302840111640100000000831117156103c357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561042657600080fd5b82018360208201111561043857600080fd5b8035906020019184600183028401116401000000008311171561045a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610723565b005b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905090565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105b75780601f1061058c576101008083540402835291602001916105b7565b820191906000526020600020905b81548152906001019060200180831161059a57829003601f168201915b5050505050908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561067b5780601f106106505761010080835404028352916020019161067b565b820191906000526020600020905b81548152906001019060200180831161065e57829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107195780601f106106ee57610100808354040283529160200191610719565b820191906000526020600020905b8154815290600101906020018083116106fc57829003601f168201915b5050505050905086565b60016000815480929190600101919050555060c0604051908101604052808681526020018581526020018481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020190805190602001906107e79291906108b6565b5060608201518160030160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550608082015181600401908051906020019061084b9291906108b6565b5060a08201518160050190805190602001906108689291906108b6565b509050503373ffffffffffffffffffffffffffffffffffffffff167ffefac6695864350719f7e40b0b42136322607d5e9e9dbfcb1cbaebcfbb60d5c460405160405180910390a25050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106108f757805160ff1916838001178555610925565b82800160010185558215610925579182015b82811115610924578251825591602001919060010190610909565b5b5090506109329190610936565b5090565b61095891905b8082111561095457600081600090555060010161093c565b5090565b9056fea165627a7a72305820a481c7e53b68505e42e43a51464d0a9c87ba5e1cca03a356f0007c746c3619ac0029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630d3eafd61461006757806378e2987414610092578063942e6bcf146100c1578063ded0bcba146102a4575b600080fd5b34801561007357600080fd5b5061007c6104ae565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100a76104b4565b604051808215151515815260200191505060405180910390f35b3480156100cd57600080fd5b50610110600480360360208110156100e457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104ff565b60405180878152602001868152602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001848103845288818151815260200191508051906020019080838360005b8381101561019657808201518184015260208101905061017b565b50505050905090810190601f1680156101c35780820380516001836020036101000a031916815260200191505b50848103835286818151815260200191508051906020019080838360005b838110156101fc5780820151818401526020810190506101e1565b50505050905090810190601f1680156102295780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b83811015610262578082015181840152602081019050610247565b50505050905090810190601f16801561028f5780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b3480156102b057600080fd5b506104ac600480360360a08110156102c757600080fd5b810190808035906020019092919080359060200190929190803590602001906401000000008111156102f857600080fd5b82018360208201111561030a57600080fd5b8035906020019184600183028401116401000000008311171561032c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561038f57600080fd5b8201836020820111156103a157600080fd5b803590602001918460018302840111640100000000831117156103c357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561042657600080fd5b82018360208201111561043857600080fd5b8035906020019184600183028401116401000000008311171561045a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610723565b005b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905090565b6000602052806000526040600020600091509050806000015490806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105b75780601f1061058c576101008083540402835291602001916105b7565b820191906000526020600020905b81548152906001019060200180831161059a57829003601f168201915b5050505050908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561067b5780601f106106505761010080835404028352916020019161067b565b820191906000526020600020905b81548152906001019060200180831161065e57829003601f168201915b505050505090806005018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107195780601f106106ee57610100808354040283529160200191610719565b820191906000526020600020905b8154815290600101906020018083116106fc57829003601f168201915b5050505050905086565b60016000815480929190600101919050555060c0604051908101604052808681526020018581526020018481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020190805190602001906107e79291906108b6565b5060608201518160030160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550608082015181600401908051906020019061084b9291906108b6565b5060a08201518160050190805190602001906108689291906108b6565b509050503373ffffffffffffffffffffffffffffffffffffffff167ffefac6695864350719f7e40b0b42136322607d5e9e9dbfcb1cbaebcfbb60d5c460405160405180910390a25050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106108f757805160ff1916838001178555610925565b82800160010185558215610925579182015b82811115610924578251825591602001919060010190610909565b5b5090506109329190610936565b5090565b61095891905b8082111561095457600081600090555060010161093c565b5090565b9056fea165627a7a72305820a481c7e53b68505e42e43a51464d0a9c87ba5e1cca03a356f0007c746c3619ac0029",
+  "sourceMap": "27:871:1:-;;;420:48;8:9:-1;5:2;;;30:1;27;20:12;5:2;420:48:1;27:871;;;;;;",
+  "deployedSourceMap": "27:871:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;290:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;290:29:1;;;;;;;;;;;;;;;;;;;;;;;473:114;;8:9:-1;5:2;;;30:1;27;20:12;5:2;473:114:1;;;;;;;;;;;;;;;;;;;;;;;;;;;231:53;;8:9:-1;5:2;;;30:1;27;20:12;5:2;231:53:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;231:53:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;592:301;;8:9:-1;5:2;;;30:1;27;20:12;5:2;592:301:1;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;592:301:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;592:301:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;592:301:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;592:301:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;592:301:1;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;592:301:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;592:301:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;592:301:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;592:301:1;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;592:301:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;592:301:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;592:301:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;592:301:1;;;;;;;;;;;;;;;;;;290:29;;;;:::o;473:114::-;527:4;581:1;545:13;:25;559:10;545:25;;;;;;;;;;;;;;;:33;;;:37;538:44;;473:114;:::o;231:53::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;592:301::-;729:17;;:19;;;;;;;;;;;;;781:68;;;;;;;;;794:4;781:68;;;;800:5;781:68;;;;807:6;781:68;;;;815:10;781:68;;;;;;827:10;781:68;;;;839:9;781:68;;;753:13;:25;767:10;753:25;;;;;;;;;;;;;;;:96;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;877:10;859:29;;;;;;;;;;;;592:301;;;;;:::o;27:871::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract VehicleRegistrationRenewal {\r\n\r\n\tstruct Registration {\r\n\t\tuint car_vin;\r\n\t\tuint car_year;\r\n\t\tstring car_model;\r\n\t\taddress owner_pk;\r\n\t\tstring owner_first_name;\r\n\t\tstring owner_last_name;\r\n\t}\r\n\r\n\tmapping(address => Registration) public registrations;\r\n\r\n\tuint public registrationCount;\r\n\r\n\t// registration event\r\n    event registrationEvent (\r\n        address indexed _vin\r\n    );\r\n\r\n\tconstructor() public {\r\n\t\t// nothing for now\r\n\t}\r\n\r\n\tfunction isRegistrationPresent() public view returns (bool) {\r\n\t\treturn registrations[msg.sender].car_vin > 0;\r\n\t}\r\n\r\n\tfunction processRegistration(uint _vin, uint _year, string memory _model, string memory _firstName, string memory _lastName) public {\r\n\t\tregistrationCount++;\r\n\t\tregistrations[msg.sender] = Registration(_vin, _year, _model, msg.sender, _firstName ,_lastName);\r\n\t\temit registrationEvent(msg.sender);\r\n\t}\r\n\r\n}",
   "sourcePath": "C:/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
   "ast": {
     "absolutePath": "/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
     "exportedSymbols": {
       "VehicleRegistrationRenewal": [
-        129
+        137
       ]
     },
-    "id": 130,
+    "id": 138,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -114,9 +157,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 129,
+        "id": 137,
         "linearizedBaseContracts": [
-          129
+          137
         ],
         "name": "VehicleRegistrationRenewal",
         "nodeType": "ContractDefinition",
@@ -285,7 +328,7 @@
             ],
             "name": "Registration",
             "nodeType": "StructDefinition",
-            "scope": 129,
+            "scope": 137,
             "src": "69:157:1",
             "visibility": "public"
           },
@@ -294,7 +337,7 @@
             "id": 75,
             "name": "registrations",
             "nodeType": "VariableDeclaration",
-            "scope": 129,
+            "scope": 137,
             "src": "231:53:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -341,7 +384,7 @@
             "id": 77,
             "name": "registrationCount",
             "nodeType": "VariableDeclaration",
-            "scope": 129,
+            "scope": 137,
             "src": "290:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -363,162 +406,23 @@
             "visibility": "public"
           },
           {
-            "body": {
-              "id": 80,
-              "nodeType": "Block",
-              "src": "346:27:1",
-              "statements": []
-            },
+            "anonymous": false,
             "documentation": null,
             "id": 81,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
+            "name": "registrationEvent",
+            "nodeType": "EventDefinition",
             "parameters": {
-              "id": 78,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "336:2:1"
-            },
-            "returnParameters": {
-              "id": 79,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "346:0:1"
-            },
-            "scope": 129,
-            "src": "325:48:1",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 95,
-              "nodeType": "Block",
-              "src": "454:52:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 93,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 88,
-                          "name": "registrations",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 75,
-                          "src": "466:13:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
-                            "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
-                          }
-                        },
-                        "id": 90,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "id": 89,
-                          "name": "_ownerPk",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 83,
-                          "src": "480:8:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "IndexAccess",
-                        "src": "466:23:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Registration_$71_storage",
-                          "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
-                        }
-                      },
-                      "id": 91,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "car_vin",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 60,
-                      "src": "466:31:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": ">",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 92,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "500:1:1",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "src": "466:35:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "functionReturnParameters": 87,
-                  "id": 94,
-                  "nodeType": "Return",
-                  "src": "459:42:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 96,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "isRegistrationPresent",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 84,
+              "id": 80,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
-                  "name": "_ownerPk",
+                  "id": 79,
+                  "indexed": true,
+                  "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 96,
-                  "src": "409:16:1",
+                  "scope": 81,
+                  "src": "387:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -526,10 +430,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 78,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "409:7:1",
+                    "src": "387:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -540,19 +444,189 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "408:18:1"
+              "src": "376:38:1"
+            },
+            "src": "352:63:1"
+          },
+          {
+            "body": {
+              "id": 84,
+              "nodeType": "Block",
+              "src": "441:27:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 85,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "431:2:1"
             },
             "returnParameters": {
-              "id": 87,
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "441:0:1"
+            },
+            "scope": 137,
+            "src": "420:48:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 98,
+              "nodeType": "Block",
+              "src": "533:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 90,
+                          "name": "registrations",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 75,
+                          "src": "545:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
+                            "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
+                          }
+                        },
+                        "id": 93,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 91,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 152,
+                            "src": "559:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 92,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "559:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "545:25:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$71_storage",
+                          "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                        }
+                      },
+                      "id": 94,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "car_vin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 60,
+                      "src": "545:33:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 95,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "581:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "545:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 89,
+                  "id": 97,
+                  "nodeType": "Return",
+                  "src": "538:44:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 99,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isRegistrationPresent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 86,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:2:1"
+            },
+            "returnParameters": {
+              "id": 89,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 86,
+                  "id": 88,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 96,
-                  "src": "448:4:1",
+                  "scope": 99,
+                  "src": "527:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -560,10 +634,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 85,
+                    "id": 87,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "448:4:1",
+                    "src": "527:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -573,24 +647,24 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "447:6:1"
+              "src": "526:6:1"
             },
-            "scope": 129,
-            "src": "378:128:1",
+            "scope": 137,
+            "src": "473:114:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 127,
+              "id": 135,
               "nodeType": "Block",
-              "src": "662:126:1",
+              "src": "724:169:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 112,
+                    "id": 113,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -598,15 +672,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "++",
                     "prefix": false,
-                    "src": "667:19:1",
+                    "src": "729:19:1",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 111,
+                      "id": 112,
                       "name": "registrationCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 77,
-                      "src": "667:17:1",
+                      "src": "729:17:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -617,14 +691,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 113,
+                  "id": 114,
                   "nodeType": "ExpressionStatement",
-                  "src": "667:19:1"
+                  "src": "729:19:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 125,
+                    "id": 128,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -633,29 +707,45 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 114,
+                        "id": 115,
                         "name": "registrations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 75,
-                        "src": "691:13:1",
+                        "src": "753:13:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
                           "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
                         }
                       },
-                      "id": 116,
+                      "id": 118,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 115,
-                        "name": "_ownerPk",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 104,
-                        "src": "705:8:1",
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 116,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 152,
+                          "src": "767:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "767:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
                         }
                       },
                       "isConstant": false,
@@ -663,7 +753,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "691:23:1",
+                      "src": "753:25:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Registration_$71_storage",
                         "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
@@ -676,64 +766,38 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 118,
+                          "id": 120,
                           "name": "_vin",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 98,
-                          "src": "730:4:1",
+                          "referencedDeclaration": 101,
+                          "src": "794:4:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 119,
-                          "name": "_year",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 100,
-                          "src": "736:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 120,
-                          "name": "_model",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 102,
-                          "src": "743:6:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
                           }
                         },
                         {
                           "argumentTypes": null,
                           "id": 121,
-                          "name": "_ownerPk",
+                          "name": "_year",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 104,
-                          "src": "751:8:1",
+                          "referencedDeclaration": 103,
+                          "src": "800:5:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           }
                         },
                         {
                           "argumentTypes": null,
                           "id": 122,
-                          "name": "_firstName",
+                          "name": "_model",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 106,
-                          "src": "761:10:1",
+                          "referencedDeclaration": 105,
+                          "src": "807:6:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -741,12 +805,54 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 123,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 123,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 152,
+                            "src": "815:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 124,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "815:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 125,
+                          "name": "_firstName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 107,
+                          "src": "827:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 126,
                           "name": "_lastName",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 108,
-                          "src": "773:9:1",
+                          "referencedDeclaration": 109,
+                          "src": "839:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -768,8 +874,8 @@
                             "typeString": "string memory"
                           },
                           {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
                           },
                           {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -780,18 +886,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 117,
+                        "id": 119,
                         "name": "Registration",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 71,
-                        "src": "717:12:1",
+                        "src": "781:12:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_Registration_$71_storage_ptr_$",
                           "typeString": "type(struct VehicleRegistrationRenewal.Registration storage pointer)"
                         }
                       },
-                      "id": 124,
+                      "id": 127,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -799,42 +905,112 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "717:66:1",
+                      "src": "781:68:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Registration_$71_memory",
                         "typeString": "struct VehicleRegistrationRenewal.Registration memory"
                       }
                     },
-                    "src": "691:92:1",
+                    "src": "753:96:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Registration_$71_storage",
                       "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
                     }
                   },
-                  "id": 126,
+                  "id": 129,
                   "nodeType": "ExpressionStatement",
-                  "src": "691:92:1"
+                  "src": "753:96:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 131,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 152,
+                          "src": "877:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 132,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "877:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 130,
+                      "name": "registrationEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 81,
+                      "src": "859:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "859:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 134,
+                  "nodeType": "EmitStatement",
+                  "src": "854:34:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 128,
+            "id": 136,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "processRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 109,
+              "id": 110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 98,
+                  "id": 101,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "540:9:1",
+                  "scope": 136,
+                  "src": "621:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -842,10 +1018,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 97,
+                    "id": 100,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "540:4:1",
+                    "src": "621:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -856,11 +1032,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 100,
+                  "id": 103,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "551:10:1",
+                  "scope": 136,
+                  "src": "632:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -868,10 +1044,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 99,
+                    "id": 102,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "551:4:1",
+                    "src": "632:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -882,11 +1058,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 102,
+                  "id": 105,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "563:20:1",
+                  "scope": 136,
+                  "src": "644:20:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -894,10 +1070,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 101,
+                    "id": 104,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "563:6:1",
+                    "src": "644:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -908,38 +1084,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 104,
-                  "name": "_ownerPk",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "585:16:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 103,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "585:7:1",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 106,
+                  "id": 107,
                   "name": "_firstName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "603:24:1",
+                  "scope": 136,
+                  "src": "666:24:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -947,10 +1096,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 105,
+                    "id": 106,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "603:6:1",
+                    "src": "666:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -961,11 +1110,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 108,
+                  "id": 109,
                   "name": "_lastName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "629:23:1",
+                  "scope": 136,
+                  "src": "692:23:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -973,10 +1122,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 107,
+                    "id": 108,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "629:6:1",
+                    "src": "692:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -986,35 +1135,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "539:114:1"
+              "src": "620:96:1"
             },
             "returnParameters": {
-              "id": 110,
+              "id": 111,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "662:0:1"
+              "src": "724:0:1"
             },
-            "scope": 129,
-            "src": "511:277:1",
+            "scope": 137,
+            "src": "592:301:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
-            "visibility": "private"
+            "visibility": "public"
           }
         ],
-        "scope": 130,
-        "src": "27:766:1"
+        "scope": 138,
+        "src": "27:871:1"
       }
     ],
-    "src": "0:793:1"
+    "src": "0:898:1"
   },
   "legacyAST": {
     "absolutePath": "/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol",
     "exportedSymbols": {
       "VehicleRegistrationRenewal": [
-        129
+        137
       ]
     },
-    "id": 130,
+    "id": 138,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -1034,9 +1183,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 129,
+        "id": 137,
         "linearizedBaseContracts": [
-          129
+          137
         ],
         "name": "VehicleRegistrationRenewal",
         "nodeType": "ContractDefinition",
@@ -1205,7 +1354,7 @@
             ],
             "name": "Registration",
             "nodeType": "StructDefinition",
-            "scope": 129,
+            "scope": 137,
             "src": "69:157:1",
             "visibility": "public"
           },
@@ -1214,7 +1363,7 @@
             "id": 75,
             "name": "registrations",
             "nodeType": "VariableDeclaration",
-            "scope": 129,
+            "scope": 137,
             "src": "231:53:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1261,7 +1410,7 @@
             "id": 77,
             "name": "registrationCount",
             "nodeType": "VariableDeclaration",
-            "scope": 129,
+            "scope": 137,
             "src": "290:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1283,162 +1432,23 @@
             "visibility": "public"
           },
           {
-            "body": {
-              "id": 80,
-              "nodeType": "Block",
-              "src": "346:27:1",
-              "statements": []
-            },
+            "anonymous": false,
             "documentation": null,
             "id": 81,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
+            "name": "registrationEvent",
+            "nodeType": "EventDefinition",
             "parameters": {
-              "id": 78,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "336:2:1"
-            },
-            "returnParameters": {
-              "id": 79,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "346:0:1"
-            },
-            "scope": 129,
-            "src": "325:48:1",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 95,
-              "nodeType": "Block",
-              "src": "454:52:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 93,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 88,
-                          "name": "registrations",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 75,
-                          "src": "466:13:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
-                            "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
-                          }
-                        },
-                        "id": 90,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "id": 89,
-                          "name": "_ownerPk",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 83,
-                          "src": "480:8:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "IndexAccess",
-                        "src": "466:23:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Registration_$71_storage",
-                          "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
-                        }
-                      },
-                      "id": 91,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "car_vin",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 60,
-                      "src": "466:31:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": ">",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 92,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "500:1:1",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "src": "466:35:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "functionReturnParameters": 87,
-                  "id": 94,
-                  "nodeType": "Return",
-                  "src": "459:42:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 96,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "isRegistrationPresent",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 84,
+              "id": 80,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
-                  "name": "_ownerPk",
+                  "id": 79,
+                  "indexed": true,
+                  "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 96,
-                  "src": "409:16:1",
+                  "scope": 81,
+                  "src": "387:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1446,10 +1456,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 78,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "409:7:1",
+                    "src": "387:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1460,19 +1470,189 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "408:18:1"
+              "src": "376:38:1"
+            },
+            "src": "352:63:1"
+          },
+          {
+            "body": {
+              "id": 84,
+              "nodeType": "Block",
+              "src": "441:27:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 85,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "431:2:1"
             },
             "returnParameters": {
-              "id": 87,
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "441:0:1"
+            },
+            "scope": 137,
+            "src": "420:48:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 98,
+              "nodeType": "Block",
+              "src": "533:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 90,
+                          "name": "registrations",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 75,
+                          "src": "545:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
+                            "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
+                          }
+                        },
+                        "id": 93,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 91,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 152,
+                            "src": "559:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 92,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "559:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "545:25:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$71_storage",
+                          "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
+                        }
+                      },
+                      "id": 94,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "car_vin",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 60,
+                      "src": "545:33:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 95,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "581:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "545:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 89,
+                  "id": 97,
+                  "nodeType": "Return",
+                  "src": "538:44:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 99,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isRegistrationPresent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 86,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "503:2:1"
+            },
+            "returnParameters": {
+              "id": 89,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 86,
+                  "id": 88,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 96,
-                  "src": "448:4:1",
+                  "scope": 99,
+                  "src": "527:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1480,10 +1660,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 85,
+                    "id": 87,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "448:4:1",
+                    "src": "527:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1493,24 +1673,24 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "447:6:1"
+              "src": "526:6:1"
             },
-            "scope": 129,
-            "src": "378:128:1",
+            "scope": 137,
+            "src": "473:114:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 127,
+              "id": 135,
               "nodeType": "Block",
-              "src": "662:126:1",
+              "src": "724:169:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 112,
+                    "id": 113,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1518,15 +1698,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "++",
                     "prefix": false,
-                    "src": "667:19:1",
+                    "src": "729:19:1",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 111,
+                      "id": 112,
                       "name": "registrationCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 77,
-                      "src": "667:17:1",
+                      "src": "729:17:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1537,14 +1717,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 113,
+                  "id": 114,
                   "nodeType": "ExpressionStatement",
-                  "src": "667:19:1"
+                  "src": "729:19:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 125,
+                    "id": 128,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1553,29 +1733,45 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 114,
+                        "id": 115,
                         "name": "registrations",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 75,
-                        "src": "691:13:1",
+                        "src": "753:13:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Registration_$71_storage_$",
                           "typeString": "mapping(address => struct VehicleRegistrationRenewal.Registration storage ref)"
                         }
                       },
-                      "id": 116,
+                      "id": 118,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 115,
-                        "name": "_ownerPk",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 104,
-                        "src": "705:8:1",
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 116,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 152,
+                          "src": "767:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "767:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
                         }
                       },
                       "isConstant": false,
@@ -1583,7 +1779,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "691:23:1",
+                      "src": "753:25:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Registration_$71_storage",
                         "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
@@ -1596,64 +1792,38 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 118,
+                          "id": 120,
                           "name": "_vin",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 98,
-                          "src": "730:4:1",
+                          "referencedDeclaration": 101,
+                          "src": "794:4:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 119,
-                          "name": "_year",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 100,
-                          "src": "736:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 120,
-                          "name": "_model",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 102,
-                          "src": "743:6:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
                           }
                         },
                         {
                           "argumentTypes": null,
                           "id": 121,
-                          "name": "_ownerPk",
+                          "name": "_year",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 104,
-                          "src": "751:8:1",
+                          "referencedDeclaration": 103,
+                          "src": "800:5:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           }
                         },
                         {
                           "argumentTypes": null,
                           "id": 122,
-                          "name": "_firstName",
+                          "name": "_model",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 106,
-                          "src": "761:10:1",
+                          "referencedDeclaration": 105,
+                          "src": "807:6:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -1661,12 +1831,54 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 123,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 123,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 152,
+                            "src": "815:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 124,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "815:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 125,
+                          "name": "_firstName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 107,
+                          "src": "827:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 126,
                           "name": "_lastName",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 108,
-                          "src": "773:9:1",
+                          "referencedDeclaration": 109,
+                          "src": "839:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -1688,8 +1900,8 @@
                             "typeString": "string memory"
                           },
                           {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
                           },
                           {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1700,18 +1912,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 117,
+                        "id": 119,
                         "name": "Registration",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 71,
-                        "src": "717:12:1",
+                        "src": "781:12:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_Registration_$71_storage_ptr_$",
                           "typeString": "type(struct VehicleRegistrationRenewal.Registration storage pointer)"
                         }
                       },
-                      "id": 124,
+                      "id": 127,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1719,42 +1931,112 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "717:66:1",
+                      "src": "781:68:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Registration_$71_memory",
                         "typeString": "struct VehicleRegistrationRenewal.Registration memory"
                       }
                     },
-                    "src": "691:92:1",
+                    "src": "753:96:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Registration_$71_storage",
                       "typeString": "struct VehicleRegistrationRenewal.Registration storage ref"
                     }
                   },
-                  "id": 126,
+                  "id": 129,
                   "nodeType": "ExpressionStatement",
-                  "src": "691:92:1"
+                  "src": "753:96:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 131,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 152,
+                          "src": "877:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 132,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "877:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 130,
+                      "name": "registrationEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 81,
+                      "src": "859:17:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "859:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 134,
+                  "nodeType": "EmitStatement",
+                  "src": "854:34:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 128,
+            "id": 136,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "processRegistration",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 109,
+              "id": 110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 98,
+                  "id": 101,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "540:9:1",
+                  "scope": 136,
+                  "src": "621:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1762,10 +2044,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 97,
+                    "id": 100,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "540:4:1",
+                    "src": "621:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1776,11 +2058,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 100,
+                  "id": 103,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "551:10:1",
+                  "scope": 136,
+                  "src": "632:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1788,10 +2070,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 99,
+                    "id": 102,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "551:4:1",
+                    "src": "632:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1802,11 +2084,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 102,
+                  "id": 105,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "563:20:1",
+                  "scope": 136,
+                  "src": "644:20:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1814,10 +2096,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 101,
+                    "id": 104,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "563:6:1",
+                    "src": "644:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1828,38 +2110,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 104,
-                  "name": "_ownerPk",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "585:16:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 103,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "585:7:1",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 106,
+                  "id": 107,
                   "name": "_firstName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "603:24:1",
+                  "scope": 136,
+                  "src": "666:24:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1867,10 +2122,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 105,
+                    "id": 106,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "603:6:1",
+                    "src": "666:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1881,11 +2136,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 108,
+                  "id": 109,
                   "name": "_lastName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "629:23:1",
+                  "scope": 136,
+                  "src": "692:23:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1893,10 +2148,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 107,
+                    "id": 108,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "629:6:1",
+                    "src": "692:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1906,34 +2161,41 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "539:114:1"
+              "src": "620:96:1"
             },
             "returnParameters": {
-              "id": 110,
+              "id": 111,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "662:0:1"
+              "src": "724:0:1"
             },
-            "scope": 129,
-            "src": "511:277:1",
+            "scope": 137,
+            "src": "592:301:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
-            "visibility": "private"
+            "visibility": "public"
           }
         ],
-        "scope": 130,
-        "src": "27:766:1"
+        "scope": 138,
+        "src": "27:871:1"
       }
     ],
-    "src": "0:793:1"
+    "src": "0:898:1"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1555557324229": {
+      "events": {},
+      "links": {},
+      "address": "0x62b8E9Ac02f3c68e08902C7e05F9Dacf6F9E06e1",
+      "transactionHash": "0xe2131e3d82f01ce423334d8dcaecfbce70739ca14cadfa35e0a929b92067e633"
+    }
+  },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T04:07:29.703Z",
+  "updatedAt": "2019-04-18T04:34:23.429Z",
   "devdoc": {
     "methods": {}
   },

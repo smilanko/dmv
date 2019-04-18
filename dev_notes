@@ -156,6 +156,11 @@
 				C:\dev>npm -v
 				5.6.0
 
+		- Install lite server
+
+			- run these npm commands
+			npm install lite-server --save-dev
+			
 	- python install
 	
 		- Download python from here:
@@ -357,6 +362,9 @@
 		
 		# start ganache-cli
 		ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,1000000000000000000000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000000000000000000000" --allowUnlimitedContractSize
+		
+		# start lite server
+		npm run dev
 		
 		# create a stub contract
 		truffle init
