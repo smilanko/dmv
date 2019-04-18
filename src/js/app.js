@@ -4,13 +4,11 @@ App = {
   account: '0x0',
 
   init: function() {
-  	console.log("## we are in the init");
   	account = '0x0';
     return App.initWeb3();
   },
 
   initWeb3: function() {
-  	// TODO: refactor conditional
     if (typeof web3 !== 'undefined') {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
@@ -52,9 +50,6 @@ App = {
     loader.show();
     content.hide();
 
-    console.log("### we are calling the render");
-
-
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
@@ -67,9 +62,7 @@ App = {
       return vehicleRegistrationRenewalInstance.isRegistrationPresent({ from: App.account });
     }).then(function(registrationPresent) {
       var registrationResults = $("#registrationResults");
-      console.log("#### before it is:: " + registrationResults.html());
       registrationResults.empty();
-      console.log("##### after it is :: " + registrationResults.html());
       if (registrationPresent) {
       	vehicleRegistrationRenewalInstance.registrations(App.account).then(function(registration) {
 			var vin = registration[0];
@@ -78,7 +71,8 @@ App = {
 			var owner_pk = registration[3];
 			var firstName = registration[4];
 			var lastName = registration[5];
-			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName +  "</td></tr>"
+			var expiringYear = registration[6];
+			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName + "</th><td>" + expiringYear +  "</td></tr>"
 			registrationResults.append(registrationTemplate);
 			loader.hide();
 			reg_block.hide();

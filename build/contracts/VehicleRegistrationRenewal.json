@@ -13,7 +13,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x0d3eafd6"
     },
     {
       "constant": true,
@@ -56,7 +57,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x942e6bcf"
     },
     {
       "anonymous": false,
@@ -68,7 +70,8 @@
         }
       ],
       "name": "registrationEvent",
-      "type": "event"
+      "type": "event",
+      "signature": "0x53876d202e8907a1c0388360a3e5be907759545bdde15ddcb06ce86299fa606b"
     },
     {
       "constant": true,
@@ -82,7 +85,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x78e29874"
     },
     {
       "constant": false,
@@ -112,7 +116,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xded0bcba"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"registrationCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isRegistrationPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registrations\",\"outputs\":[{\"name\":\"car_vin\",\"type\":\"uint256\"},{\"name\":\"car_year\",\"type\":\"uint256\"},{\"name\":\"car_model\",\"type\":\"string\"},{\"name\":\"owner_pk\",\"type\":\"address\"},{\"name\":\"owner_first_name\",\"type\":\"string\"},{\"name\":\"owner_last_name\",\"type\":\"string\"},{\"name\":\"expiring_year\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_vin\",\"type\":\"uint256\"},{\"name\":\"_year\",\"type\":\"uint256\"},{\"name\":\"_model\",\"type\":\"string\"},{\"name\":\"_firstName\",\"type\":\"string\"},{\"name\":\"_lastName\",\"type\":\"string\"}],\"name\":\"processRegistration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_vin\",\"type\":\"uint256\"}],\"name\":\"registrationEvent\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0x4a4592a6f0485db6fcfa53a15a61f16788e25bf44335164d11e9d76cb34ceaaf\",\"urls\":[\"bzzr://d27376f9e4401c555740be91f39fc12845d016a893fd2481d307f16e77d7a13c\"]}},\"version\":1}",
@@ -2564,9 +2569,16 @@
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1555572671013": {
+      "events": {},
+      "links": {},
+      "address": "0x934D4E65427A13c74D4AE33404Eb1D841c3e8ed2",
+      "transactionHash": "0x4aeba35474575a28fd929349f9938e518fd67f3bcc96930f1e418660fab2f82f"
+    }
+  },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T08:00:27.800Z",
+  "updatedAt": "2019-04-18T08:02:47.414Z",
   "devdoc": {
     "methods": {}
   },
