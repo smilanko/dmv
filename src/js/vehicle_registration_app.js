@@ -1,4 +1,4 @@
-App = {
+VehicleRegistrationApp = {
 
   web3Provider: null,
   webDriver: null,
@@ -6,29 +6,29 @@ App = {
   account: '0x0',
 
   configureBase: function() {
-  	App.web3Provider = BaseApp.getProvider();
-  	App.webDriver = BaseApp.getWebDriver();
-  	return App.initContract();
+  	VehicleRegistrationApp.web3Provider = BaseApp.getProvider();
+  	VehicleRegistrationApp.webDriver = BaseApp.getWebDriver();
+  	return VehicleRegistrationApp.initContract();
   },
 
   initContract: function() {
     $.getJSON("VehicleRegistrationRenewal.json", function(vehicleRegistrationRenewal) {
-      App.contracts.VehicleRegistrationRenewal = TruffleContract(vehicleRegistrationRenewal);
-      App.contracts.VehicleRegistrationRenewal.setProvider(App.web3Provider);
-      App.listenForEvents();
-      return App.render();
+      VehicleRegistrationApp.contracts.VehicleRegistrationRenewal = TruffleContract(vehicleRegistrationRenewal);
+      VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.setProvider(VehicleRegistrationApp.web3Provider);
+      VehicleRegistrationApp.listenForEvents();
+      return VehicleRegistrationApp.render();
     });
 
   },
 
   // Listen for events emitted from the contract
   listenForEvents: function() {
-    App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
+    VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       instance.registrationEvent({}, {
         fromBlock: 0,
         toBlock: 'latest'
       }).watch(function(error, event) {
-        App.render();
+        VehicleRegistrationApp.render();
       });
     });
   },
@@ -41,21 +41,21 @@ App = {
     loader.show();
     content.hide();
 
-    App.webDriver.eth.getCoinbase(function(err, account) {
+    VehicleRegistrationApp.webDriver.eth.getCoinbase(function(err, account) {
       if (err === null) {
-        App.account = account;
+        VehicleRegistrationApp.account = account;
         $("#accountAddress").html("Your Account: " + account);
       }
     });
 
-    App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
+    VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       vehicleRegistrationRenewalInstance = instance;
-      return vehicleRegistrationRenewalInstance.isRegistrationPresent({ from: App.account });
+      return vehicleRegistrationRenewalInstance.isRegistrationPresent({ from: VehicleRegistrationApp.account });
     }).then(function(registrationPresent) {
       var registrationResults = $("#registrationResults");
       registrationResults.empty();
       if (registrationPresent) {
-      	vehicleRegistrationRenewalInstance.registrations(App.account).then(function(registration) {
+      	vehicleRegistrationRenewalInstance.registrations(VehicleRegistrationApp.account).then(function(registration) {
 			var vin = registration[0];
 			var year = registration[1];
 			var model = registration[2];
@@ -84,8 +84,8 @@ App = {
     var model = $('#model').val();
     var firstName = $('#firstName').val();
     var lastName = $('#lastName').val();
-    App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
-      return instance.processRegistration(vin, year, model, firstName, lastName, { from: App.account, gas:3000000 });
+    VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
+      return instance.processRegistration(vin, year, model, firstName, lastName, { from: VehicleRegistrationApp.account, gas:3000000 });
     }).then(function(result) {
       $("#content").hide();
       $("#loader").show();
@@ -98,6 +98,6 @@ App = {
 
 $(function() {
   $(window).load(function() {
-    App.configureBase();
+    VehicleRegistrationApp.configureBase();
   });
 });
