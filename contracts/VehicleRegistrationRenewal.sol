@@ -6,8 +6,6 @@ contract VehicleRegistrationRenewal {
 		uint car_vin;
 		uint car_year;
 		string car_model;
-		string owner_first_name;
-		string owner_last_name;
 		uint expiring_year;
 	}
 
@@ -24,11 +22,11 @@ contract VehicleRegistrationRenewal {
 		return registrations[msg.sender].expiring_year > 0;
 	}
 
-	function processRegistration(uint _vin, uint _year, string memory _model, string memory _firstName, string memory _lastName) public {
-		registrationCount++;
+	function processRegistration(uint _vin, uint _year, string memory _model) public {
 		if (!isRegistrationPresent()) {
+			registrationCount++;
 			uint _expiring_year = (now / 31536000) + 1970;
-			registrations[msg.sender] = Registration(_vin, _year, _model, _firstName ,_lastName, _expiring_year);
+			registrations[msg.sender] = Registration(_vin, _year, _model, _expiring_year);
 			emit registrationEvent(_vin);
 		}
 	}

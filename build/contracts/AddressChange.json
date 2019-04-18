@@ -432,7 +432,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 209,
+                          "referencedDeclaration": 199,
                           "src": "458:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1051,7 +1051,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 209,
+                          "referencedDeclaration": 199,
                           "src": "458:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1339,15 +1339,15 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
-    "1555572671013": {
+    "1555603614686": {
       "events": {},
       "links": {},
-      "address": "0x620B7AB436089f3dBfe60375409Ca909B645cE1E",
-      "transactionHash": "0xfdb3c10445d59c44edf252c2c427a1b7477533feb3e523891bc2dc510677bff3"
+      "address": "0x23Bc3a9db991F8635Ae1d8C904F14ceBB6D63B21",
+      "transactionHash": "0x3d6161827a0e4e723d1bbca7fade44ad76ba49975f36a9d800cf5fb98daba6d1"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T08:24:55.186Z",
+  "updatedAt": "2019-04-18T17:15:54.652Z",
   "devdoc": {
     "methods": {}
   },

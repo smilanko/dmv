@@ -18,9 +18,7 @@ contract("VehicleRegistrationRenewal", function(accounts){
 			vin = 123;
 			year = 1990;
 			model = "toyota";
-			fname = "joe";
-			lname = "cools";
-			return registrationInstance.processRegistration(vin, year, model, fname, lname, { from : accounts[0] });
+			return registrationInstance.processRegistration(vin, year, model, { from : accounts[0] });
 		}).then(function(receipt) {
 			return registrationInstance.isRegistrationPresent({ from : accounts[0] });
 		}).then(function(registered) {
@@ -30,9 +28,7 @@ contract("VehicleRegistrationRenewal", function(accounts){
 			assert.equal(123, registrations[0], "vin match");
 			assert.equal(1990, registrations[1], "year match");
 			assert.equal("toyota", registrations[2], "model match");
-			assert.equal("joe", registrations[3], "fisrt name match");
-			assert.equal("cools", registrations[4], "last name match");
-			assert.equal(new Date().getFullYear(), registrations[5], "expiring year match");
+			assert.equal(new Date().getFullYear(), registrations[3], "expiring year match");
 		});
 	});
 

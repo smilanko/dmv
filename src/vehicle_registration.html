@@ -34,8 +34,6 @@
                                 <th scope="col">Vin</th>
                                 <th scope="col">Year</th>
                                 <th scope="col">Model</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
                                 <th scope="col">Expiring Year</th>
                             </tr>
                         </thead>
@@ -45,7 +43,7 @@
                 </div>
                 <div id="add_registration" style="display: none;">
                     <hr/>
-                    <form onSubmit="App.registerVehicle(); return false;">
+                    <form onSubmit="VehicleRegistrationApp.registerVehicle(); return false;">
                         <div class="form-group">
 
                             <label for="vin">Vin</label>
@@ -56,12 +54,6 @@
 
                             <label for="model">Model</label>
                             <input id="model" type="text" class="form-control" />
-
-                            <label for="firstName">First Name</label>
-                            <input id="firstName" type="text" class="form-control" />
-
-                            <label for="lastName">Last Name</label>
-                            <input id="lastName" type="text" class="form-control" />
 
                         </div>
                         <button type="submit" class="btn btn-primary">Registrater your vehicle</button>

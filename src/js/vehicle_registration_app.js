@@ -25,8 +25,7 @@ VehicleRegistrationApp = {
   listenForEvents: function() {
     VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       instance.registrationEvent({}, {
-        fromBlock: 0,
-        toBlock: 'latest'
+        fromBlock: 'latest'
       }).watch(function(error, event) {
         VehicleRegistrationApp.render();
       });
@@ -59,10 +58,8 @@ VehicleRegistrationApp = {
 			var vin = registration[0];
 			var year = registration[1];
 			var model = registration[2];
-			var firstName = registration[3];
-			var lastName = registration[4];
-			var expiringYear = registration[5];
-			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + firstName +  "</th><td>" + lastName + "</th><td>" + expiringYear +  "</td></tr>"
+			var expiringYear = registration[3];
+			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + expiringYear +  "</td></tr>"
 			registrationResults.append(registrationTemplate);
 			loader.hide();
 			reg_block.hide();
@@ -82,10 +79,8 @@ VehicleRegistrationApp = {
     var vin = $('#vin').val();
     var year = $('#year').val();
     var model = $('#model').val();
-    var firstName = $('#firstName').val();
-    var lastName = $('#lastName').val();
     VehicleRegistrationApp.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
-      return instance.processRegistration(vin, year, model, firstName, lastName, { from: VehicleRegistrationApp.account, gas:3000000 });
+      return instance.processRegistration(vin, year, model, { from: VehicleRegistrationApp.account, gas:3000000 });
     }).then(function(result) {
       $("#content").hide();
       $("#loader").show();
