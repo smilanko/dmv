@@ -1,0 +1,386 @@
+-- notes on configuring dev env --
+
+	- console 2 
+		- desc : this tool isa  pretty version of cmd. makes developing easier
+		- downlaod the latest version here:
+			https://sourceforge.net/projects/console/files/latest/download
+			
+		- once downloaded, extract the contents to : C:\dev\software
+		( Note, in C:\dev\software\Console2, you should see hll's, hooks, etc. )
+		
+		- Create a new file, called aliases.cmd
+		- In this file, paste the following:
+		
+			@echo off
+
+			DOSKEY clear=cls
+			DOSKEY ls=dir
+			DOSKEY ex=explorer .
+			DOSKEY ll=dir /A
+			DOSKEY rm=del $*
+			DOSKEY pwd=cd
+			DOSKEY touch=copy nul $* > nul
+			
+		
+		- Open Console2 ( as admin)
+			- Click Console
+			- In the Shell box, enter this:
+			
+				C:\Windows\system32\cmd.exe /K "C:\dev\software\Console2\aliases.cmd"
+				
+			- In the Strtup dir, enter this:
+				C:\dev
+				
+			- Click Hotkeys
+				- Select "copy selection"
+					- Assign : Ctrl + Shift + C
+				- Select "paste"
+					- Assign : Ctrl + Shift + V
+				
+			- Click Hotkeys -> Mouse
+				- Select "Copy/Clear section"
+					- set button to none, and assing ( remove funcitonality )
+					
+				- Select "Select Text"
+					- uncheck Shift, set Left, and click Assign
+				
+				- Select "Paste Text"
+					- set button to none, and assing ( remove funcitonality )
+					
+				- Select "Context menu"
+					- leave as Right
+			
+			
+		- bounce Console2, and ensure everything works as desired
+		
+	
+	- configure git
+		- download git for windows from here:
+			https://github.com/git-for-windows/git/releases/download/v2.21.0.windows.1/Git-2.21.0-64-bit.exe
+			
+			( Note, if the link is dead, you can see the version embedded in the url: v2.21.0 win x64
+			
+		- Once downloaded, run
+			- Licence screen -> Next
+			- Distribution location screen -> C:\dev\software\Git
+			- Select components -> leave defaults, Next
+			- Start menu -> defaults, Next
+			- Default editor used by git -> Use Vim -> next
+			- Adjust path -> Git from command line ( 2nd option ) -> Next
+			- Https protocol backend -> Use the OpenSSL Library -> Next
+			- Configuring line endings -> Windows Style
+			- Terminal Emulator -> Use MinTTY
+			- Extra Options 
+				-> Enable File System Caching
+				-> Enagle Git Credential Manager
+			- Install -> Finish
+			
+		- Create ssh keys ( if needed by git, optional )
+			- run C:\software\dev\Git\bin\bash.exe
+			- execute these commands:
+				ssh-keygen -t rsa
+				( Go through prompts; I did not set a pass phrase ) 
+				cat /c/Users/smilanko/.ssh/id_rsa.pub
+				( My username is smilanko, so replace it with whatever is yours )
+			
+	- Chrome
+		- I donwloaded chrome from here : https://www.google.com/chrome/
+			( Installing a browser is probably pretty self explanatory, and does not
+			require notes ) However, to ensure we are on the same page, I am using this version:
+			
+			Version 73.0.3683.103 (Official Build) (64-bit)
+			
+	- Install and Configure Metamask Extension chrome
+	
+		- Go to this link to add the metamask extension to chrome:
+			https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
+			
+			- Click "Add to chrome"
+			
+		- Once downloaded, verify version ( I am using 6.3.2 )
+			- Enter this url in chrome :
+				
+				-> chrome://extensions
+				-> Under MetaMask, Click Details
+				-> Observe "Version" value
+			
+		- After it is added, you will be taken to something like this:
+			chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#initialize/welcome
+				
+			( Where a fox watches your mouse )
+				
+			- Click Get started
+			- "New to MetaMask?" screen, click "Create Wallet"
+			- "Help us imrpove?" screen, click "No thanks"
+			- Create password screen:
+				-> Enter: super_secret
+				-> Confirm: super_secret
+				-> Check "I agree"
+				-> Create
+			- Secret key backup ( Important to do, because MetaMask will test you to ensure you did this )
+				-> Click "Click here to reveal secret words"
+				-> Copy all words to a new file, metamask.txt, and store to :
+					C:\dev\passwords
+				-> Next
+			
+			- Confirm your Secret backup
+				-> Arrange the words from the rder in metamask.txt
+				-> Click Confirm
+			
+			-> All done
+			
+			-> you should now be taken to the screen where you can see your account,
+				and 0.00 USD, 0 ETH in your wallet
+				
+			-> In the drop down, ensure you always have Localhost after you configure latter sections
+			
+	- Node JS
+	
+		- Download 8.11.3 from : https://nodejs.org/dist/v8.11.3/node-v8.11.3-x64.msi
+		- Run the application
+			- Click next
+			- Accept the terms -> next
+			- Destination folder: C:\dev\software\nodejs\ -> Next
+			- Next
+			- Install
+			- Finish
+			
+		- Test the node
+
+			- open Console 2
+			- enter these commands:
+			
+				C:\dev>node -v
+				v8.11.3
+
+				C:\dev>npm -v
+				5.6.0
+
+	- python install
+	
+		- Download python from here:
+			https://www.python.org/ftp/python/2.7.16/python-2.7.16.amd64.msi
+		
+			- Install for all users -> Next
+			- Destination -> C:\dev\software\Python27\ -> Next
+			- Next
+			- Accept AUC ( Windows security )
+			
+			- ensure these commands work:
+			
+				python --version
+				pip --version
+				
+				( If winodws complains, make sure you have these two in your PATH: )
+				C:\dev\software\Python27\;C:\dev\software\Python27\Scripts;
+		
+	- Create private blockchain
+	
+		- Open Console 2
+			- enter these commands
+			
+			cd C:\dev\projects
+			mkdir dmv
+			cd dmv
+			cd C:\dev\software\Git\bin
+			bash.exe
+			
+			npm install -g ganache-cli@6.1.8
+			npm install -g truffle@5.0.13
+				( seeing a lot of errors here is ok. re-run command to amke sure everything installed )
+				
+			ganache-cli -v --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,1000000000000000000000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000000000000000000000" --allowUnlimitedContractSize
+			
+			
+		- Observe the accounts and keys:
+			
+			Available Accounts
+			==================
+			(0) 0xf351450ee62d96d9e1471d7b18121180badb30e5 (~1000000000000000000000 ETH)
+			(1) 0xddfc9ee0f38495fd0488c22c730828188134391e (~1000000000000000000000 ETH)
+			(2) 0xf61edb9c23e88820a4c23525902a4898474b2637 (~1000000000000000000000 ETH)
+
+			Private Keys
+			==================
+			(0) 0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8
+			(1) 0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760
+			(2) 0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff
+
+			Gas Price
+			==================
+			20000000000
+
+			Gas Limit
+			==================
+			6721975
+			
+		- update metamask
+			- Go back to the chrome extension
+			- In top right, click circular button for account
+			- Import account
+			- Paste one of the private keys from above
+			- Import
+			
+			- Your ETH account should show a lot of ETH now
+				
+	- Sublime text
+
+		- Download sublime from here:
+			https://download.sublimetext.com/Sublime%20Text%20Build%203207%20x64%20Setup.exe
+		
+			- run the executable
+			- Destination locaiton : -> C:\dev\software\sublime_txt_3 -> Next
+			- Next
+			- Install
+			
+		- Configure the solidity Etherium highlighting for Sublime
+			
+			- Open Sublime text
+			- Open Package Control ( Ctrl + Shift + P ) in windows 
+			- Type in : 
+				Package control: Install package
+			- Highlight result, and click enter
+			- Search for Etherium
+			- Select and click enter
+			
+	- Remix
+		Remix IDE is a solidity IDE located here : https://remix.ethereum.org
+		
+		- Click Settings
+			- Under general settings:
+				-> Check Enable personal mode
+		- Click run
+			-> cick the "+" next to account
+				-> Provide the following passphrase:
+					metamask
+					
+				
+				
+				
+				
+	- Remix alternative ( Truffle )
+
+		- You've installed truffle, so it's possible to create smart contracts
+		- Open console 2, and open bash.exe from git
+			( Already explained above )
+			
+		- run these commands:
+			
+			mkdir online_services
+			cd online_services
+			mkdir vehicle_registration_renewal
+			cd vehicle_registration_renewal
+			truffle init
+			
+		- should now see something like this:
+			
+			$ truffle init
+
+			√ Preparing to download
+			√ Downloading
+			√ Cleaning up temporary files
+			√ Setting up box
+
+			Unbox successful. Sweet!
+
+			Commands:
+
+			  Compile:        truffle compile
+			  Migrate:        truffle migrate
+			  Test contracts: truffle test
+			  
+		- Continue preparation
+		
+			- Create a sample contract
+			
+				- touch contracts/VehicleRegistrationRenewal.sol
+				- vim VehicleRegistrationRenewal.sol
+				
+				pragma solidity ^0.5.0;
+
+				contract VehicleRegistrationRenewal {
+
+					string public car;
+					string public person;
+
+					// constructor 
+					constructor() public {
+						car = "";
+						person = "";
+					}
+
+				}
+		
+			- truffle prepare for migration
+			
+				( ensure you are in migrations dir )
+				
+				touch 2_deploy_contracts.js
+				
+				const VehicleRegistrationRenewal = artifacts.require("VehicleRegistrationRenewal");
+				module.exports = function(deployer) {
+				  deployer.deploy(VehicleRegistrationRenewal);
+				};
+
+			- edit the truffle config
+			
+				vim truffle-config.js
+				
+				-> find development section, under module.exports.network
+				-> ensure that section is not commented out, and matches the following
+				
+					development: {
+						host: "127.0.0.1",     // Localhost (default: none)
+						port: 8545,            // Standard Ethereum port (default: none)
+						network_id: "*",       // Any network (default: none)
+					}
+				
+			- migrate the contract and observe ganache-cli
+				
+				truffle migrate
+				
+			- you should now see the contarct in dev
+			
+				   > transaction hash:    0xbf310eb3ecfc3931f145bbd67c52d62ada1a3bfea954067223cd58b2ea6f7df4
+				   > Blocks: 0            Seconds: 0
+				   > contract address:    0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be
+				   > block number:        3
+				   > block timestamp:     1555549741
+				   > account:             0xf351450EE62d96d9E1471D7b18121180badB30e5
+				   > balance:             999999999999999999999.98799056
+				   > gas used:            273530
+				   > gas price:           20 gwei
+				   > value sent:          0 ETH
+				   > total cost:          0.0054706 ETH
+		
+	- Useful commands:
+		
+		# start ganache-cli
+		ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,1000000000000000000000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000000000000000000000" --allowUnlimitedContractSize
+		
+		# create a stub contract
+		truffle init
+		
+		# compile the contract
+		truffle compile
+		
+		# send it over the network
+		truffle migrate --reset
+		
+		# run the unit tests
+		truffle test
+		
+		# clean and build
+		rm -rf build && truffle compile && truffle migrate
+		
+		# truffle console
+		truffle console
+			VehicleRegistrationRenewal.deployed().then(function(instance) { app = instance })
+			app.address 
+				( should yeild '0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be' alike above )
+			app.car()
+			app.person()
+				( should evaluate to '' )
+				
+		
+	
