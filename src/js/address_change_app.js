@@ -59,7 +59,7 @@ ChangeAddressApp = {
   			var state = registration[2];
   			var zip = registration[3];
   			var addrTemplate = 	"<tr><th>" + street + "</th><td>" + city +  "</td><td>" + state + "</th><td>" + zip +  "</td></tr>"
-  			chngeAddrResults.append(addrTemplate);
+  			chngeAddrResults.html(addrTemplate);
   			loader.hide();
   			content.show();
       	});

@@ -55,15 +55,15 @@ VehicleRegistrationApp = {
       registrationResults.empty();
       if (registrationPresent) {
       	vehicleRegistrationRenewalInstance.registrations(VehicleRegistrationApp.account).then(function(registration) {
-			var vin = registration[0];
-			var year = registration[1];
-			var model = registration[2];
-			var expiringYear = registration[3];
-			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + expiringYear +  "</td></tr>"
-			registrationResults.append(registrationTemplate);
-			loader.hide();
-			reg_block.hide();
-			content.show();
+  			var vin = registration[0];
+  			var year = registration[1];
+  			var model = registration[2];
+  			var expiringYear = registration[3];
+  			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + expiringYear +  "</td></tr>"
+  			registrationResults.html(registrationTemplate);
+  			loader.hide();
+  			reg_block.hide();
+  			content.show();
     	});
       } else {
       	reg_block.show();
