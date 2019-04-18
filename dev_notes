@@ -386,9 +386,10 @@
 			VehicleRegistrationRenewal.deployed().then(function(instance) { app = instance })
 			app.address 
 				( should yeild '0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be' alike above )
-			app.car()
-			app.person()
-				( should evaluate to '' )
-				
+			web3.eth.getCoinbase(function(err, account) { acct = account} )
+			app.registrations(acct)
+			
+		# check account loaded
+		truffle console
 		
 	

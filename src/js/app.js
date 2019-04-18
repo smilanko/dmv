@@ -51,6 +51,7 @@ App = {
 
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
+    	console.log("### we loaded this account:: " + account);
       if (err === null) {
         App.account = account;
         $("#accountAddress").html("Your Account: " + account);
@@ -64,6 +65,8 @@ App = {
     }).then(function(registrationCount) {
       var registrationResults = $("#registrationResults");
       registrationResults.empty();
+
+      console.log("### this is what we ahve in here:: " + registrationCount);
 
       for (var i = 1; i <= registrationCount; i++) {
         vehicleRegistrationRenewalInstance.registrations(i).then(function(registration) {
@@ -83,6 +86,7 @@ App = {
       return vehicleRegistrationRenewalInstance.isRegistrationPresent(App.account);
     }).then(function(isRegistrationPresent) {
       // Do not allow a user to vote
+      console.log("### that jank be present??? " + isRegistrationPresent);
       if(isRegistrationPresent) {
         $('form').hide();
       }
