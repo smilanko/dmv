@@ -30,9 +30,9 @@ contract("VehicleRegistrationRenewal", function(accounts){
 			assert.equal(123, registrations[0], "vin match");
 			assert.equal(1990, registrations[1], "year match");
 			assert.equal("toyota", registrations[2], "model match");
-			assert.equal(accounts[0], registrations[3], "pk match");
-			assert.equal("joe", registrations[4], "fisrt name match");
-			assert.equal("cools", registrations[5], "fisrt name match");
+			assert.equal("joe", registrations[3], "fisrt name match");
+			assert.equal("cools", registrations[4], "last name match");
+			assert.equal(new Date().getFullYear(), registrations[5], "expiring year match");
 		});
 	});
 

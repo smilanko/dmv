@@ -68,11 +68,10 @@ App = {
 			var vin = registration[0];
 			var year = registration[1];
 			var model = registration[2];
-			var owner_pk = registration[3];
-			var firstName = registration[4];
-			var lastName = registration[5];
-			var expiringYear = registration[6];
-			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + owner_pk + "</th><td>" + firstName +  "</th><td>" + lastName + "</th><td>" + expiringYear +  "</td></tr>"
+			var firstName = registration[3];
+			var lastName = registration[4];
+			var expiringYear = registration[5];
+			var registrationTemplate = 	"<tr><th>" + vin + "</th><td>" + year +  "</td><td>" + model + "</th><td>" + firstName +  "</th><td>" + lastName + "</th><td>" + expiringYear +  "</td></tr>"
 			registrationResults.append(registrationTemplate);
 			loader.hide();
 			reg_block.hide();
