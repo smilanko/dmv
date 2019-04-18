@@ -9,6 +9,7 @@ contract VehicleRegistrationRenewal {
 		address owner_pk;
 		string owner_first_name;
 		string owner_last_name;
+		uint expiring_year;
 	}
 
 	mapping(address => Registration) public registrations;
@@ -17,21 +18,20 @@ contract VehicleRegistrationRenewal {
 
 	// registration event
     event registrationEvent (
-        address indexed _vin
+        uint indexed _vin
     );
 
-	constructor() public {
-		// nothing for now
-	}
-
 	function isRegistrationPresent() public view returns (bool) {
-		return registrations[msg.sender].car_vin > 0;
+		return registrations[msg.sender].expiring_year > 0;
 	}
 
 	function processRegistration(uint _vin, uint _year, string memory _model, string memory _firstName, string memory _lastName) public {
 		registrationCount++;
-		registrations[msg.sender] = Registration(_vin, _year, _model, msg.sender, _firstName ,_lastName);
-		emit registrationEvent(msg.sender);
+		if (!isRegistrationPresent()) {
+			uint _expiring_year = (now / 31536000) + 1970;
+			registrations[msg.sender] = Registration(_vin, _year, _model, msg.sender, _firstName ,_lastName, _expiring_year);
+			emit registrationEvent(_vin);
+		}
 	}
 
 }

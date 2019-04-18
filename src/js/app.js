@@ -15,12 +15,10 @@ App = {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
-      console.log("### metamask porivided us with jank");
     } else {
       // Specify default instance if no web3 instance provided
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
       web3 = new Web3(App.web3Provider);
-      console.log("##### we manually loaded");
     }
     return App.initContract();
   },
@@ -54,6 +52,8 @@ App = {
     loader.show();
     content.hide();
 
+    console.log("### we are calling the render");
+
 
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
@@ -62,13 +62,14 @@ App = {
       }
     });
 
-    // Load contract data
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       vehicleRegistrationRenewalInstance = instance;
       return vehicleRegistrationRenewalInstance.isRegistrationPresent({ from: App.account });
     }).then(function(registrationPresent) {
       var registrationResults = $("#registrationResults");
+      console.log("#### before it is:: " + registrationResults.html());
       registrationResults.empty();
+      console.log("##### after it is :: " + registrationResults.html());
       if (registrationPresent) {
       	vehicleRegistrationRenewalInstance.registrations(App.account).then(function(registration) {
 			var vin = registration[0];
