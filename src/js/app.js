@@ -1,24 +1,14 @@
 App = {
+
   web3Provider: null,
+  webDriver: null,
   contracts: {},
   account: '0x0',
 
-  init: function() {
-  	account = '0x0';
-    return App.initWeb3();
-  },
-
-  initWeb3: function() {
-    if (typeof web3 !== 'undefined') {
-      // If a web3 instance is already provided by Meta Mask.
-      App.web3Provider = web3.currentProvider;
-      web3 = new Web3(web3.currentProvider);
-    } else {
-      // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
-      web3 = new Web3(App.web3Provider);
-    }
-    return App.initContract();
+  configureBase: function() {
+  	App.web3Provider = BaseApp.getProvider();
+  	App.webDriver = BaseApp.getWebDriver();
+  	return App.initContract();
   },
 
   initContract: function() {
@@ -28,6 +18,7 @@ App = {
       App.listenForEvents();
       return App.render();
     });
+
   },
 
   // Listen for events emitted from the contract
@@ -50,7 +41,7 @@ App = {
     loader.show();
     content.hide();
 
-    web3.eth.getCoinbase(function(err, account) {
+    App.webDriver.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
         $("#accountAddress").html("Your Account: " + account);
@@ -76,7 +67,6 @@ App = {
 			loader.hide();
 			reg_block.hide();
 			content.show();
-
     	});
       } else {
       	reg_block.show();
@@ -97,7 +87,6 @@ App = {
     App.contracts.VehicleRegistrationRenewal.deployed().then(function(instance) {
       return instance.processRegistration(vin, year, model, firstName, lastName, { from: App.account, gas:3000000 });
     }).then(function(result) {
-      // wait for the registration to show
       $("#content").hide();
       $("#loader").show();
       $("#add_registration").hide();
@@ -109,6 +98,6 @@ App = {
 
 $(function() {
   $(window).load(function() {
-    App.init();
+    App.configureBase();
   });
 });
