@@ -111,7 +111,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x52ac8923"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_vin\",\"type\":\"uint256\"},{\"name\":\"_year\",\"type\":\"uint256\"},{\"name\":\"_model\",\"type\":\"string\"}],\"name\":\"processRegistration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registrationCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"reportSoldTraded\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isRegistrationPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registrations\",\"outputs\":[{\"name\":\"car_vin\",\"type\":\"uint256\"},{\"name\":\"car_year\",\"type\":\"uint256\"},{\"name\":\"car_model\",\"type\":\"string\"},{\"name\":\"expiring_year\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_vin\",\"type\":\"uint256\"}],\"name\":\"registrationEvent\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":\"VehicleRegistrationRenewal\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VehicleRegistrationRenewal.sol\":{\"keccak256\":\"0x7415b777a4eb2d21f99c05bf124be6613a8ecbc416efb94a7e21cd9ad99f4295\",\"urls\":[\"bzzr://2b1e54017fb8271b4763a5d135e565833bdddcb744c4e27959994439c0dba14f\"]}},\"version\":1}",
@@ -4060,15 +4061,15 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
-    "1555603614686": {
+    "1555629167092": {
       "events": {},
       "links": {},
-      "address": "0x97Ea7Ec1A8986404353b36D04d8BB54A5EE05731",
-      "transactionHash": "0xb80193afe9635520340ca5622a2e22aa2d904a9737ea2f811289079be132e3ab"
+      "address": "0xCd1051aee88227eef0A458731111821f28c72990",
+      "transactionHash": "0xd7081fe97047d956844215f88e8bb9bb9401ca0f5db386b435c44f64c8de0b34"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T23:50:59.965Z",
+  "updatedAt": "2019-04-19T00:09:19.504Z",
   "devdoc": {
     "methods": {}
   },
