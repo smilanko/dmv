@@ -17,7 +17,7 @@ contract VirtualRecord {
     	return virtualRecord[_citizen].numberOfTickets > 0 || virtualRecord[_citizen].numberOfAccidents > 0;
 	}
 
-	function addVirtualRecord(address _citizen, bool _was_accident, bool _was_ticket) payable public {
+	function addVirtualRecord(address _citizen, bool _was_accident, bool _was_ticket) public {
         if (_was_accident) {
             uint accidentCount = virtualRecord[_citizen].numberOfAccidents + 1;
             virtualRecord[_citizen] = Record(virtualRecord[_citizen].numberOfTickets, accidentCount, msg.sender);
