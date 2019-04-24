@@ -21,15 +21,11 @@ contract PracticeExam {
 
 	function purchaseExam(address payable _addr) payable public {
 		if (!isExamPurchased()) {
-			// take the money
 			require(msg.value == examCost);
         	_addr.transfer(msg.value);
-        	// display the practice questions
         	questions[msg.sender] = PracticeQuestion("What color is the stop sign?", "Red");
         	purchaseList[msg.sender] = true;
 			emit practiceQuestionsPurchased(msg.sender);
 		}
-		
 	}
-
 }
