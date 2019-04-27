@@ -13,6 +13,10 @@ contract DrivingLicenseRenew {
         address indexed _ssn
     );
 
+    function isRenewalPresent() public view returns (bool) {
+    	return renewals[msg.sender].expiration > 0;
+	}
+
 	function renewLicense() public {
 		renewCount++;
 		uint _extension_period = 10;

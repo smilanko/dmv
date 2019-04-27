@@ -76,14 +76,14 @@
     "absolutePath": "/C/dev/projects/dmv/contracts/Titling.sol",
     "exportedSymbols": {
       "Titling": [
-        593
+        607
       ]
     },
-    "id": 594,
+    "id": 608,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 542,
+        "id": 556,
         "literals": [
           "solidity",
           "^",
@@ -99,23 +99,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 593,
+        "id": 607,
         "linearizedBaseContracts": [
-          593
+          607
         ],
         "name": "Titling",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Titling.Title",
-            "id": 545,
+            "id": 559,
             "members": [
               {
                 "constant": false,
-                "id": 544,
+                "id": 558,
                 "name": "vin",
                 "nodeType": "VariableDeclaration",
-                "scope": 545,
+                "scope": 559,
                 "src": "77:8:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -124,7 +124,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 543,
+                  "id": 557,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "77:4:6",
@@ -139,27 +139,27 @@
             ],
             "name": "Title",
             "nodeType": "StructDefinition",
-            "scope": 593,
+            "scope": 607,
             "src": "53:40:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 549,
+            "id": 563,
             "name": "carTitles",
             "nodeType": "VariableDeclaration",
-            "scope": 593,
+            "scope": 607,
             "src": "98:42:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
               "typeString": "mapping(address => struct Titling.Title)"
             },
             "typeName": {
-              "id": 548,
+              "id": 562,
               "keyType": {
-                "id": 546,
+                "id": 560,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "106:7:6",
@@ -171,18 +171,18 @@
               "nodeType": "Mapping",
               "src": "98:25:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                 "typeString": "mapping(address => struct Titling.Title)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 547,
+                "id": 561,
                 "name": "Title",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 545,
+                "referencedDeclaration": 559,
                 "src": "117:5:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Title_$545_storage_ptr",
+                  "typeIdentifier": "t_struct$_Title_$559_storage_ptr",
                   "typeString": "struct Titling.Title"
                 }
               }
@@ -193,20 +193,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 553,
+            "id": 567,
             "name": "carTitled",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 552,
+              "id": 566,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 551,
+                  "id": 565,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 553,
+                  "scope": 567,
                   "src": "173:22:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -215,7 +215,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 550,
+                    "id": 564,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "173:7:6",
@@ -235,7 +235,7 @@
           },
           {
             "body": {
-              "id": 566,
+              "id": 580,
               "nodeType": "Block",
               "src": "261:55:6",
               "statements": [
@@ -246,7 +246,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 564,
+                    "id": 578,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -257,34 +257,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 558,
+                          "id": 572,
                           "name": "carTitles",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 549,
+                          "referencedDeclaration": 563,
                           "src": "279:9:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                             "typeString": "mapping(address => struct Titling.Title storage ref)"
                           }
                         },
-                        "id": 561,
+                        "id": 575,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 559,
+                            "id": 573,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 866,
+                            "referencedDeclaration": 880,
                             "src": "289:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 560,
+                          "id": 574,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -305,18 +305,18 @@
                         "nodeType": "IndexAccess",
                         "src": "279:21:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Title_$545_storage",
+                          "typeIdentifier": "t_struct$_Title_$559_storage",
                           "typeString": "struct Titling.Title storage ref"
                         }
                       },
-                      "id": 562,
+                      "id": 576,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "vin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 544,
+                      "referencedDeclaration": 558,
                       "src": "279:25:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -328,7 +328,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 563,
+                      "id": 577,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -349,36 +349,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 557,
-                  "id": 565,
+                  "functionReturnParameters": 571,
+                  "id": 579,
                   "nodeType": "Return",
                   "src": "272:36:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 567,
+            "id": 581,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCarTitled",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 554,
+              "id": 568,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "231:2:6"
             },
             "returnParameters": {
-              "id": 557,
+              "id": 571,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 556,
+                  "id": 570,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 567,
+                  "scope": 581,
                   "src": "255:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -387,7 +387,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 555,
+                    "id": 569,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "255:4:6",
@@ -402,7 +402,7 @@
               ],
               "src": "254:6:6"
             },
-            "scope": 593,
+            "scope": 607,
             "src": "211:105:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -410,14 +410,14 @@
           },
           {
             "body": {
-              "id": 591,
+              "id": 605,
               "nodeType": "Block",
               "src": "360:141:6",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 574,
+                    "id": 588,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -431,18 +431,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 572,
+                        "id": 586,
                         "name": "isCarTitled",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 567,
+                        "referencedDeclaration": 581,
                         "src": "376:11:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                           "typeString": "function () view returns (bool)"
                         }
                       },
-                      "id": 573,
+                      "id": 587,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -462,18 +462,18 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 590,
+                  "id": 604,
                   "nodeType": "IfStatement",
                   "src": "371:123:6",
                   "trueBody": {
-                    "id": 589,
+                    "id": 603,
                     "nodeType": "Block",
                     "src": "391:103:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 582,
+                          "id": 596,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -482,34 +482,34 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 575,
+                              "id": 589,
                               "name": "carTitles",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 549,
+                              "referencedDeclaration": 563,
                               "src": "406:9:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                                 "typeString": "mapping(address => struct Titling.Title storage ref)"
                               }
                             },
-                            "id": 578,
+                            "id": 592,
                             "indexExpression": {
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 576,
+                                "id": 590,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 866,
+                                "referencedDeclaration": 880,
                                 "src": "416:3:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 577,
+                              "id": 591,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -530,7 +530,7 @@
                             "nodeType": "IndexAccess",
                             "src": "406:21:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Title_$545_storage",
+                              "typeIdentifier": "t_struct$_Title_$559_storage",
                               "typeString": "struct Titling.Title storage ref"
                             }
                           },
@@ -541,11 +541,11 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 580,
+                                "id": 594,
                                 "name": "_vin",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 569,
+                                "referencedDeclaration": 583,
                                 "src": "436:4:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -560,18 +560,18 @@
                                   "typeString": "uint256"
                                 }
                               ],
-                              "id": 579,
+                              "id": 593,
                               "name": "Title",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 545,
+                              "referencedDeclaration": 559,
                               "src": "430:5:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Title_$545_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Title_$559_storage_ptr_$",
                                 "typeString": "type(struct Titling.Title storage pointer)"
                               }
                             },
-                            "id": 581,
+                            "id": 595,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -581,17 +581,17 @@
                             "nodeType": "FunctionCall",
                             "src": "430:11:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Title_$545_memory",
+                              "typeIdentifier": "t_struct$_Title_$559_memory",
                               "typeString": "struct Titling.Title memory"
                             }
                           },
                           "src": "406:35:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Title_$545_storage",
+                            "typeIdentifier": "t_struct$_Title_$559_storage",
                             "typeString": "struct Titling.Title storage ref"
                           }
                         },
-                        "id": 583,
+                        "id": 597,
                         "nodeType": "ExpressionStatement",
                         "src": "406:35:6"
                       },
@@ -603,18 +603,18 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 585,
+                                "id": 599,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 866,
+                                "referencedDeclaration": 880,
                                 "src": "471:3:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 586,
+                              "id": 600,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -636,18 +636,18 @@
                                 "typeString": "address payable"
                               }
                             ],
-                            "id": 584,
+                            "id": 598,
                             "name": "carTitled",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 553,
+                            "referencedDeclaration": 567,
                             "src": "461:9:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 587,
+                          "id": 601,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -661,7 +661,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 588,
+                        "id": 602,
                         "nodeType": "EmitStatement",
                         "src": "456:26:6"
                       }
@@ -671,22 +671,22 @@
               ]
             },
             "documentation": null,
-            "id": 592,
+            "id": 606,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "titleCar",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 570,
+              "id": 584,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 569,
+                  "id": 583,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 592,
+                  "scope": 606,
                   "src": "342:9:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -695,7 +695,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 568,
+                    "id": 582,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "342:4:6",
@@ -711,19 +711,19 @@
               "src": "341:11:6"
             },
             "returnParameters": {
-              "id": 571,
+              "id": 585,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "360:0:6"
             },
-            "scope": 593,
+            "scope": 607,
             "src": "324:177:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 594,
+        "scope": 608,
         "src": "27:479:6"
       }
     ],
@@ -733,14 +733,14 @@
     "absolutePath": "/C/dev/projects/dmv/contracts/Titling.sol",
     "exportedSymbols": {
       "Titling": [
-        593
+        607
       ]
     },
-    "id": 594,
+    "id": 608,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 542,
+        "id": 556,
         "literals": [
           "solidity",
           "^",
@@ -756,23 +756,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 593,
+        "id": 607,
         "linearizedBaseContracts": [
-          593
+          607
         ],
         "name": "Titling",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Titling.Title",
-            "id": 545,
+            "id": 559,
             "members": [
               {
                 "constant": false,
-                "id": 544,
+                "id": 558,
                 "name": "vin",
                 "nodeType": "VariableDeclaration",
-                "scope": 545,
+                "scope": 559,
                 "src": "77:8:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -781,7 +781,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 543,
+                  "id": 557,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "77:4:6",
@@ -796,27 +796,27 @@
             ],
             "name": "Title",
             "nodeType": "StructDefinition",
-            "scope": 593,
+            "scope": 607,
             "src": "53:40:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 549,
+            "id": 563,
             "name": "carTitles",
             "nodeType": "VariableDeclaration",
-            "scope": 593,
+            "scope": 607,
             "src": "98:42:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
               "typeString": "mapping(address => struct Titling.Title)"
             },
             "typeName": {
-              "id": 548,
+              "id": 562,
               "keyType": {
-                "id": 546,
+                "id": 560,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "106:7:6",
@@ -828,18 +828,18 @@
               "nodeType": "Mapping",
               "src": "98:25:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                 "typeString": "mapping(address => struct Titling.Title)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 547,
+                "id": 561,
                 "name": "Title",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 545,
+                "referencedDeclaration": 559,
                 "src": "117:5:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Title_$545_storage_ptr",
+                  "typeIdentifier": "t_struct$_Title_$559_storage_ptr",
                   "typeString": "struct Titling.Title"
                 }
               }
@@ -850,20 +850,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 553,
+            "id": 567,
             "name": "carTitled",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 552,
+              "id": 566,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 551,
+                  "id": 565,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 553,
+                  "scope": 567,
                   "src": "173:22:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -872,7 +872,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 550,
+                    "id": 564,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "173:7:6",
@@ -892,7 +892,7 @@
           },
           {
             "body": {
-              "id": 566,
+              "id": 580,
               "nodeType": "Block",
               "src": "261:55:6",
               "statements": [
@@ -903,7 +903,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 564,
+                    "id": 578,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -914,34 +914,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 558,
+                          "id": 572,
                           "name": "carTitles",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 549,
+                          "referencedDeclaration": 563,
                           "src": "279:9:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                             "typeString": "mapping(address => struct Titling.Title storage ref)"
                           }
                         },
-                        "id": 561,
+                        "id": 575,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 559,
+                            "id": 573,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 866,
+                            "referencedDeclaration": 880,
                             "src": "289:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 560,
+                          "id": 574,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -962,18 +962,18 @@
                         "nodeType": "IndexAccess",
                         "src": "279:21:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Title_$545_storage",
+                          "typeIdentifier": "t_struct$_Title_$559_storage",
                           "typeString": "struct Titling.Title storage ref"
                         }
                       },
-                      "id": 562,
+                      "id": 576,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "vin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 544,
+                      "referencedDeclaration": 558,
                       "src": "279:25:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -985,7 +985,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 563,
+                      "id": 577,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1006,36 +1006,36 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 557,
-                  "id": 565,
+                  "functionReturnParameters": 571,
+                  "id": 579,
                   "nodeType": "Return",
                   "src": "272:36:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 567,
+            "id": 581,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCarTitled",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 554,
+              "id": 568,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "231:2:6"
             },
             "returnParameters": {
-              "id": 557,
+              "id": 571,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 556,
+                  "id": 570,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 567,
+                  "scope": 581,
                   "src": "255:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1044,7 +1044,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 555,
+                    "id": 569,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "255:4:6",
@@ -1059,7 +1059,7 @@
               ],
               "src": "254:6:6"
             },
-            "scope": 593,
+            "scope": 607,
             "src": "211:105:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -1067,14 +1067,14 @@
           },
           {
             "body": {
-              "id": 591,
+              "id": 605,
               "nodeType": "Block",
               "src": "360:141:6",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 574,
+                    "id": 588,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1088,18 +1088,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 572,
+                        "id": 586,
                         "name": "isCarTitled",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 567,
+                        "referencedDeclaration": 581,
                         "src": "376:11:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
                           "typeString": "function () view returns (bool)"
                         }
                       },
-                      "id": 573,
+                      "id": 587,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1119,18 +1119,18 @@
                     }
                   },
                   "falseBody": null,
-                  "id": 590,
+                  "id": 604,
                   "nodeType": "IfStatement",
                   "src": "371:123:6",
                   "trueBody": {
-                    "id": 589,
+                    "id": 603,
                     "nodeType": "Block",
                     "src": "391:103:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 582,
+                          "id": 596,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1139,34 +1139,34 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 575,
+                              "id": 589,
                               "name": "carTitles",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 549,
+                              "referencedDeclaration": 563,
                               "src": "406:9:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$545_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Title_$559_storage_$",
                                 "typeString": "mapping(address => struct Titling.Title storage ref)"
                               }
                             },
-                            "id": 578,
+                            "id": 592,
                             "indexExpression": {
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 576,
+                                "id": 590,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 866,
+                                "referencedDeclaration": 880,
                                 "src": "416:3:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 577,
+                              "id": 591,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1187,7 +1187,7 @@
                             "nodeType": "IndexAccess",
                             "src": "406:21:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Title_$545_storage",
+                              "typeIdentifier": "t_struct$_Title_$559_storage",
                               "typeString": "struct Titling.Title storage ref"
                             }
                           },
@@ -1198,11 +1198,11 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 580,
+                                "id": 594,
                                 "name": "_vin",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 569,
+                                "referencedDeclaration": 583,
                                 "src": "436:4:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -1217,18 +1217,18 @@
                                   "typeString": "uint256"
                                 }
                               ],
-                              "id": 579,
+                              "id": 593,
                               "name": "Title",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 545,
+                              "referencedDeclaration": 559,
                               "src": "430:5:6",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Title_$545_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Title_$559_storage_ptr_$",
                                 "typeString": "type(struct Titling.Title storage pointer)"
                               }
                             },
-                            "id": 581,
+                            "id": 595,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1238,17 +1238,17 @@
                             "nodeType": "FunctionCall",
                             "src": "430:11:6",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Title_$545_memory",
+                              "typeIdentifier": "t_struct$_Title_$559_memory",
                               "typeString": "struct Titling.Title memory"
                             }
                           },
                           "src": "406:35:6",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Title_$545_storage",
+                            "typeIdentifier": "t_struct$_Title_$559_storage",
                             "typeString": "struct Titling.Title storage ref"
                           }
                         },
-                        "id": 583,
+                        "id": 597,
                         "nodeType": "ExpressionStatement",
                         "src": "406:35:6"
                       },
@@ -1260,18 +1260,18 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 585,
+                                "id": 599,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 866,
+                                "referencedDeclaration": 880,
                                 "src": "471:3:6",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 586,
+                              "id": 600,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1293,18 +1293,18 @@
                                 "typeString": "address payable"
                               }
                             ],
-                            "id": 584,
+                            "id": 598,
                             "name": "carTitled",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 553,
+                            "referencedDeclaration": 567,
                             "src": "461:9:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 587,
+                          "id": 601,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1318,7 +1318,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 588,
+                        "id": 602,
                         "nodeType": "EmitStatement",
                         "src": "456:26:6"
                       }
@@ -1328,22 +1328,22 @@
               ]
             },
             "documentation": null,
-            "id": 592,
+            "id": 606,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "titleCar",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 570,
+              "id": 584,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 569,
+                  "id": 583,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 592,
+                  "scope": 606,
                   "src": "342:9:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1352,7 +1352,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 568,
+                    "id": 582,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "342:4:6",
@@ -1368,19 +1368,19 @@
               "src": "341:11:6"
             },
             "returnParameters": {
-              "id": 571,
+              "id": 585,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "360:0:6"
             },
-            "scope": 593,
+            "scope": 607,
             "src": "324:177:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 594,
+        "scope": 608,
         "src": "27:479:6"
       }
     ],
@@ -1394,12 +1394,12 @@
     "1556137462886": {
       "events": {},
       "links": {},
-      "address": "0x65885B8ca87fA08B3264bD084B618C4027577FE9",
-      "transactionHash": "0x1555635b9e8791beef6fef302260774064c3366b74f53cbe5275356db64090ab"
+      "address": "0x0FCE9820a7921397C03899493AD47645777aBde6",
+      "transactionHash": "0x8fba8fa8f62087bce86ab58f6a4f02d42b06890da0b54953a0136ef3ce1ff9c2"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-27T19:54:59.513Z",
+  "updatedAt": "2019-04-27T20:37:26.317Z",
   "devdoc": {
     "methods": {}
   },

@@ -16,6 +16,9 @@ contract("DrivingLicenseRenew", function(accounts){
 	it("renewal processed", function() {
 		return DrivingLicenseRenew.deployed().then(function(instance) {
 			renewalInstance = instance;
+			return renewalInstance.isRenewalPresent({ from : accounts[0] });
+		}).then(function(renewalPresent){
+			assert.isFalse(renewalPresent, "no renewal exists"); 
 			return renewalInstance.renewLicense({ from : accounts[0] });
 		}).then(function(renewalCount) {
 			assert(renewalCount, "we have a renewal");
@@ -25,6 +28,9 @@ contract("DrivingLicenseRenew", function(accounts){
 			return renewalInstance.renewCount();
 		}).then(function(reCount) {
 			assert.equal(reCount, 1);
+			return renewalInstance.isRenewalPresent({ from : accounts[0] });
+		}).then(function(renewalPresent) {
+			assert.isTrue(renewalPresent, "renewal now exists");
 		});
 	});
 
