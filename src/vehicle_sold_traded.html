@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMV</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/base_app.js"></script>
+    <script src="js/vehicle_sold_traded_app.js"></script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container" style="width: 650px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Vehicle registration renewal</h1>
+                <hr/>
+                <br/>
+                <div id="loader">
+                    <p class="text-center">No vehicle registrations present currently...</p>
+                </div>
+                <div id="content" style="display: none;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Vin</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Model</th>
+                                <th scope="col">Expiring Year</th>
+                                <th scope="col">
+                                    <form onSubmit="VehicleSoldTradedApp.reportSoldTraded(); return false;">
+                                        <button type="submit" onclick="" class="btn btn-primary">Sold / Traded</button>
+                                    </form>
+                                    
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrationResults">
+                        </tbody>
+                    </table>
+                </div>
+                <p id="accountAddress" class="text-center"></p>
+                <p id="recipient" class="text-center">Car to be sold / traded to: 0x24873b56e520e905a263d7546d7d26165824dd0d </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+          $(window).load(function() {
+            $("#nav-placeholder").load("menu.html");
+          });
+        });
+    </script>
+
+</body>
+
+</html>
