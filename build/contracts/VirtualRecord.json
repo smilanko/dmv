@@ -89,22 +89,22 @@
   "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"virtualRecord\",\"outputs\":[{\"name\":\"numberOfTickets\",\"type\":\"uint256\"},{\"name\":\"numberOfAccidents\",\"type\":\"uint256\"},{\"name\":\"updatedByOfficer\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_citizen\",\"type\":\"address\"}],\"name\":\"isExistsVirtualRecord\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_citizen\",\"type\":\"address\"},{\"name\":\"_was_accident\",\"type\":\"bool\"},{\"name\":\"_was_ticket\",\"type\":\"bool\"}],\"name\":\"addVirtualRecord\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"recordUpdated\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/VirtualRecord.sol\":\"VirtualRecord\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/VirtualRecord.sol\":{\"keccak256\":\"0x2c9801498008d35fd3bd2ee43c853baaf3c58a9aa34eb2a64270ff811ed38d1c\",\"urls\":[\"bzzr://38dd09b00f52e3a8e053cb13e0a056abb69a4ec7df12fdaaf5ddf03d617f02b4\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b50610627806100206000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063acc8fdcd1461005c578063e1748caf146100fb578063f892b69f14610164575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101cd565b604051808481526020018381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001935050505060405180910390f35b34801561010757600080fd5b5061014a6004803603602081101561011e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610217565b604051808215151515815260200191505060405180910390f35b34801561017057600080fd5b506101cb6004803603606081101561018757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291908035151590602001909291905050506102b0565b005b60006020528060005260406000206000915090508060000154908060010154908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905083565b6000806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411806102a9575060008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010154115b9050919050565b811561045357600060016000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101540190506060604051908101604052806000808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015481526020018281526020013373ffffffffffffffffffffffffffffffffffffffff168152506000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050508373ffffffffffffffffffffffffffffffffffffffff167fbe49f6e991e75fed877a1db4cfa41cbffa39ca50a81d6ea1cafc5b7409e6025760405160405180910390a2505b80156105f657600060016000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001540190506060604051908101604052808281526020016000808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015481526020013373ffffffffffffffffffffffffffffffffffffffff168152506000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050508373ffffffffffffffffffffffffffffffffffffffff167fbe49f6e991e75fed877a1db4cfa41cbffa39ca50a81d6ea1cafc5b7409e6025760405160405180910390a2505b50505056fea165627a7a723058200a1a753a8ea0e6d988a31d41fe305158b80f53a8aed30ed2e052be0b9d7dfc710029",
   "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063acc8fdcd1461005c578063e1748caf146100fb578063f892b69f14610164575b600080fd5b34801561006857600080fd5b506100ab6004803603602081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101cd565b604051808481526020018381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001935050505060405180910390f35b34801561010757600080fd5b5061014a6004803603602081101561011e57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610217565b604051808215151515815260200191505060405180910390f35b34801561017057600080fd5b506101cb6004803603606081101561018757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291908035151590602001909291905050506102b0565b005b60006020528060005260406000206000915090508060000154908060010154908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905083565b6000806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411806102a9575060008060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060010154115b9050919050565b811561045357600060016000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101540190506060604051908101604052806000808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015481526020018281526020013373ffffffffffffffffffffffffffffffffffffffff168152506000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050508373ffffffffffffffffffffffffffffffffffffffff167fbe49f6e991e75fed877a1db4cfa41cbffa39ca50a81d6ea1cafc5b7409e6025760405160405180910390a2505b80156105f657600060016000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001540190506060604051908101604052808281526020016000808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001015481526020013373ffffffffffffffffffffffffffffffffffffffff168152506000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001556020820151816001015560408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050508373ffffffffffffffffffffffffffffffffffffffff167fbe49f6e991e75fed877a1db4cfa41cbffa39ca50a81d6ea1cafc5b7409e6025760405160405180910390a2505b50505056fea165627a7a723058200a1a753a8ea0e6d988a31d41fe305158b80f53a8aed30ed2e052be0b9d7dfc710029",
-  "sourceMap": "27:1095:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:1095:7;;;;;;;",
-  "deployedSourceMap": "27:1095:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;171:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:47:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;171:47:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;293:188;;8:9:-1;5:2;;;30:1;27;20:12;5:2;293:188:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;293:188:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;486:633;;8:9:-1;5:2;;;30:1;27;20:12;5:2;486:633:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;486:633:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;171:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;293:188::-;363:4;426:1;384:13;:23;398:8;384:23;;;;;;;;;;;;;;;:39;;;:43;:92;;;;475:1;431:13;:23;445:8;431:23;;;;;;;;;;;;;;;:41;;;:45;384:92;377:99;;293:188;;;:::o;486:633::-;590:13;586:270;;;620:18;685:1;641:13;:23;655:8;641:23;;;;;;;;;;;;;;;:41;;;:45;620:66;;727:74;;;;;;;;;734:13;:23;748:8;734:23;;;;;;;;;;;;;;;:39;;;727:74;;;;775:13;727:74;;;;790:10;727:74;;;;;701:13;:23;715:8;701:23;;;;;;;;;;;;;;;:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;835:8;821:23;;;;;;;;;;;;586:270;;870:11;866:249;;;898:16;959:1;917:13;:23;931:8;917:23;;;;;;;;;;;;;;;:39;;;:43;898:62;;1001:74;;;;;;;;;1008:11;1001:74;;;;1021:13;:23;1035:8;1021:23;;;;;;;;;;;;;;;:41;;;1001:74;;;;1064:10;1001:74;;;;;975:13;:23;989:8;975:23;;;;;;;;;;;;;;;:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1100:8;1086:23;;;;;;;;;;;;866:249;;486:633;;;:::o",
+  "sourceMap": "27:1095:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:1095:8;;;;;;;",
+  "deployedSourceMap": "27:1095:8:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;171:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:47:8;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;171:47:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;293:188;;8:9:-1;5:2;;;30:1;27;20:12;5:2;293:188:8;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;293:188:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;486:633;;8:9:-1;5:2;;;30:1;27;20:12;5:2;486:633:8;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;486:633:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;171:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;293:188::-;363:4;426:1;384:13;:23;398:8;384:23;;;;;;;;;;;;;;;:39;;;:43;:92;;;;475:1;431:13;:23;445:8;431:23;;;;;;;;;;;;;;;:41;;;:45;384:92;377:99;;293:188;;;:::o;486:633::-;590:13;586:270;;;620:18;685:1;641:13;:23;655:8;641:23;;;;;;;;;;;;;;;:41;;;:45;620:66;;727:74;;;;;;;;;734:13;:23;748:8;734:23;;;;;;;;;;;;;;;:39;;;727:74;;;;775:13;727:74;;;;790:10;727:74;;;;;701:13;:23;715:8;701:23;;;;;;;;;;;;;;;:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;835:8;821:23;;;;;;;;;;;;586:270;;870:11;866:249;;;898:16;959:1;917:13;:23;931:8;917:23;;;;;;;;;;;;;;;:39;;;:43;898:62;;1001:74;;;;;;;;;1008:11;1001:74;;;;1021:13;:23;1035:8;1021:23;;;;;;;;;;;;;;;:41;;;1001:74;;;;1064:10;1001:74;;;;;975:13;:23;989:8;975:23;;;;;;;;;;;;;;;:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1100:8;1086:23;;;;;;;;;;;;866:249;;486:633;;;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\ncontract VirtualRecord {\r\n\r\n\tstruct Record {\r\n\t\tuint numberOfTickets;\r\n        uint numberOfAccidents;\r\n        address updatedByOfficer;\r\n\t}\r\n\tmapping(address => Record) public virtualRecord;\r\n\r\n    event recordUpdated (\r\n    \taddress indexed _owner\r\n    );\r\n\r\n    function isExistsVirtualRecord(address _citizen) public view returns (bool) {\r\n    \treturn virtualRecord[_citizen].numberOfTickets > 0 || virtualRecord[_citizen].numberOfAccidents > 0;\r\n\t}\r\n\r\n\tfunction addVirtualRecord(address _citizen, bool _was_accident, bool _was_ticket) public {\r\n        if (_was_accident) {\r\n            uint accidentCount = virtualRecord[_citizen].numberOfAccidents + 1;\r\n            virtualRecord[_citizen] = Record(virtualRecord[_citizen].numberOfTickets, accidentCount, msg.sender);\r\n            emit recordUpdated(_citizen);\r\n        }\r\n        if (_was_ticket) {\r\n            uint ticketCount = virtualRecord[_citizen].numberOfTickets + 1;\r\n            virtualRecord[_citizen] = Record(ticketCount, virtualRecord[_citizen].numberOfAccidents, msg.sender);\r\n\t\t\temit recordUpdated(_citizen);\r\n\t\t}\r\n\t}\r\n}",
   "sourcePath": "C:/dev/projects/dmv/contracts/VirtualRecord.sol",
   "ast": {
     "absolutePath": "/C/dev/projects/dmv/contracts/VirtualRecord.sol",
     "exportedSymbols": {
       "VirtualRecord": [
-        798
+        851
       ]
     },
-    "id": 799,
+    "id": 852,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 690,
+        "id": 743,
         "literals": [
           "solidity",
           "^",
@@ -112,7 +112,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:7"
+        "src": "0:23:8"
       },
       {
         "baseContracts": [],
@@ -120,24 +120,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 798,
+        "id": 851,
         "linearizedBaseContracts": [
-          798
+          851
         ],
         "name": "VirtualRecord",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "VirtualRecord.Record",
-            "id": 697,
+            "id": 750,
             "members": [
               {
                 "constant": false,
-                "id": 692,
+                "id": 745,
                 "name": "numberOfTickets",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "75:20:7",
+                "scope": 750,
+                "src": "75:20:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -145,10 +145,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 691,
+                  "id": 744,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "75:4:7",
+                  "src": "75:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -159,11 +159,11 @@
               },
               {
                 "constant": false,
-                "id": 694,
+                "id": 747,
                 "name": "numberOfAccidents",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "106:22:7",
+                "scope": 750,
+                "src": "106:22:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -171,10 +171,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 693,
+                  "id": 746,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "106:4:7",
+                  "src": "106:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -185,11 +185,11 @@
               },
               {
                 "constant": false,
-                "id": 696,
+                "id": 749,
                 "name": "updatedByOfficer",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "139:24:7",
+                "scope": 750,
+                "src": "139:24:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -197,10 +197,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 695,
+                  "id": 748,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "139:7:7",
+                  "src": "139:7:8",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -213,50 +213,50 @@
             ],
             "name": "Record",
             "nodeType": "StructDefinition",
-            "scope": 798,
-            "src": "56:112:7",
+            "scope": 851,
+            "src": "56:112:8",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 701,
+            "id": 754,
             "name": "virtualRecord",
             "nodeType": "VariableDeclaration",
-            "scope": 798,
-            "src": "171:47:7",
+            "scope": 851,
+            "src": "171:47:8",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
               "typeString": "mapping(address => struct VirtualRecord.Record)"
             },
             "typeName": {
-              "id": 700,
+              "id": 753,
               "keyType": {
-                "id": 698,
+                "id": 751,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "179:7:7",
+                "src": "179:7:8",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "171:26:7",
+              "src": "171:26:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                 "typeString": "mapping(address => struct VirtualRecord.Record)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 699,
+                "id": 752,
                 "name": "Record",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 697,
-                "src": "190:6:7",
+                "referencedDeclaration": 750,
+                "src": "190:6:8",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Record_$697_storage_ptr",
+                  "typeIdentifier": "t_struct$_Record_$750_storage_ptr",
                   "typeString": "struct VirtualRecord.Record"
                 }
               }
@@ -267,21 +267,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 705,
+            "id": 758,
             "name": "recordUpdated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 704,
+              "id": 757,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 756,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "255:22:7",
+                  "scope": 758,
+                  "src": "255:22:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -289,10 +289,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 755,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "255:7:7",
+                    "src": "255:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -303,15 +303,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "247:37:7"
+              "src": "247:37:8"
             },
-            "src": "227:58:7"
+            "src": "227:58:8"
           },
           {
             "body": {
-              "id": 726,
+              "id": 779,
               "nodeType": "Block",
-              "src": "369:112:7",
+              "src": "369:112:8",
               "statements": [
                 {
                   "expression": {
@@ -320,7 +320,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 724,
+                    "id": 777,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -331,7 +331,7 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 717,
+                      "id": 770,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -342,26 +342,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 712,
+                            "id": 765,
                             "name": "virtualRecord",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 701,
-                            "src": "384:13:7",
+                            "referencedDeclaration": 754,
+                            "src": "384:13:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                               "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                             }
                           },
-                          "id": 714,
+                          "id": 767,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 713,
+                            "id": 766,
                             "name": "_citizen",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 707,
-                            "src": "398:8:7",
+                            "referencedDeclaration": 760,
+                            "src": "398:8:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -372,21 +372,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "384:23:7",
+                          "src": "384:23:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 715,
+                        "id": 768,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "numberOfTickets",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 692,
-                        "src": "384:39:7",
+                        "referencedDeclaration": 745,
+                        "src": "384:39:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -397,14 +397,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 716,
+                        "id": 769,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "426:1:7",
+                        "src": "426:1:8",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -412,7 +412,7 @@
                         },
                         "value": "0"
                       },
-                      "src": "384:43:7",
+                      "src": "384:43:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -426,7 +426,7 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 723,
+                      "id": 776,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -437,26 +437,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 718,
+                            "id": 771,
                             "name": "virtualRecord",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 701,
-                            "src": "431:13:7",
+                            "referencedDeclaration": 754,
+                            "src": "431:13:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                               "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                             }
                           },
-                          "id": 720,
+                          "id": 773,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 719,
+                            "id": 772,
                             "name": "_citizen",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 707,
-                            "src": "445:8:7",
+                            "referencedDeclaration": 760,
+                            "src": "445:8:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -467,21 +467,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "431:23:7",
+                          "src": "431:23:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 721,
+                        "id": 774,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "numberOfAccidents",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 694,
-                        "src": "431:41:7",
+                        "referencedDeclaration": 747,
+                        "src": "431:41:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -492,14 +492,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 722,
+                        "id": 775,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "475:1:7",
+                        "src": "475:1:8",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -507,43 +507,43 @@
                         },
                         "value": "0"
                       },
-                      "src": "431:45:7",
+                      "src": "431:45:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "384:92:7",
+                    "src": "384:92:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 711,
-                  "id": 725,
+                  "functionReturnParameters": 764,
+                  "id": 778,
                   "nodeType": "Return",
-                  "src": "377:99:7"
+                  "src": "377:99:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 727,
+            "id": 780,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isExistsVirtualRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 708,
+              "id": 761,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 760,
                   "name": "_citizen",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
-                  "src": "324:16:7",
+                  "scope": 780,
+                  "src": "324:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -551,10 +551,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 706,
+                    "id": 759,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "324:7:7",
+                    "src": "324:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -565,19 +565,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "323:18:7"
+              "src": "323:18:8"
             },
             "returnParameters": {
-              "id": 711,
+              "id": 764,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 710,
+                  "id": 763,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
-                  "src": "363:4:7",
+                  "scope": 780,
+                  "src": "363:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -585,10 +585,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 709,
+                    "id": 762,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "363:4:7",
+                    "src": "363:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -598,55 +598,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "362:6:7"
+              "src": "362:6:8"
             },
-            "scope": 798,
-            "src": "293:188:7",
+            "scope": 851,
+            "src": "293:188:8",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 796,
+              "id": 849,
               "nodeType": "Block",
-              "src": "575:544:7",
+              "src": "575:544:8",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 736,
+                    "id": 789,
                     "name": "_was_accident",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 731,
-                    "src": "590:13:7",
+                    "referencedDeclaration": 784,
+                    "src": "590:13:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 765,
+                  "id": 818,
                   "nodeType": "IfStatement",
-                  "src": "586:270:7",
+                  "src": "586:270:8",
                   "trueBody": {
-                    "id": 764,
+                    "id": 817,
                     "nodeType": "Block",
-                    "src": "605:251:7",
+                    "src": "605:251:8",
                     "statements": [
                       {
                         "assignments": [
-                          738
+                          791
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 738,
+                            "id": 791,
                             "name": "accidentCount",
                             "nodeType": "VariableDeclaration",
-                            "scope": 764,
-                            "src": "620:18:7",
+                            "scope": 817,
+                            "src": "620:18:8",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -654,10 +654,10 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 737,
+                              "id": 790,
                               "name": "uint",
                               "nodeType": "ElementaryTypeName",
-                              "src": "620:4:7",
+                              "src": "620:4:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -667,14 +667,14 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 745,
+                        "id": 798,
                         "initialValue": {
                           "argumentTypes": null,
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 744,
+                          "id": 797,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -685,26 +685,26 @@
                               "argumentTypes": null,
                               "baseExpression": {
                                 "argumentTypes": null,
-                                "id": 739,
+                                "id": 792,
                                 "name": "virtualRecord",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 701,
-                                "src": "641:13:7",
+                                "referencedDeclaration": 754,
+                                "src": "641:13:8",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                   "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                 }
                               },
-                              "id": 741,
+                              "id": 794,
                               "indexExpression": {
                                 "argumentTypes": null,
-                                "id": 740,
+                                "id": 793,
                                 "name": "_citizen",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 729,
-                                "src": "655:8:7",
+                                "referencedDeclaration": 782,
+                                "src": "655:8:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -715,21 +715,21 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "641:23:7",
+                              "src": "641:23:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Record_$697_storage",
+                                "typeIdentifier": "t_struct$_Record_$750_storage",
                                 "typeString": "struct VirtualRecord.Record storage ref"
                               }
                             },
-                            "id": 742,
+                            "id": 795,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "numberOfAccidents",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 694,
-                            "src": "641:41:7",
+                            "referencedDeclaration": 747,
+                            "src": "641:41:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -740,14 +740,14 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 743,
+                            "id": 796,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "685:1:7",
+                            "src": "685:1:8",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -755,19 +755,19 @@
                             },
                             "value": "1"
                           },
-                          "src": "641:45:7",
+                          "src": "641:45:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "620:66:7"
+                        "src": "620:66:8"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 758,
+                          "id": 811,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -776,26 +776,26 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 746,
+                              "id": 799,
                               "name": "virtualRecord",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 701,
-                              "src": "701:13:7",
+                              "referencedDeclaration": 754,
+                              "src": "701:13:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                 "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                               }
                             },
-                            "id": 748,
+                            "id": 801,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 747,
+                              "id": 800,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "715:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "715:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -806,9 +806,9 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "701:23:7",
+                            "src": "701:23:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_storage",
+                              "typeIdentifier": "t_struct$_Record_$750_storage",
                               "typeString": "struct VirtualRecord.Record storage ref"
                             }
                           },
@@ -823,26 +823,26 @@
                                   "argumentTypes": null,
                                   "baseExpression": {
                                     "argumentTypes": null,
-                                    "id": 750,
+                                    "id": 803,
                                     "name": "virtualRecord",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 701,
-                                    "src": "734:13:7",
+                                    "referencedDeclaration": 754,
+                                    "src": "734:13:8",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                       "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                     }
                                   },
-                                  "id": 752,
+                                  "id": 805,
                                   "indexExpression": {
                                     "argumentTypes": null,
-                                    "id": 751,
+                                    "id": 804,
                                     "name": "_citizen",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 729,
-                                    "src": "748:8:7",
+                                    "referencedDeclaration": 782,
+                                    "src": "748:8:8",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
@@ -853,21 +853,21 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "nodeType": "IndexAccess",
-                                  "src": "734:23:7",
+                                  "src": "734:23:8",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Record_$697_storage",
+                                    "typeIdentifier": "t_struct$_Record_$750_storage",
                                     "typeString": "struct VirtualRecord.Record storage ref"
                                   }
                                 },
-                                "id": 753,
+                                "id": 806,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "numberOfTickets",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 692,
-                                "src": "734:39:7",
+                                "referencedDeclaration": 745,
+                                "src": "734:39:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -875,12 +875,12 @@
                               },
                               {
                                 "argumentTypes": null,
-                                "id": 754,
+                                "id": 807,
                                 "name": "accidentCount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 738,
-                                "src": "775:13:7",
+                                "referencedDeclaration": 791,
+                                "src": "775:13:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -890,18 +890,18 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 755,
+                                  "id": 808,
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 813,
-                                  "src": "790:3:7",
+                                  "referencedDeclaration": 866,
+                                  "src": "790:3:8",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
                                     "typeString": "msg"
                                   }
                                 },
-                                "id": 756,
+                                "id": 809,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -909,7 +909,7 @@
                                 "memberName": "sender",
                                 "nodeType": "MemberAccess",
                                 "referencedDeclaration": null,
-                                "src": "790:10:7",
+                                "src": "790:10:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address_payable",
                                   "typeString": "address payable"
@@ -931,18 +931,18 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "id": 749,
+                              "id": 802,
                               "name": "Record",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 697,
-                              "src": "727:6:7",
+                              "referencedDeclaration": 750,
+                              "src": "727:6:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Record_$697_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Record_$750_storage_ptr_$",
                                 "typeString": "type(struct VirtualRecord.Record storage pointer)"
                               }
                             },
-                            "id": 757,
+                            "id": 810,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -950,21 +950,21 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "727:74:7",
+                            "src": "727:74:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_memory",
+                              "typeIdentifier": "t_struct$_Record_$750_memory",
                               "typeString": "struct VirtualRecord.Record memory"
                             }
                           },
-                          "src": "701:100:7",
+                          "src": "701:100:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 759,
+                        "id": 812,
                         "nodeType": "ExpressionStatement",
-                        "src": "701:100:7"
+                        "src": "701:100:8"
                       },
                       {
                         "eventCall": {
@@ -972,12 +972,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 761,
+                              "id": 814,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "835:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "835:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -991,18 +991,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 760,
+                            "id": 813,
                             "name": "recordUpdated",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 705,
-                            "src": "821:13:7",
+                            "referencedDeclaration": 758,
+                            "src": "821:13:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 762,
+                          "id": 815,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1010,15 +1010,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "821:23:7",
+                          "src": "821:23:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 763,
+                        "id": 816,
                         "nodeType": "EmitStatement",
-                        "src": "816:28:7"
+                        "src": "816:28:8"
                       }
                     ]
                   }
@@ -1026,38 +1026,38 @@
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 766,
+                    "id": 819,
                     "name": "_was_ticket",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 733,
-                    "src": "870:11:7",
+                    "referencedDeclaration": 786,
+                    "src": "870:11:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 795,
+                  "id": 848,
                   "nodeType": "IfStatement",
-                  "src": "866:249:7",
+                  "src": "866:249:8",
                   "trueBody": {
-                    "id": 794,
+                    "id": 847,
                     "nodeType": "Block",
-                    "src": "883:232:7",
+                    "src": "883:232:8",
                     "statements": [
                       {
                         "assignments": [
-                          768
+                          821
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 768,
+                            "id": 821,
                             "name": "ticketCount",
                             "nodeType": "VariableDeclaration",
-                            "scope": 794,
-                            "src": "898:16:7",
+                            "scope": 847,
+                            "src": "898:16:8",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -1065,10 +1065,10 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 767,
+                              "id": 820,
                               "name": "uint",
                               "nodeType": "ElementaryTypeName",
-                              "src": "898:4:7",
+                              "src": "898:4:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1078,14 +1078,14 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 775,
+                        "id": 828,
                         "initialValue": {
                           "argumentTypes": null,
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 774,
+                          "id": 827,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1096,26 +1096,26 @@
                               "argumentTypes": null,
                               "baseExpression": {
                                 "argumentTypes": null,
-                                "id": 769,
+                                "id": 822,
                                 "name": "virtualRecord",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 701,
-                                "src": "917:13:7",
+                                "referencedDeclaration": 754,
+                                "src": "917:13:8",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                   "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                 }
                               },
-                              "id": 771,
+                              "id": 824,
                               "indexExpression": {
                                 "argumentTypes": null,
-                                "id": 770,
+                                "id": 823,
                                 "name": "_citizen",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 729,
-                                "src": "931:8:7",
+                                "referencedDeclaration": 782,
+                                "src": "931:8:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -1126,21 +1126,21 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "917:23:7",
+                              "src": "917:23:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Record_$697_storage",
+                                "typeIdentifier": "t_struct$_Record_$750_storage",
                                 "typeString": "struct VirtualRecord.Record storage ref"
                               }
                             },
-                            "id": 772,
+                            "id": 825,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "numberOfTickets",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 692,
-                            "src": "917:39:7",
+                            "referencedDeclaration": 745,
+                            "src": "917:39:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1151,14 +1151,14 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 773,
+                            "id": 826,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "959:1:7",
+                            "src": "959:1:8",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -1166,19 +1166,19 @@
                             },
                             "value": "1"
                           },
-                          "src": "917:43:7",
+                          "src": "917:43:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "898:62:7"
+                        "src": "898:62:8"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 788,
+                          "id": 841,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1187,26 +1187,26 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 776,
+                              "id": 829,
                               "name": "virtualRecord",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 701,
-                              "src": "975:13:7",
+                              "referencedDeclaration": 754,
+                              "src": "975:13:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                 "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                               }
                             },
-                            "id": 778,
+                            "id": 831,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 777,
+                              "id": 830,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "989:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "989:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -1217,9 +1217,9 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "975:23:7",
+                            "src": "975:23:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_storage",
+                              "typeIdentifier": "t_struct$_Record_$750_storage",
                               "typeString": "struct VirtualRecord.Record storage ref"
                             }
                           },
@@ -1230,12 +1230,12 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 780,
+                                "id": 833,
                                 "name": "ticketCount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 768,
-                                "src": "1008:11:7",
+                                "referencedDeclaration": 821,
+                                "src": "1008:11:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1247,26 +1247,26 @@
                                   "argumentTypes": null,
                                   "baseExpression": {
                                     "argumentTypes": null,
-                                    "id": 781,
+                                    "id": 834,
                                     "name": "virtualRecord",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 701,
-                                    "src": "1021:13:7",
+                                    "referencedDeclaration": 754,
+                                    "src": "1021:13:8",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                       "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                     }
                                   },
-                                  "id": 783,
+                                  "id": 836,
                                   "indexExpression": {
                                     "argumentTypes": null,
-                                    "id": 782,
+                                    "id": 835,
                                     "name": "_citizen",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 729,
-                                    "src": "1035:8:7",
+                                    "referencedDeclaration": 782,
+                                    "src": "1035:8:8",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
@@ -1277,21 +1277,21 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "nodeType": "IndexAccess",
-                                  "src": "1021:23:7",
+                                  "src": "1021:23:8",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Record_$697_storage",
+                                    "typeIdentifier": "t_struct$_Record_$750_storage",
                                     "typeString": "struct VirtualRecord.Record storage ref"
                                   }
                                 },
-                                "id": 784,
+                                "id": 837,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "numberOfAccidents",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 694,
-                                "src": "1021:41:7",
+                                "referencedDeclaration": 747,
+                                "src": "1021:41:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1301,18 +1301,18 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 785,
+                                  "id": 838,
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 813,
-                                  "src": "1064:3:7",
+                                  "referencedDeclaration": 866,
+                                  "src": "1064:3:8",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
                                     "typeString": "msg"
                                   }
                                 },
-                                "id": 786,
+                                "id": 839,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1320,7 +1320,7 @@
                                 "memberName": "sender",
                                 "nodeType": "MemberAccess",
                                 "referencedDeclaration": null,
-                                "src": "1064:10:7",
+                                "src": "1064:10:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address_payable",
                                   "typeString": "address payable"
@@ -1342,18 +1342,18 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "id": 779,
+                              "id": 832,
                               "name": "Record",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 697,
-                              "src": "1001:6:7",
+                              "referencedDeclaration": 750,
+                              "src": "1001:6:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Record_$697_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Record_$750_storage_ptr_$",
                                 "typeString": "type(struct VirtualRecord.Record storage pointer)"
                               }
                             },
-                            "id": 787,
+                            "id": 840,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1361,21 +1361,21 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1001:74:7",
+                            "src": "1001:74:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_memory",
+                              "typeIdentifier": "t_struct$_Record_$750_memory",
                               "typeString": "struct VirtualRecord.Record memory"
                             }
                           },
-                          "src": "975:100:7",
+                          "src": "975:100:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 789,
+                        "id": 842,
                         "nodeType": "ExpressionStatement",
-                        "src": "975:100:7"
+                        "src": "975:100:8"
                       },
                       {
                         "eventCall": {
@@ -1383,12 +1383,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 791,
+                              "id": 844,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "1100:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "1100:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -1402,18 +1402,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 790,
+                            "id": 843,
                             "name": "recordUpdated",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 705,
-                            "src": "1086:13:7",
+                            "referencedDeclaration": 758,
+                            "src": "1086:13:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 792,
+                          "id": 845,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1421,15 +1421,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1086:23:7",
+                          "src": "1086:23:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 793,
+                        "id": 846,
                         "nodeType": "EmitStatement",
-                        "src": "1081:28:7"
+                        "src": "1081:28:8"
                       }
                     ]
                   }
@@ -1437,23 +1437,23 @@
               ]
             },
             "documentation": null,
-            "id": 797,
+            "id": 850,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addVirtualRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 734,
+              "id": 787,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 729,
+                  "id": 782,
                   "name": "_citizen",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "512:16:7",
+                  "scope": 850,
+                  "src": "512:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1461,10 +1461,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 728,
+                    "id": 781,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "512:7:7",
+                    "src": "512:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1476,11 +1476,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 731,
+                  "id": 784,
                   "name": "_was_accident",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "530:18:7",
+                  "scope": 850,
+                  "src": "530:18:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1488,10 +1488,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 730,
+                    "id": 783,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "530:4:7",
+                    "src": "530:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1502,11 +1502,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 733,
+                  "id": 786,
                   "name": "_was_ticket",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "550:16:7",
+                  "scope": 850,
+                  "src": "550:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1514,10 +1514,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 732,
+                    "id": 785,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "550:4:7",
+                    "src": "550:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1527,39 +1527,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "511:56:7"
+              "src": "511:56:8"
             },
             "returnParameters": {
-              "id": 735,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "575:0:7"
+              "src": "575:0:8"
             },
-            "scope": 798,
-            "src": "486:633:7",
+            "scope": 851,
+            "src": "486:633:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 799,
-        "src": "27:1095:7"
+        "scope": 852,
+        "src": "27:1095:8"
       }
     ],
-    "src": "0:1122:7"
+    "src": "0:1122:8"
   },
   "legacyAST": {
     "absolutePath": "/C/dev/projects/dmv/contracts/VirtualRecord.sol",
     "exportedSymbols": {
       "VirtualRecord": [
-        798
+        851
       ]
     },
-    "id": 799,
+    "id": 852,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 690,
+        "id": 743,
         "literals": [
           "solidity",
           "^",
@@ -1567,7 +1567,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:7"
+        "src": "0:23:8"
       },
       {
         "baseContracts": [],
@@ -1575,24 +1575,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 798,
+        "id": 851,
         "linearizedBaseContracts": [
-          798
+          851
         ],
         "name": "VirtualRecord",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "VirtualRecord.Record",
-            "id": 697,
+            "id": 750,
             "members": [
               {
                 "constant": false,
-                "id": 692,
+                "id": 745,
                 "name": "numberOfTickets",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "75:20:7",
+                "scope": 750,
+                "src": "75:20:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1600,10 +1600,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 691,
+                  "id": 744,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "75:4:7",
+                  "src": "75:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1614,11 +1614,11 @@
               },
               {
                 "constant": false,
-                "id": 694,
+                "id": 747,
                 "name": "numberOfAccidents",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "106:22:7",
+                "scope": 750,
+                "src": "106:22:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1626,10 +1626,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 693,
+                  "id": 746,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "106:4:7",
+                  "src": "106:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1640,11 +1640,11 @@
               },
               {
                 "constant": false,
-                "id": 696,
+                "id": 749,
                 "name": "updatedByOfficer",
                 "nodeType": "VariableDeclaration",
-                "scope": 697,
-                "src": "139:24:7",
+                "scope": 750,
+                "src": "139:24:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1652,10 +1652,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 695,
+                  "id": 748,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "139:7:7",
+                  "src": "139:7:8",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -1668,50 +1668,50 @@
             ],
             "name": "Record",
             "nodeType": "StructDefinition",
-            "scope": 798,
-            "src": "56:112:7",
+            "scope": 851,
+            "src": "56:112:8",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 701,
+            "id": 754,
             "name": "virtualRecord",
             "nodeType": "VariableDeclaration",
-            "scope": 798,
-            "src": "171:47:7",
+            "scope": 851,
+            "src": "171:47:8",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
               "typeString": "mapping(address => struct VirtualRecord.Record)"
             },
             "typeName": {
-              "id": 700,
+              "id": 753,
               "keyType": {
-                "id": 698,
+                "id": 751,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "179:7:7",
+                "src": "179:7:8",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "171:26:7",
+              "src": "171:26:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                 "typeString": "mapping(address => struct VirtualRecord.Record)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 699,
+                "id": 752,
                 "name": "Record",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 697,
-                "src": "190:6:7",
+                "referencedDeclaration": 750,
+                "src": "190:6:8",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Record_$697_storage_ptr",
+                  "typeIdentifier": "t_struct$_Record_$750_storage_ptr",
                   "typeString": "struct VirtualRecord.Record"
                 }
               }
@@ -1722,21 +1722,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 705,
+            "id": 758,
             "name": "recordUpdated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 704,
+              "id": 757,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 703,
+                  "id": 756,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "255:22:7",
+                  "scope": 758,
+                  "src": "255:22:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1744,10 +1744,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 702,
+                    "id": 755,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "255:7:7",
+                    "src": "255:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1758,15 +1758,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "247:37:7"
+              "src": "247:37:8"
             },
-            "src": "227:58:7"
+            "src": "227:58:8"
           },
           {
             "body": {
-              "id": 726,
+              "id": 779,
               "nodeType": "Block",
-              "src": "369:112:7",
+              "src": "369:112:8",
               "statements": [
                 {
                   "expression": {
@@ -1775,7 +1775,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 724,
+                    "id": 777,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1786,7 +1786,7 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 717,
+                      "id": 770,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1797,26 +1797,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 712,
+                            "id": 765,
                             "name": "virtualRecord",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 701,
-                            "src": "384:13:7",
+                            "referencedDeclaration": 754,
+                            "src": "384:13:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                               "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                             }
                           },
-                          "id": 714,
+                          "id": 767,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 713,
+                            "id": 766,
                             "name": "_citizen",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 707,
-                            "src": "398:8:7",
+                            "referencedDeclaration": 760,
+                            "src": "398:8:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -1827,21 +1827,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "384:23:7",
+                          "src": "384:23:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 715,
+                        "id": 768,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "numberOfTickets",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 692,
-                        "src": "384:39:7",
+                        "referencedDeclaration": 745,
+                        "src": "384:39:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1852,14 +1852,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 716,
+                        "id": 769,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "426:1:7",
+                        "src": "426:1:8",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -1867,7 +1867,7 @@
                         },
                         "value": "0"
                       },
-                      "src": "384:43:7",
+                      "src": "384:43:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1881,7 +1881,7 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 723,
+                      "id": 776,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1892,26 +1892,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 718,
+                            "id": 771,
                             "name": "virtualRecord",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 701,
-                            "src": "431:13:7",
+                            "referencedDeclaration": 754,
+                            "src": "431:13:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                               "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                             }
                           },
-                          "id": 720,
+                          "id": 773,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 719,
+                            "id": 772,
                             "name": "_citizen",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 707,
-                            "src": "445:8:7",
+                            "referencedDeclaration": 760,
+                            "src": "445:8:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -1922,21 +1922,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "431:23:7",
+                          "src": "431:23:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 721,
+                        "id": 774,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "numberOfAccidents",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 694,
-                        "src": "431:41:7",
+                        "referencedDeclaration": 747,
+                        "src": "431:41:8",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1947,14 +1947,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 722,
+                        "id": 775,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "475:1:7",
+                        "src": "475:1:8",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
@@ -1962,43 +1962,43 @@
                         },
                         "value": "0"
                       },
-                      "src": "431:45:7",
+                      "src": "431:45:8",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "384:92:7",
+                    "src": "384:92:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 711,
-                  "id": 725,
+                  "functionReturnParameters": 764,
+                  "id": 778,
                   "nodeType": "Return",
-                  "src": "377:99:7"
+                  "src": "377:99:8"
                 }
               ]
             },
             "documentation": null,
-            "id": 727,
+            "id": 780,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isExistsVirtualRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 708,
+              "id": 761,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 760,
                   "name": "_citizen",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
-                  "src": "324:16:7",
+                  "scope": 780,
+                  "src": "324:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2006,10 +2006,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 706,
+                    "id": 759,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "324:7:7",
+                    "src": "324:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2020,19 +2020,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "323:18:7"
+              "src": "323:18:8"
             },
             "returnParameters": {
-              "id": 711,
+              "id": 764,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 710,
+                  "id": 763,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 727,
-                  "src": "363:4:7",
+                  "scope": 780,
+                  "src": "363:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2040,10 +2040,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 709,
+                    "id": 762,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "363:4:7",
+                    "src": "363:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2053,55 +2053,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "362:6:7"
+              "src": "362:6:8"
             },
-            "scope": 798,
-            "src": "293:188:7",
+            "scope": 851,
+            "src": "293:188:8",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 796,
+              "id": 849,
               "nodeType": "Block",
-              "src": "575:544:7",
+              "src": "575:544:8",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 736,
+                    "id": 789,
                     "name": "_was_accident",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 731,
-                    "src": "590:13:7",
+                    "referencedDeclaration": 784,
+                    "src": "590:13:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 765,
+                  "id": 818,
                   "nodeType": "IfStatement",
-                  "src": "586:270:7",
+                  "src": "586:270:8",
                   "trueBody": {
-                    "id": 764,
+                    "id": 817,
                     "nodeType": "Block",
-                    "src": "605:251:7",
+                    "src": "605:251:8",
                     "statements": [
                       {
                         "assignments": [
-                          738
+                          791
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 738,
+                            "id": 791,
                             "name": "accidentCount",
                             "nodeType": "VariableDeclaration",
-                            "scope": 764,
-                            "src": "620:18:7",
+                            "scope": 817,
+                            "src": "620:18:8",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -2109,10 +2109,10 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 737,
+                              "id": 790,
                               "name": "uint",
                               "nodeType": "ElementaryTypeName",
-                              "src": "620:4:7",
+                              "src": "620:4:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -2122,14 +2122,14 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 745,
+                        "id": 798,
                         "initialValue": {
                           "argumentTypes": null,
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 744,
+                          "id": 797,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2140,26 +2140,26 @@
                               "argumentTypes": null,
                               "baseExpression": {
                                 "argumentTypes": null,
-                                "id": 739,
+                                "id": 792,
                                 "name": "virtualRecord",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 701,
-                                "src": "641:13:7",
+                                "referencedDeclaration": 754,
+                                "src": "641:13:8",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                   "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                 }
                               },
-                              "id": 741,
+                              "id": 794,
                               "indexExpression": {
                                 "argumentTypes": null,
-                                "id": 740,
+                                "id": 793,
                                 "name": "_citizen",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 729,
-                                "src": "655:8:7",
+                                "referencedDeclaration": 782,
+                                "src": "655:8:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -2170,21 +2170,21 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "641:23:7",
+                              "src": "641:23:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Record_$697_storage",
+                                "typeIdentifier": "t_struct$_Record_$750_storage",
                                 "typeString": "struct VirtualRecord.Record storage ref"
                               }
                             },
-                            "id": 742,
+                            "id": 795,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "numberOfAccidents",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 694,
-                            "src": "641:41:7",
+                            "referencedDeclaration": 747,
+                            "src": "641:41:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2195,14 +2195,14 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 743,
+                            "id": 796,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "685:1:7",
+                            "src": "685:1:8",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -2210,19 +2210,19 @@
                             },
                             "value": "1"
                           },
-                          "src": "641:45:7",
+                          "src": "641:45:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "620:66:7"
+                        "src": "620:66:8"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 758,
+                          "id": 811,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2231,26 +2231,26 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 746,
+                              "id": 799,
                               "name": "virtualRecord",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 701,
-                              "src": "701:13:7",
+                              "referencedDeclaration": 754,
+                              "src": "701:13:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                 "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                               }
                             },
-                            "id": 748,
+                            "id": 801,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 747,
+                              "id": 800,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "715:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "715:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2261,9 +2261,9 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "701:23:7",
+                            "src": "701:23:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_storage",
+                              "typeIdentifier": "t_struct$_Record_$750_storage",
                               "typeString": "struct VirtualRecord.Record storage ref"
                             }
                           },
@@ -2278,26 +2278,26 @@
                                   "argumentTypes": null,
                                   "baseExpression": {
                                     "argumentTypes": null,
-                                    "id": 750,
+                                    "id": 803,
                                     "name": "virtualRecord",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 701,
-                                    "src": "734:13:7",
+                                    "referencedDeclaration": 754,
+                                    "src": "734:13:8",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                       "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                     }
                                   },
-                                  "id": 752,
+                                  "id": 805,
                                   "indexExpression": {
                                     "argumentTypes": null,
-                                    "id": 751,
+                                    "id": 804,
                                     "name": "_citizen",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 729,
-                                    "src": "748:8:7",
+                                    "referencedDeclaration": 782,
+                                    "src": "748:8:8",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
@@ -2308,21 +2308,21 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "nodeType": "IndexAccess",
-                                  "src": "734:23:7",
+                                  "src": "734:23:8",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Record_$697_storage",
+                                    "typeIdentifier": "t_struct$_Record_$750_storage",
                                     "typeString": "struct VirtualRecord.Record storage ref"
                                   }
                                 },
-                                "id": 753,
+                                "id": 806,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "numberOfTickets",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 692,
-                                "src": "734:39:7",
+                                "referencedDeclaration": 745,
+                                "src": "734:39:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2330,12 +2330,12 @@
                               },
                               {
                                 "argumentTypes": null,
-                                "id": 754,
+                                "id": 807,
                                 "name": "accidentCount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 738,
-                                "src": "775:13:7",
+                                "referencedDeclaration": 791,
+                                "src": "775:13:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2345,18 +2345,18 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 755,
+                                  "id": 808,
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 813,
-                                  "src": "790:3:7",
+                                  "referencedDeclaration": 866,
+                                  "src": "790:3:8",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
                                     "typeString": "msg"
                                   }
                                 },
-                                "id": 756,
+                                "id": 809,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -2364,7 +2364,7 @@
                                 "memberName": "sender",
                                 "nodeType": "MemberAccess",
                                 "referencedDeclaration": null,
-                                "src": "790:10:7",
+                                "src": "790:10:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address_payable",
                                   "typeString": "address payable"
@@ -2386,18 +2386,18 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "id": 749,
+                              "id": 802,
                               "name": "Record",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 697,
-                              "src": "727:6:7",
+                              "referencedDeclaration": 750,
+                              "src": "727:6:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Record_$697_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Record_$750_storage_ptr_$",
                                 "typeString": "type(struct VirtualRecord.Record storage pointer)"
                               }
                             },
-                            "id": 757,
+                            "id": 810,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2405,21 +2405,21 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "727:74:7",
+                            "src": "727:74:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_memory",
+                              "typeIdentifier": "t_struct$_Record_$750_memory",
                               "typeString": "struct VirtualRecord.Record memory"
                             }
                           },
-                          "src": "701:100:7",
+                          "src": "701:100:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 759,
+                        "id": 812,
                         "nodeType": "ExpressionStatement",
-                        "src": "701:100:7"
+                        "src": "701:100:8"
                       },
                       {
                         "eventCall": {
@@ -2427,12 +2427,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 761,
+                              "id": 814,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "835:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "835:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2446,18 +2446,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 760,
+                            "id": 813,
                             "name": "recordUpdated",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 705,
-                            "src": "821:13:7",
+                            "referencedDeclaration": 758,
+                            "src": "821:13:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 762,
+                          "id": 815,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2465,15 +2465,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "821:23:7",
+                          "src": "821:23:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 763,
+                        "id": 816,
                         "nodeType": "EmitStatement",
-                        "src": "816:28:7"
+                        "src": "816:28:8"
                       }
                     ]
                   }
@@ -2481,38 +2481,38 @@
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 766,
+                    "id": 819,
                     "name": "_was_ticket",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 733,
-                    "src": "870:11:7",
+                    "referencedDeclaration": 786,
+                    "src": "870:11:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 795,
+                  "id": 848,
                   "nodeType": "IfStatement",
-                  "src": "866:249:7",
+                  "src": "866:249:8",
                   "trueBody": {
-                    "id": 794,
+                    "id": 847,
                     "nodeType": "Block",
-                    "src": "883:232:7",
+                    "src": "883:232:8",
                     "statements": [
                       {
                         "assignments": [
-                          768
+                          821
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 768,
+                            "id": 821,
                             "name": "ticketCount",
                             "nodeType": "VariableDeclaration",
-                            "scope": 794,
-                            "src": "898:16:7",
+                            "scope": 847,
+                            "src": "898:16:8",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -2520,10 +2520,10 @@
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 767,
+                              "id": 820,
                               "name": "uint",
                               "nodeType": "ElementaryTypeName",
-                              "src": "898:4:7",
+                              "src": "898:4:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -2533,14 +2533,14 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 775,
+                        "id": 828,
                         "initialValue": {
                           "argumentTypes": null,
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 774,
+                          "id": 827,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2551,26 +2551,26 @@
                               "argumentTypes": null,
                               "baseExpression": {
                                 "argumentTypes": null,
-                                "id": 769,
+                                "id": 822,
                                 "name": "virtualRecord",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 701,
-                                "src": "917:13:7",
+                                "referencedDeclaration": 754,
+                                "src": "917:13:8",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                   "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                 }
                               },
-                              "id": 771,
+                              "id": 824,
                               "indexExpression": {
                                 "argumentTypes": null,
-                                "id": 770,
+                                "id": 823,
                                 "name": "_citizen",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 729,
-                                "src": "931:8:7",
+                                "referencedDeclaration": 782,
+                                "src": "931:8:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -2581,21 +2581,21 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "917:23:7",
+                              "src": "917:23:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Record_$697_storage",
+                                "typeIdentifier": "t_struct$_Record_$750_storage",
                                 "typeString": "struct VirtualRecord.Record storage ref"
                               }
                             },
-                            "id": 772,
+                            "id": 825,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "numberOfTickets",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 692,
-                            "src": "917:39:7",
+                            "referencedDeclaration": 745,
+                            "src": "917:39:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2606,14 +2606,14 @@
                           "rightExpression": {
                             "argumentTypes": null,
                             "hexValue": "31",
-                            "id": 773,
+                            "id": 826,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "959:1:7",
+                            "src": "959:1:8",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -2621,19 +2621,19 @@
                             },
                             "value": "1"
                           },
-                          "src": "917:43:7",
+                          "src": "917:43:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "898:62:7"
+                        "src": "898:62:8"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 788,
+                          "id": 841,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2642,26 +2642,26 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 776,
+                              "id": 829,
                               "name": "virtualRecord",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 701,
-                              "src": "975:13:7",
+                              "referencedDeclaration": 754,
+                              "src": "975:13:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                 "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                               }
                             },
-                            "id": 778,
+                            "id": 831,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 777,
+                              "id": 830,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "989:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "989:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2672,9 +2672,9 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "975:23:7",
+                            "src": "975:23:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_storage",
+                              "typeIdentifier": "t_struct$_Record_$750_storage",
                               "typeString": "struct VirtualRecord.Record storage ref"
                             }
                           },
@@ -2685,12 +2685,12 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 780,
+                                "id": 833,
                                 "name": "ticketCount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 768,
-                                "src": "1008:11:7",
+                                "referencedDeclaration": 821,
+                                "src": "1008:11:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2702,26 +2702,26 @@
                                   "argumentTypes": null,
                                   "baseExpression": {
                                     "argumentTypes": null,
-                                    "id": 781,
+                                    "id": 834,
                                     "name": "virtualRecord",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 701,
-                                    "src": "1021:13:7",
+                                    "referencedDeclaration": 754,
+                                    "src": "1021:13:8",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$697_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Record_$750_storage_$",
                                       "typeString": "mapping(address => struct VirtualRecord.Record storage ref)"
                                     }
                                   },
-                                  "id": 783,
+                                  "id": 836,
                                   "indexExpression": {
                                     "argumentTypes": null,
-                                    "id": 782,
+                                    "id": 835,
                                     "name": "_citizen",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 729,
-                                    "src": "1035:8:7",
+                                    "referencedDeclaration": 782,
+                                    "src": "1035:8:8",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
@@ -2732,21 +2732,21 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "nodeType": "IndexAccess",
-                                  "src": "1021:23:7",
+                                  "src": "1021:23:8",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_Record_$697_storage",
+                                    "typeIdentifier": "t_struct$_Record_$750_storage",
                                     "typeString": "struct VirtualRecord.Record storage ref"
                                   }
                                 },
-                                "id": 784,
+                                "id": 837,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "numberOfAccidents",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 694,
-                                "src": "1021:41:7",
+                                "referencedDeclaration": 747,
+                                "src": "1021:41:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2756,18 +2756,18 @@
                                 "argumentTypes": null,
                                 "expression": {
                                   "argumentTypes": null,
-                                  "id": 785,
+                                  "id": 838,
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 813,
-                                  "src": "1064:3:7",
+                                  "referencedDeclaration": 866,
+                                  "src": "1064:3:8",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
                                     "typeString": "msg"
                                   }
                                 },
-                                "id": 786,
+                                "id": 839,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -2775,7 +2775,7 @@
                                 "memberName": "sender",
                                 "nodeType": "MemberAccess",
                                 "referencedDeclaration": null,
-                                "src": "1064:10:7",
+                                "src": "1064:10:8",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address_payable",
                                   "typeString": "address payable"
@@ -2797,18 +2797,18 @@
                                   "typeString": "address payable"
                                 }
                               ],
-                              "id": 779,
+                              "id": 832,
                               "name": "Record",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 697,
-                              "src": "1001:6:7",
+                              "referencedDeclaration": 750,
+                              "src": "1001:6:8",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_struct$_Record_$697_storage_ptr_$",
+                                "typeIdentifier": "t_type$_t_struct$_Record_$750_storage_ptr_$",
                                 "typeString": "type(struct VirtualRecord.Record storage pointer)"
                               }
                             },
-                            "id": 787,
+                            "id": 840,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2816,21 +2816,21 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1001:74:7",
+                            "src": "1001:74:8",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Record_$697_memory",
+                              "typeIdentifier": "t_struct$_Record_$750_memory",
                               "typeString": "struct VirtualRecord.Record memory"
                             }
                           },
-                          "src": "975:100:7",
+                          "src": "975:100:8",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Record_$697_storage",
+                            "typeIdentifier": "t_struct$_Record_$750_storage",
                             "typeString": "struct VirtualRecord.Record storage ref"
                           }
                         },
-                        "id": 789,
+                        "id": 842,
                         "nodeType": "ExpressionStatement",
-                        "src": "975:100:7"
+                        "src": "975:100:8"
                       },
                       {
                         "eventCall": {
@@ -2838,12 +2838,12 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 791,
+                              "id": 844,
                               "name": "_citizen",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 729,
-                              "src": "1100:8:7",
+                              "referencedDeclaration": 782,
+                              "src": "1100:8:8",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -2857,18 +2857,18 @@
                                 "typeString": "address"
                               }
                             ],
-                            "id": 790,
+                            "id": 843,
                             "name": "recordUpdated",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 705,
-                            "src": "1086:13:7",
+                            "referencedDeclaration": 758,
+                            "src": "1086:13:8",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address)"
                             }
                           },
-                          "id": 792,
+                          "id": 845,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2876,15 +2876,15 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1086:23:7",
+                          "src": "1086:23:8",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 793,
+                        "id": 846,
                         "nodeType": "EmitStatement",
-                        "src": "1081:28:7"
+                        "src": "1081:28:8"
                       }
                     ]
                   }
@@ -2892,23 +2892,23 @@
               ]
             },
             "documentation": null,
-            "id": 797,
+            "id": 850,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addVirtualRecord",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 734,
+              "id": 787,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 729,
+                  "id": 782,
                   "name": "_citizen",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "512:16:7",
+                  "scope": 850,
+                  "src": "512:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2916,10 +2916,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 728,
+                    "id": 781,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "512:7:7",
+                    "src": "512:7:8",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2931,11 +2931,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 731,
+                  "id": 784,
                   "name": "_was_accident",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "530:18:7",
+                  "scope": 850,
+                  "src": "530:18:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2943,10 +2943,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 730,
+                    "id": 783,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "530:4:7",
+                    "src": "530:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2957,11 +2957,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 733,
+                  "id": 786,
                   "name": "_was_ticket",
                   "nodeType": "VariableDeclaration",
-                  "scope": 797,
-                  "src": "550:16:7",
+                  "scope": 850,
+                  "src": "550:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2969,10 +2969,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 732,
+                    "id": 785,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "550:4:7",
+                    "src": "550:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2982,26 +2982,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "511:56:7"
+              "src": "511:56:8"
             },
             "returnParameters": {
-              "id": 735,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "575:0:7"
+              "src": "575:0:8"
             },
-            "scope": 798,
-            "src": "486:633:7",
+            "scope": 851,
+            "src": "486:633:8",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 799,
-        "src": "27:1095:7"
+        "scope": 852,
+        "src": "27:1095:8"
       }
     ],
-    "src": "0:1122:7"
+    "src": "0:1122:8"
   },
   "compiler": {
     "name": "solc",
@@ -3011,12 +3011,12 @@
     "1556137462886": {
       "events": {},
       "links": {},
-      "address": "0xfcFd0957F4C6dA8F7052dfea8BFBF1b7ACDF6459",
-      "transactionHash": "0x6af6b90a4dbf9879249e812ce5b29c779d14ba0301d30a1f0b2eb09430e0f0e3"
+      "address": "0x6386c38728a4a5515a03505C0779D9Cd9e695B51",
+      "transactionHash": "0x99ded3b387e5f2c93ab6e0e8bb2a40f41cf2f5b4464acbd990137393f3e921ad"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-24T20:52:04.525Z",
+  "updatedAt": "2019-04-27T19:54:59.513Z",
   "devdoc": {
     "methods": {}
   },

@@ -5,6 +5,7 @@ const PracticeExam = artifacts.require("PracticeExam");
 const ReadLid = artifacts.require("ReadLid");
 const VirtualRecord = artifacts.require("VirtualRecord");
 const SellDonateCar = artifacts.require("SellDonateCar");
+const Titling = artifacts.require("Titling");
 
 module.exports = function(deployer) {
   deployer.deploy(AddressChange);
@@ -14,4 +15,5 @@ module.exports = function(deployer) {
   deployer.deploy(ReadLid);
   deployer.deploy(VirtualRecord);
   deployer.deploy(SellDonateCar);
+  deployer.deploy(Titling);
 };
