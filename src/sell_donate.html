@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMV</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/base_app.js"></script>
+    <script src="js/sell_donate_app.js"></script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="container" style="width: 650px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Sell Donate Car</h1>
+                <hr/>
+                <br/>
+                <div id="loader">
+                    <p class="text-center">No cars present currently...</p>
+                </div>
+                <div id="content" style="display: none;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Year</th>
+                                <th scope="col">Make</th>
+                                <th scope="col">Model</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carsForSale">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="sellDonateCarForm" style="display: none;">
+                    <hr/>
+                    <form onSubmit="SellDonateCarApp.sellDonateCar(); return false;">
+                        <div class="form-group">
+
+                            <label for="year">Year</label>
+                            <input id="year" type="text" class="form-control" />
+
+                            <label for="make">Make</label>
+                            <input id="make" type="text" class="form-control" />
+
+                            <label for="model">Model</label>
+                            <input id="model" type="text" class="form-control" />
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sell Donate car</button>
+                        <hr />
+                    </form>
+                </div>
+                <p id="accountAddress" class="text-center"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+          $(window).load(function() {
+            $("#nav-placeholder").load("menu.html");
+          });
+        });
+    </script>
+
+</body>
+
+</html>

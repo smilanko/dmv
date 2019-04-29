@@ -23,6 +23,7 @@ contract SellDonateCar {
         // to make thing simple, 1 owner 1 sale
         if (!isCarOwned(msg.sender)) {
             cars[msg.sender] = Car(_year, _make, _model);
+            emit carSoldDonated(msg.sender);
         }
     }
 
