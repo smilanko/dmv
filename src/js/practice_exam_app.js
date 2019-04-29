@@ -57,7 +57,7 @@ PracticeExamApp = {
       	drivingLicenceRenewalInstance.questions(PracticeExamApp.account).then(function(qAndA) {
         var question = qAndA[0];
         var answer = qAndA[1];
-  			var qAndATemplate = 	"<tr><th>" + question +  "</td></tr>" + "<tr><th>" + answer +  "</td></tr>"
+  			var qAndATemplate = 	"<tr><td>" + question +  "</td><td>" + answer +  "</td></tr>"
   			purchaseResult.html(qAndATemplate);
   			loader.hide();
   			purchaseExamForm.hide();

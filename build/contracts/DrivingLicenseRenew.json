@@ -51,6 +51,26 @@
     },
     {
       "constant": true,
+      "inputs": [
+        {
+          "name": "_person",
+          "type": "address"
+        }
+      ],
+      "name": "personHasLicense",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xfd8cb15f"
+    },
+    {
+      "constant": true,
       "inputs": [],
       "name": "isRenewalPresent",
       "outputs": [
@@ -75,21 +95,21 @@
       "signature": "0x39b2d9e4"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"renewLicense\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"renewals\",\"outputs\":[{\"name\":\"expiration\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"renewCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isRenewalPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_ssn\",\"type\":\"address\"}],\"name\":\"licenceRenewEvent\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol\":\"DrivingLicenseRenew\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol\":{\"keccak256\":\"0x381ac3247f735db66acb64c9a07e9907fdbade2c57cad858a2a350d0dde16595\",\"urls\":[\"bzzr://d2534d0f01a6bf58a7c2d4f24640935da9fb9e106f5552d9894a1eaab05eb664\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506102ac806100206000396000f3fe608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806339b2d9e41461006757806396b4b8451461007e578063d2d31dd2146100e3578063ed782b161461010e575b600080fd5b34801561007357600080fd5b5061007c61013d565b005b34801561008a57600080fd5b506100cd600480360360208110156100a157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610211565b6040518082815260200191505060405180910390f35b3480156100ef57600080fd5b506100f861022f565b6040518082815260200191505060405180910390f35b34801561011a57600080fd5b50610123610235565b604051808215151515815260200191505060405180910390f35b6001600081548092919060010191905055506000600a90506000816107b26301e133804281151561016a57fe5b0401019050602060405190810160405280828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001559050503373ffffffffffffffffffffffffffffffffffffffff167f6afedaf59c64b56600cd23d94cbccc7c48004454a70e71ee79993b476aa2304560405160405180910390a25050565b60006020528060005260406000206000915090508060000154905081565b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001541190509056fea165627a7a72305820fefbdae7d73b1d41a18cfd51f7529e6d893fff8da0a4494ef722dbd5e00173220029",
-  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806339b2d9e41461006757806396b4b8451461007e578063d2d31dd2146100e3578063ed782b161461010e575b600080fd5b34801561007357600080fd5b5061007c61013d565b005b34801561008a57600080fd5b506100cd600480360360208110156100a157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610211565b6040518082815260200191505060405180910390f35b3480156100ef57600080fd5b506100f861022f565b6040518082815260200191505060405180910390f35b34801561011a57600080fd5b50610123610235565b604051808215151515815260200191505060405180910390f35b6001600081548092919060010191905055506000600a90506000816107b26301e133804281151561016a57fe5b0401019050602060405190810160405280828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001559050503373ffffffffffffffffffffffffffffffffffffffff167f6afedaf59c64b56600cd23d94cbccc7c48004454a70e71ee79993b476aa2304560405160405180910390a25050565b60006020528060005260406000206000915090508060000154905081565b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001541190509056fea165627a7a72305820fefbdae7d73b1d41a18cfd51f7529e6d893fff8da0a4494ef722dbd5e00173220029",
-  "sourceMap": "27:594:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:594:1;;;;;;;",
-  "deployedSourceMap": "27:594:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;371:245;;8:9:-1;5:2;;;30:1;27;20:12;5:2;371:245:1;;;;;;107:43;;8:9:-1;5:2;;;30:1;27;20:12;5:2;107:43:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;107:43:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;154:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;154:22:1;;;;;;;;;;;;;;;;;;;;;;;256:110;;8:9:-1;5:2;;;30:1;27;20:12;5:2;256:110:1;;;;;;;;;;;;;;;;;;;;;;;;;;;371:245;407:10;;:12;;;;;;;;;;;;;424:22;449:2;424:27;;456:19;504:17;497:4;485:8;479:3;:14;;;;;;;;478:23;:43;456:65;;549:23;;;;;;;;;557:14;549:23;;;526:8;:20;535:10;526:20;;;;;;;;;;;;;;;:46;;;;;;;;;;;600:10;582:29;;;;;;;;;;;;371:245;;:::o;107:43::-;;;;;;;;;;;;;;;;;;;;;;:::o;154:22::-;;;;:::o;256:110::-;305:4;360:1;326:8;:20;335:10;326:20;;;;;;;;;;;;;;;:31;;;:35;319:42;;256:110;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract DrivingLicenseRenew {\r\n\r\n\tstruct License {\r\n\t\tuint expiration;\r\n\t}\r\n\r\n\tmapping(address => License) public renewals;\r\n\tuint public renewCount;\r\n\r\n    event licenceRenewEvent (\r\n        address indexed _ssn\r\n    );\r\n\r\n    function isRenewalPresent() public view returns (bool) {\r\n    \treturn renewals[msg.sender].expiration > 0;\r\n\t}\r\n\r\n\tfunction renewLicense() public {\r\n\t\trenewCount++;\r\n\t\tuint _extension_period = 10;\r\n\t\tuint _expiring_year = (now / 31536000) + 1970 + _extension_period;\r\n\t\trenewals[msg.sender] = License(_expiring_year);\r\n\t\temit licenceRenewEvent(msg.sender);\r\n\t}\r\n\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"renewLicense\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"renewals\",\"outputs\":[{\"name\":\"expiration\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"renewCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isRenewalPresent\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_person\",\"type\":\"address\"}],\"name\":\"personHasLicense\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_ssn\",\"type\":\"address\"}],\"name\":\"licenceRenewEvent\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol\":\"DrivingLicenseRenew\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol\":{\"keccak256\":\"0x8eb0f2bc1ca445970ae533beef4feb906ae4d155bf69cf28c26315c951429245\",\"urls\":[\"bzzr://7b5a12178916b25f0b8f576282e1208eede27a6d90cf922d1384fe6c18d61bb0\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061033a806100206000396000f3fe60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806339b2d9e41461007257806396b4b84514610089578063d2d31dd2146100ee578063ed782b1614610119578063fd8cb15f14610148575b600080fd5b34801561007e57600080fd5b506100876101b1565b005b34801561009557600080fd5b506100d8600480360360208110156100ac57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610294565b6040518082815260200191505060405180910390f35b3480156100fa57600080fd5b506101036102b2565b6040518082815260200191505060405180910390f35b34801561012557600080fd5b5061012e6102b8565b604051808215151515815260200191505060405180910390f35b34801561015457600080fd5b506101976004803603602081101561016b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610303565b604051808215151515815260200191505060405180910390f35b6101ba33610303565b15610292576001600081548092919060010191905055506000600a90506000816107b26301e13380428115156101ec57fe5b0401019050602060405190810160405280828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001559050503373ffffffffffffffffffffffffffffffffffffffff167f6afedaf59c64b56600cd23d94cbccc7c48004454a70e71ee79993b476aa2304560405160405180910390a250505b565b60006020528060005260406000206000915090508060000154905081565b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905090565b60006001905091905056fea165627a7a723058200f04054b0ef5ad90e1c4ee5b50836ddadaae91176c34b752f24332de23eaaf440029",
+  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806339b2d9e41461007257806396b4b84514610089578063d2d31dd2146100ee578063ed782b1614610119578063fd8cb15f14610148575b600080fd5b34801561007e57600080fd5b506100876101b1565b005b34801561009557600080fd5b506100d8600480360360208110156100ac57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610294565b6040518082815260200191505060405180910390f35b3480156100fa57600080fd5b506101036102b2565b6040518082815260200191505060405180910390f35b34801561012557600080fd5b5061012e6102b8565b604051808215151515815260200191505060405180910390f35b34801561015457600080fd5b506101976004803603602081101561016b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610303565b604051808215151515815260200191505060405180910390f35b6101ba33610303565b15610292576001600081548092919060010191905055506000600a90506000816107b26301e13380428115156101ec57fe5b0401019050602060405190810160405280828152506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001559050503373ffffffffffffffffffffffffffffffffffffffff167f6afedaf59c64b56600cd23d94cbccc7c48004454a70e71ee79993b476aa2304560405160405180910390a250505b565b60006020528060005260406000206000915090508060000154905081565b60015481565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000015411905090565b60006001905091905056fea165627a7a723058200f04054b0ef5ad90e1c4ee5b50836ddadaae91176c34b752f24332de23eaaf440029",
+  "sourceMap": "27:748:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:748:1;;;;;;;",
+  "deployedSourceMap": "27:748:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;476:294;;8:9:-1;5:2;;;30:1;27;20:12;5:2;476:294:1;;;;;;107:43;;8:9:-1;5:2;;;30:1;27;20:12;5:2;107:43:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;107:43:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;154:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;154:22:1;;;;;;;;;;;;;;;;;;;;;;;361:110;;8:9:-1;5:2;;;30:1;27;20:12;5:2;361:110:1;;;;;;;;;;;;;;;;;;;;;;;;;;;256:97;;8:9:-1;5:2;;;30:1;27;20:12;5:2;256:97:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;256:97:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;476:294;516:28;533:10;516:16;:28::i;:::-;512:254;;;552:10;;:12;;;;;;;;;;;;;570:22;595:2;570:27;;603:19;651:17;644:4;632:8;626:3;:14;;;;;;;;625:23;:43;603:65;;697:23;;;;;;;;;705:14;697:23;;;674:8;:20;683:10;674:20;;;;;;;;;;;;;;;:46;;;;;;;;;;;749:10;731:29;;;;;;;;;;;;512:254;;;476:294::o;107:43::-;;;;;;;;;;;;;;;;;;;;;;:::o;154:22::-;;;;:::o;361:110::-;410:4;465:1;431:8;:20;440:10;431:20;;;;;;;;;;;;;;;:31;;;:35;424:42;;361:110;:::o;256:97::-;320:4;341;334:11;;256:97;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract DrivingLicenseRenew {\r\n\r\n\tstruct License {\r\n\t\tuint expiration;\r\n\t}\r\n\r\n\tmapping(address => License) public renewals;\r\n\tuint public renewCount;\r\n\r\n    event licenceRenewEvent (\r\n        address indexed _ssn\r\n    );\r\n\r\n    function personHasLicense(address _person) public view returns (bool) {\r\n    \treturn true;\r\n    }\r\n\r\n    function isRenewalPresent() public view returns (bool) {\r\n    \treturn renewals[msg.sender].expiration > 0;\r\n\t}\r\n\r\n\tfunction renewLicense() public {\r\n\t\tif (personHasLicense(msg.sender)) {\r\n\t\t\trenewCount++;\r\n\t\t\tuint _extension_period = 10;\r\n\t\t\tuint _expiring_year = (now / 31536000) + 1970 + _extension_period;\r\n\t\t\trenewals[msg.sender] = License(_expiring_year);\r\n\t\t\temit licenceRenewEvent(msg.sender);\r\n\t\t}\r\n\t}\r\n\r\n}",
   "sourcePath": "C:/dev/projects/dmv/contracts/DrivingLicenseRenew.sol",
   "ast": {
     "absolutePath": "/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol",
     "exportedSymbols": {
       "DrivingLicenseRenew": [
-        140
+        156
       ]
     },
-    "id": 141,
+    "id": 157,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -109,9 +129,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 140,
+        "id": 156,
         "linearizedBaseContracts": [
-          140
+          156
         ],
         "name": "DrivingLicenseRenew",
         "nodeType": "ContractDefinition",
@@ -149,7 +169,7 @@
             ],
             "name": "License",
             "nodeType": "StructDefinition",
-            "scope": 140,
+            "scope": 156,
             "src": "62:40:1",
             "visibility": "public"
           },
@@ -158,7 +178,7 @@
             "id": 83,
             "name": "renewals",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
+            "scope": 156,
             "src": "107:43:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -205,7 +225,7 @@
             "id": 85,
             "name": "renewCount",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
+            "scope": 156,
             "src": "154:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -271,9 +291,121 @@
           },
           {
             "body": {
-              "id": 102,
+              "id": 98,
               "nodeType": "Block",
-              "src": "311:55:1",
+              "src": "326:27:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "341:4:1",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 97,
+                  "nodeType": "Return",
+                  "src": "334:11:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 99,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "personHasLicense",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_person",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "282:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:17:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "320:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:6:1"
+            },
+            "scope": 156,
+            "src": "256:97:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 112,
+              "nodeType": "Block",
+              "src": "416:55:1",
               "statements": [
                 {
                   "expression": {
@@ -282,7 +414,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 100,
+                    "id": 110,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -293,34 +425,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 94,
+                          "id": 104,
                           "name": "renewals",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 83,
-                          "src": "326:8:1",
+                          "src": "431:8:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
                             "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
                           }
                         },
-                        "id": 97,
+                        "id": 107,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 95,
+                            "id": 105,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 885,
-                            "src": "335:3:1",
+                            "referencedDeclaration": 901,
+                            "src": "440:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 96,
+                          "id": 106,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -328,7 +460,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "335:10:1",
+                          "src": "440:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -339,13 +471,13 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "326:20:1",
+                        "src": "431:20:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_License_$79_storage",
                           "typeString": "struct DrivingLicenseRenew.License storage ref"
                         }
                       },
-                      "id": 98,
+                      "id": 108,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -353,7 +485,7 @@
                       "memberName": "expiration",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 78,
-                      "src": "326:31:1",
+                      "src": "431:31:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -364,14 +496,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 99,
+                      "id": 109,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "360:1:1",
+                      "src": "465:1:1",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -379,43 +511,43 @@
                       },
                       "value": "0"
                     },
-                    "src": "326:35:1",
+                    "src": "431:35:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 93,
-                  "id": 101,
+                  "functionReturnParameters": 103,
+                  "id": 111,
                   "nodeType": "Return",
-                  "src": "319:42:1"
+                  "src": "424:42:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 103,
+            "id": 113,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isRenewalPresent",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 90,
+              "id": 100,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "281:2:1"
+              "src": "386:2:1"
             },
             "returnParameters": {
-              "id": 93,
+              "id": 103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 92,
+                  "id": 102,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 103,
-                  "src": "305:4:1",
+                  "scope": 113,
+                  "src": "410:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -423,10 +555,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 91,
+                    "id": 101,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "305:4:1",
+                    "src": "410:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -436,425 +568,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "304:6:1"
+              "src": "409:6:1"
             },
-            "scope": 140,
-            "src": "256:110:1",
+            "scope": 156,
+            "src": "361:110:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 138,
+              "id": 154,
               "nodeType": "Block",
-              "src": "402:214:1",
+              "src": "507:263:1",
               "statements": [
                 {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 107,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "nodeType": "UnaryOperation",
-                    "operator": "++",
-                    "prefix": false,
-                    "src": "407:12:1",
-                    "subExpression": {
-                      "argumentTypes": null,
-                      "id": 106,
-                      "name": "renewCount",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 85,
-                      "src": "407:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 108,
-                  "nodeType": "ExpressionStatement",
-                  "src": "407:12:1"
-                },
-                {
-                  "assignments": [
-                    110
-                  ],
-                  "declarations": [
-                    {
-                      "constant": false,
-                      "id": 110,
-                      "name": "_extension_period",
-                      "nodeType": "VariableDeclaration",
-                      "scope": 138,
-                      "src": "424:22:1",
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "typeName": {
-                        "id": 109,
-                        "name": "uint",
-                        "nodeType": "ElementaryTypeName",
-                        "src": "424:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "value": null,
-                      "visibility": "internal"
-                    }
-                  ],
-                  "id": 112,
-                  "initialValue": {
-                    "argumentTypes": null,
-                    "hexValue": "3130",
-                    "id": 111,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": true,
-                    "kind": "number",
-                    "lValueRequested": false,
-                    "nodeType": "Literal",
-                    "src": "449:2:1",
-                    "subdenomination": null,
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_rational_10_by_1",
-                      "typeString": "int_const 10"
-                    },
-                    "value": "10"
-                  },
-                  "nodeType": "VariableDeclarationStatement",
-                  "src": "424:27:1"
-                },
-                {
-                  "assignments": [
-                    114
-                  ],
-                  "declarations": [
-                    {
-                      "constant": false,
-                      "id": 114,
-                      "name": "_expiring_year",
-                      "nodeType": "VariableDeclaration",
-                      "scope": 138,
-                      "src": "456:19:1",
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "typeName": {
-                        "id": 113,
-                        "name": "uint",
-                        "nodeType": "ElementaryTypeName",
-                        "src": "456:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "value": null,
-                      "visibility": "internal"
-                    }
-                  ],
-                  "id": 123,
-                  "initialValue": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 122,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "id": 120,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "components": [
-                          {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            },
-                            "id": 117,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 115,
-                              "name": "now",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 887,
-                              "src": "479:3:1",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "/",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "hexValue": "3331353336303030",
-                              "id": 116,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "number",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "485:8:1",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_rational_31536000_by_1",
-                                "typeString": "int_const 31536000"
-                              },
-                              "value": "31536000"
-                            },
-                            "src": "479:14:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          }
-                        ],
-                        "id": 118,
-                        "isConstant": false,
-                        "isInlineArray": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "TupleExpression",
-                        "src": "478:16:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "+",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "hexValue": "31393730",
-                        "id": 119,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "497:4:1",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_1970_by_1",
-                          "typeString": "int_const 1970"
-                        },
-                        "value": "1970"
-                      },
-                      "src": "478:23:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "+",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "id": 121,
-                      "name": "_extension_period",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 110,
-                      "src": "504:17:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "478:43:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "nodeType": "VariableDeclarationStatement",
-                  "src": "456:65:1"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 131,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 124,
-                        "name": "renewals",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 83,
-                        "src": "526:8:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
-                          "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
-                        }
-                      },
-                      "id": 127,
-                      "indexExpression": {
-                        "argumentTypes": null,
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 125,
-                          "name": "msg",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 885,
-                          "src": "535:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_magic_message",
-                            "typeString": "msg"
-                          }
-                        },
-                        "id": 126,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "sender",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "535:10:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        }
-                      },
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "nodeType": "IndexAccess",
-                      "src": "526:20:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_License_$79_storage",
-                        "typeString": "struct DrivingLicenseRenew.License storage ref"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 129,
-                          "name": "_expiring_year",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 114,
-                          "src": "557:14:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        ],
-                        "id": 128,
-                        "name": "License",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 79,
-                        "src": "549:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_License_$79_storage_ptr_$",
-                          "typeString": "type(struct DrivingLicenseRenew.License storage pointer)"
-                        }
-                      },
-                      "id": 130,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "549:23:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_License_$79_memory",
-                        "typeString": "struct DrivingLicenseRenew.License memory"
-                      }
-                    },
-                    "src": "526:46:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_License_$79_storage",
-                      "typeString": "struct DrivingLicenseRenew.License storage ref"
-                    }
-                  },
-                  "id": 132,
-                  "nodeType": "ExpressionStatement",
-                  "src": "526:46:1"
-                },
-                {
-                  "eventCall": {
+                  "condition": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 134,
+                          "id": 117,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 885,
-                          "src": "600:3:1",
+                          "referencedDeclaration": 901,
+                          "src": "533:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 135,
+                        "id": 118,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -862,7 +609,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "600:10:1",
+                        "src": "533:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -876,18 +623,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 133,
-                      "name": "licenceRenewEvent",
+                      "id": 116,
+                      "name": "personHasLicense",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 89,
-                      "src": "582:17:1",
+                      "referencedDeclaration": 99,
+                      "src": "516:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
-                        "typeString": "function (address)"
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                        "typeString": "function (address) view returns (bool)"
                       }
                     },
-                    "id": 136,
+                    "id": 119,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -895,58 +642,521 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "582:29:1",
+                    "src": "516:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
                     }
                   },
-                  "id": 137,
-                  "nodeType": "EmitStatement",
-                  "src": "577:34:1"
+                  "falseBody": null,
+                  "id": 153,
+                  "nodeType": "IfStatement",
+                  "src": "512:254:1",
+                  "trueBody": {
+                    "id": 152,
+                    "nodeType": "Block",
+                    "src": "546:220:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 121,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "++",
+                          "prefix": false,
+                          "src": "552:12:1",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "id": 120,
+                            "name": "renewCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 85,
+                            "src": "552:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 122,
+                        "nodeType": "ExpressionStatement",
+                        "src": "552:12:1"
+                      },
+                      {
+                        "assignments": [
+                          124
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 124,
+                            "name": "_extension_period",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 152,
+                            "src": "570:22:1",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 123,
+                              "name": "uint",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "570:4:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 126,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "hexValue": "3130",
+                          "id": 125,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "595:2:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_10_by_1",
+                            "typeString": "int_const 10"
+                          },
+                          "value": "10"
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "570:27:1"
+                      },
+                      {
+                        "assignments": [
+                          128
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 128,
+                            "name": "_expiring_year",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 152,
+                            "src": "603:19:1",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 127,
+                              "name": "uint",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "603:4:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 137,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 136,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 134,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "components": [
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "id": 131,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "id": 129,
+                                    "name": "now",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 903,
+                                    "src": "626:3:1",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "/",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "3331353336303030",
+                                    "id": 130,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "632:8:1",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_31536000_by_1",
+                                      "typeString": "int_const 31536000"
+                                    },
+                                    "value": "31536000"
+                                  },
+                                  "src": "626:14:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "id": 132,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "TupleExpression",
+                              "src": "625:16:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "+",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31393730",
+                              "id": 133,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "644:4:1",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1970_by_1",
+                                "typeString": "int_const 1970"
+                              },
+                              "value": "1970"
+                            },
+                            "src": "625:23:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 135,
+                            "name": "_extension_period",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 124,
+                            "src": "651:17:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "625:43:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "603:65:1"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 145,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 138,
+                              "name": "renewals",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 83,
+                              "src": "674:8:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
+                                "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
+                              }
+                            },
+                            "id": 141,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 139,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 901,
+                                "src": "683:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 140,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "683:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "674:20:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_License_$79_storage",
+                              "typeString": "struct DrivingLicenseRenew.License storage ref"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 143,
+                                "name": "_expiring_year",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 128,
+                                "src": "705:14:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 142,
+                              "name": "License",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 79,
+                              "src": "697:7:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_License_$79_storage_ptr_$",
+                                "typeString": "type(struct DrivingLicenseRenew.License storage pointer)"
+                              }
+                            },
+                            "id": 144,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "697:23:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_License_$79_memory",
+                              "typeString": "struct DrivingLicenseRenew.License memory"
+                            }
+                          },
+                          "src": "674:46:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_License_$79_storage",
+                            "typeString": "struct DrivingLicenseRenew.License storage ref"
+                          }
+                        },
+                        "id": 146,
+                        "nodeType": "ExpressionStatement",
+                        "src": "674:46:1"
+                      },
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 148,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 901,
+                                "src": "749:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 149,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "749:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            ],
+                            "id": 147,
+                            "name": "licenceRenewEvent",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 89,
+                            "src": "731:17:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                              "typeString": "function (address)"
+                            }
+                          },
+                          "id": 150,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "731:29:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 151,
+                        "nodeType": "EmitStatement",
+                        "src": "726:34:1"
+                      }
+                    ]
+                  }
                 }
               ]
             },
             "documentation": null,
-            "id": 139,
+            "id": 155,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "renewLicense",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 104,
+              "id": 114,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "392:2:1"
+              "src": "497:2:1"
             },
             "returnParameters": {
-              "id": 105,
+              "id": 115,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "402:0:1"
+              "src": "507:0:1"
             },
-            "scope": 140,
-            "src": "371:245:1",
+            "scope": 156,
+            "src": "476:294:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 141,
-        "src": "27:594:1"
+        "scope": 157,
+        "src": "27:748:1"
       }
     ],
-    "src": "0:621:1"
+    "src": "0:775:1"
   },
   "legacyAST": {
     "absolutePath": "/C/dev/projects/dmv/contracts/DrivingLicenseRenew.sol",
     "exportedSymbols": {
       "DrivingLicenseRenew": [
-        140
+        156
       ]
     },
-    "id": 141,
+    "id": 157,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -966,9 +1176,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 140,
+        "id": 156,
         "linearizedBaseContracts": [
-          140
+          156
         ],
         "name": "DrivingLicenseRenew",
         "nodeType": "ContractDefinition",
@@ -1006,7 +1216,7 @@
             ],
             "name": "License",
             "nodeType": "StructDefinition",
-            "scope": 140,
+            "scope": 156,
             "src": "62:40:1",
             "visibility": "public"
           },
@@ -1015,7 +1225,7 @@
             "id": 83,
             "name": "renewals",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
+            "scope": 156,
             "src": "107:43:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1062,7 +1272,7 @@
             "id": 85,
             "name": "renewCount",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
+            "scope": 156,
             "src": "154:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1128,9 +1338,121 @@
           },
           {
             "body": {
-              "id": 102,
+              "id": 98,
               "nodeType": "Block",
-              "src": "311:55:1",
+              "src": "326:27:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "341:4:1",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 97,
+                  "nodeType": "Return",
+                  "src": "334:11:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 99,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "personHasLicense",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_person",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "282:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:17:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "320:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "319:6:1"
+            },
+            "scope": 156,
+            "src": "256:97:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 112,
+              "nodeType": "Block",
+              "src": "416:55:1",
               "statements": [
                 {
                   "expression": {
@@ -1139,7 +1461,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 100,
+                    "id": 110,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1150,34 +1472,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 94,
+                          "id": 104,
                           "name": "renewals",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 83,
-                          "src": "326:8:1",
+                          "src": "431:8:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
                             "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
                           }
                         },
-                        "id": 97,
+                        "id": 107,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 95,
+                            "id": 105,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 885,
-                            "src": "335:3:1",
+                            "referencedDeclaration": 901,
+                            "src": "440:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 96,
+                          "id": 106,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1185,7 +1507,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "335:10:1",
+                          "src": "440:10:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -1196,13 +1518,13 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "326:20:1",
+                        "src": "431:20:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_License_$79_storage",
                           "typeString": "struct DrivingLicenseRenew.License storage ref"
                         }
                       },
-                      "id": 98,
+                      "id": 108,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -1210,7 +1532,7 @@
                       "memberName": "expiration",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 78,
-                      "src": "326:31:1",
+                      "src": "431:31:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1221,14 +1543,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 99,
+                      "id": 109,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "360:1:1",
+                      "src": "465:1:1",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -1236,43 +1558,43 @@
                       },
                       "value": "0"
                     },
-                    "src": "326:35:1",
+                    "src": "431:35:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 93,
-                  "id": 101,
+                  "functionReturnParameters": 103,
+                  "id": 111,
                   "nodeType": "Return",
-                  "src": "319:42:1"
+                  "src": "424:42:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 103,
+            "id": 113,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isRenewalPresent",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 90,
+              "id": 100,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "281:2:1"
+              "src": "386:2:1"
             },
             "returnParameters": {
-              "id": 93,
+              "id": 103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 92,
+                  "id": 102,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 103,
-                  "src": "305:4:1",
+                  "scope": 113,
+                  "src": "410:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1280,10 +1602,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 91,
+                    "id": 101,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "305:4:1",
+                    "src": "410:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1293,425 +1615,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "304:6:1"
+              "src": "409:6:1"
             },
-            "scope": 140,
-            "src": "256:110:1",
+            "scope": 156,
+            "src": "361:110:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 138,
+              "id": 154,
               "nodeType": "Block",
-              "src": "402:214:1",
+              "src": "507:263:1",
               "statements": [
                 {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 107,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "nodeType": "UnaryOperation",
-                    "operator": "++",
-                    "prefix": false,
-                    "src": "407:12:1",
-                    "subExpression": {
-                      "argumentTypes": null,
-                      "id": 106,
-                      "name": "renewCount",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 85,
-                      "src": "407:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 108,
-                  "nodeType": "ExpressionStatement",
-                  "src": "407:12:1"
-                },
-                {
-                  "assignments": [
-                    110
-                  ],
-                  "declarations": [
-                    {
-                      "constant": false,
-                      "id": 110,
-                      "name": "_extension_period",
-                      "nodeType": "VariableDeclaration",
-                      "scope": 138,
-                      "src": "424:22:1",
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "typeName": {
-                        "id": 109,
-                        "name": "uint",
-                        "nodeType": "ElementaryTypeName",
-                        "src": "424:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "value": null,
-                      "visibility": "internal"
-                    }
-                  ],
-                  "id": 112,
-                  "initialValue": {
-                    "argumentTypes": null,
-                    "hexValue": "3130",
-                    "id": 111,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": true,
-                    "kind": "number",
-                    "lValueRequested": false,
-                    "nodeType": "Literal",
-                    "src": "449:2:1",
-                    "subdenomination": null,
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_rational_10_by_1",
-                      "typeString": "int_const 10"
-                    },
-                    "value": "10"
-                  },
-                  "nodeType": "VariableDeclarationStatement",
-                  "src": "424:27:1"
-                },
-                {
-                  "assignments": [
-                    114
-                  ],
-                  "declarations": [
-                    {
-                      "constant": false,
-                      "id": 114,
-                      "name": "_expiring_year",
-                      "nodeType": "VariableDeclaration",
-                      "scope": 138,
-                      "src": "456:19:1",
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "typeName": {
-                        "id": 113,
-                        "name": "uint",
-                        "nodeType": "ElementaryTypeName",
-                        "src": "456:4:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "value": null,
-                      "visibility": "internal"
-                    }
-                  ],
-                  "id": 123,
-                  "initialValue": {
-                    "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "id": 122,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftExpression": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "id": 120,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "components": [
-                          {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            },
-                            "id": 117,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 115,
-                              "name": "now",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 887,
-                              "src": "479:3:1",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "/",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "hexValue": "3331353336303030",
-                              "id": 116,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "kind": "number",
-                              "lValueRequested": false,
-                              "nodeType": "Literal",
-                              "src": "485:8:1",
-                              "subdenomination": null,
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_rational_31536000_by_1",
-                                "typeString": "int_const 31536000"
-                              },
-                              "value": "31536000"
-                            },
-                            "src": "479:14:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          }
-                        ],
-                        "id": 118,
-                        "isConstant": false,
-                        "isInlineArray": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "TupleExpression",
-                        "src": "478:16:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "+",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "hexValue": "31393730",
-                        "id": 119,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "497:4:1",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_1970_by_1",
-                          "typeString": "int_const 1970"
-                        },
-                        "value": "1970"
-                      },
-                      "src": "478:23:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "BinaryOperation",
-                    "operator": "+",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "id": 121,
-                      "name": "_extension_period",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 110,
-                      "src": "504:17:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "478:43:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "nodeType": "VariableDeclarationStatement",
-                  "src": "456:65:1"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 131,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 124,
-                        "name": "renewals",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 83,
-                        "src": "526:8:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
-                          "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
-                        }
-                      },
-                      "id": 127,
-                      "indexExpression": {
-                        "argumentTypes": null,
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 125,
-                          "name": "msg",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 885,
-                          "src": "535:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_magic_message",
-                            "typeString": "msg"
-                          }
-                        },
-                        "id": 126,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "sender",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "535:10:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_address_payable",
-                          "typeString": "address payable"
-                        }
-                      },
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "nodeType": "IndexAccess",
-                      "src": "526:20:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_License_$79_storage",
-                        "typeString": "struct DrivingLicenseRenew.License storage ref"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 129,
-                          "name": "_expiring_year",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 114,
-                          "src": "557:14:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        ],
-                        "id": 128,
-                        "name": "License",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 79,
-                        "src": "549:7:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_License_$79_storage_ptr_$",
-                          "typeString": "type(struct DrivingLicenseRenew.License storage pointer)"
-                        }
-                      },
-                      "id": 130,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "549:23:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_License_$79_memory",
-                        "typeString": "struct DrivingLicenseRenew.License memory"
-                      }
-                    },
-                    "src": "526:46:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_License_$79_storage",
-                      "typeString": "struct DrivingLicenseRenew.License storage ref"
-                    }
-                  },
-                  "id": 132,
-                  "nodeType": "ExpressionStatement",
-                  "src": "526:46:1"
-                },
-                {
-                  "eventCall": {
+                  "condition": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 134,
+                          "id": 117,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 885,
-                          "src": "600:3:1",
+                          "referencedDeclaration": 901,
+                          "src": "533:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 135,
+                        "id": 118,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1719,7 +1656,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "600:10:1",
+                        "src": "533:10:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1733,18 +1670,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 133,
-                      "name": "licenceRenewEvent",
+                      "id": 116,
+                      "name": "personHasLicense",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 89,
-                      "src": "582:17:1",
+                      "referencedDeclaration": 99,
+                      "src": "516:16:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
-                        "typeString": "function (address)"
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                        "typeString": "function (address) view returns (bool)"
                       }
                     },
-                    "id": 136,
+                    "id": 119,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1752,64 +1689,527 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "582:29:1",
+                    "src": "516:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
                     }
                   },
-                  "id": 137,
-                  "nodeType": "EmitStatement",
-                  "src": "577:34:1"
+                  "falseBody": null,
+                  "id": 153,
+                  "nodeType": "IfStatement",
+                  "src": "512:254:1",
+                  "trueBody": {
+                    "id": 152,
+                    "nodeType": "Block",
+                    "src": "546:220:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 121,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "++",
+                          "prefix": false,
+                          "src": "552:12:1",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "id": 120,
+                            "name": "renewCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 85,
+                            "src": "552:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 122,
+                        "nodeType": "ExpressionStatement",
+                        "src": "552:12:1"
+                      },
+                      {
+                        "assignments": [
+                          124
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 124,
+                            "name": "_extension_period",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 152,
+                            "src": "570:22:1",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 123,
+                              "name": "uint",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "570:4:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 126,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "hexValue": "3130",
+                          "id": 125,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "595:2:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_10_by_1",
+                            "typeString": "int_const 10"
+                          },
+                          "value": "10"
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "570:27:1"
+                      },
+                      {
+                        "assignments": [
+                          128
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 128,
+                            "name": "_expiring_year",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 152,
+                            "src": "603:19:1",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 127,
+                              "name": "uint",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "603:4:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 137,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 136,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 134,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "components": [
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "id": 131,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "id": 129,
+                                    "name": "now",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 903,
+                                    "src": "626:3:1",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "/",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "3331353336303030",
+                                    "id": 130,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "632:8:1",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_31536000_by_1",
+                                      "typeString": "int_const 31536000"
+                                    },
+                                    "value": "31536000"
+                                  },
+                                  "src": "626:14:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "id": 132,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "TupleExpression",
+                              "src": "625:16:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "+",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31393730",
+                              "id": 133,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "644:4:1",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1970_by_1",
+                                "typeString": "int_const 1970"
+                              },
+                              "value": "1970"
+                            },
+                            "src": "625:23:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 135,
+                            "name": "_extension_period",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 124,
+                            "src": "651:17:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "625:43:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "603:65:1"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 145,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 138,
+                              "name": "renewals",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 83,
+                              "src": "674:8:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_License_$79_storage_$",
+                                "typeString": "mapping(address => struct DrivingLicenseRenew.License storage ref)"
+                              }
+                            },
+                            "id": 141,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 139,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 901,
+                                "src": "683:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 140,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "683:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "674:20:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_License_$79_storage",
+                              "typeString": "struct DrivingLicenseRenew.License storage ref"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 143,
+                                "name": "_expiring_year",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 128,
+                                "src": "705:14:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 142,
+                              "name": "License",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 79,
+                              "src": "697:7:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_License_$79_storage_ptr_$",
+                                "typeString": "type(struct DrivingLicenseRenew.License storage pointer)"
+                              }
+                            },
+                            "id": 144,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "697:23:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_License_$79_memory",
+                              "typeString": "struct DrivingLicenseRenew.License memory"
+                            }
+                          },
+                          "src": "674:46:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_License_$79_storage",
+                            "typeString": "struct DrivingLicenseRenew.License storage ref"
+                          }
+                        },
+                        "id": 146,
+                        "nodeType": "ExpressionStatement",
+                        "src": "674:46:1"
+                      },
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 148,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 901,
+                                "src": "749:3:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 149,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "749:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            ],
+                            "id": 147,
+                            "name": "licenceRenewEvent",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 89,
+                            "src": "731:17:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                              "typeString": "function (address)"
+                            }
+                          },
+                          "id": 150,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "731:29:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 151,
+                        "nodeType": "EmitStatement",
+                        "src": "726:34:1"
+                      }
+                    ]
+                  }
                 }
               ]
             },
             "documentation": null,
-            "id": 139,
+            "id": 155,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "renewLicense",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 104,
+              "id": 114,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "392:2:1"
+              "src": "497:2:1"
             },
             "returnParameters": {
-              "id": 105,
+              "id": 115,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "402:0:1"
+              "src": "507:0:1"
             },
-            "scope": 140,
-            "src": "371:245:1",
+            "scope": 156,
+            "src": "476:294:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 141,
-        "src": "27:594:1"
+        "scope": 157,
+        "src": "27:748:1"
       }
     ],
-    "src": "0:621:1"
+    "src": "0:775:1"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
-    "1556137462886": {
+    "1556548010858": {
       "events": {},
       "links": {},
-      "address": "0xd702c542D6dF00898114a91813F748Bf6A5c39E3",
-      "transactionHash": "0x1e7054e7f80e9c784998ccbb9ef40e41d3f424008426aaf0ac737f7b6af55310"
+      "address": "0x5Bb22bC43A578a2514D702A11eAFcc5bf39A9d1b",
+      "transactionHash": "0xa8866e41e6455035f271390a9e0cfe56609622dd15feb4337b1b6c23383a6877"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-29T02:09:37.978Z",
+  "updatedAt": "2019-04-29T14:27:51.248Z",
   "devdoc": {
     "methods": {}
   },
