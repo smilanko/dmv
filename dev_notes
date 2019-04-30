@@ -1,12 +1,13 @@
 -- notes on configuring dev env --
 
 	- console 2 
-		- desc : this tool isa  pretty version of cmd. makes developing easier
+		- desc : this tool is a  pretty version of cmd. makes developing easier
+			Downloading and using this is completelly optional.
 		- downlaod the latest version here:
 			https://sourceforge.net/projects/console/files/latest/download
 			
 		- once downloaded, extract the contents to : C:\dev\software
-		( Note, in C:\dev\software\Console2, you should see hll's, hooks, etc. )
+		( Note, in C:\dev\software\Console2, you should see dll's, hooks, etc. )
 		
 		- Create a new file, called aliases.cmd
 		- In this file, paste the following:
@@ -107,7 +108,8 @@
 		- After it is added, you will be taken to something like this:
 			chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#initialize/welcome
 				
-			( Where a fox watches your mouse )
+			( Where a fox watches your mouse, just note that nkbihfbeogaeaoehlefnkodbefgpgknn is most likely different
+				on your machine )
 				
 			- Click Get started
 			- "New to MetaMask?" screen, click "Create Wallet"
@@ -124,7 +126,7 @@
 				-> Next
 			
 			- Confirm your Secret backup
-				-> Arrange the words from the rder in metamask.txt
+				-> Arrange the words from the order in metamask.txt
 				-> Click Confirm
 			
 			-> All done
@@ -133,18 +135,20 @@
 				and 0.00 USD, 0 ETH in your wallet
 				
 			-> In the drop down, ensure you always have Localhost after you configure latter sections
-			
-		-> Disable private mode
-			-> Settings
-			-> Security and privacy
-			-> Slide Privacy mode to "Black" to disable it
-			
-		-> Enable confirmation
-			-> Settings
-			-> Advanced
-			-> Gas control settings
-			-> Slide Advanced Gas Controls to "Green" to enable it
-			
+		
+		-> Right next to localhost:8545, there is a circular button you can click.
+			-> Click it, and it should give you a drop down where at the bottom
+				of the list, you should see Settings
+			-> Click Settings
+				-> We will now disable private mode
+					-> Click Security and privacy
+					-> Slide Privacy mode to "Black" to disable it
+					
+				-> We will now enable confirmation
+					-> Click Advanced
+					-> Click Gas control settings
+					-> Slide Advanced Gas Controls to "Green" to enable it
+				
 			
 	- Node JS
 	
@@ -168,9 +172,8 @@
 				C:\dev>npm -v
 				5.6.0
 
-		- Install lite server
+		- Install lite server by running this npm commands
 
-			- run these npm commands
 			npm install lite-server --save-dev
 			
 	- python install
@@ -190,24 +193,39 @@
 				
 				( If winodws complains, make sure you have these two in your PATH: )
 				C:\dev\software\Python27\;C:\dev\software\Python27\Scripts;
+					- You can check your path, by doing something like this:
+						-> Right click "My computer"
+						-> Click Properties
+						-> Click Advanced System Settings
+						-> Click Environemtn variables
+						-> Under System Variables, scroll down to Path
+						-> Click Edit, and ensure the above python dependencies are present
 		
 	- Create private blockchain
 	
-		- Open Console 2
-			- enter these commands
+		- Open Console 2 ( you can use cmd, but I prefer Console2, as mentioned above how to configure and use )
+			- enter these commands, one by one
 			
-			cd C:\dev\projects
-			mkdir dmv
-			cd dmv
-			cd C:\dev\software\Git\bin
-			bash.exe
+			- starting bash 
+				cd C:\dev\projects
+				mkdir dmv
+				cd dmv
+				cd C:\dev\software\Git\bin
+				bash.exe
 			
-			npm install -g ganache-cli@6.1.8
-			npm install -g truffle@5.0.13
-				( seeing a lot of errors here is ok. re-run command to amke sure everything installed )
-				
-			ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,9000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000" --account="0xd82573a88c9e278f52a3a926f346bd8099226d8c517ac2b1779f5dc4ef5d1029,1000000000000000000000" --account="0x7afe0a5008b6c9fd97a66283ccfb8b17588b43bf21b543fb6b10fb251e0c992f,1000000000000000000000" --account="0x3739ba130bcc6cb20291ddde46b587224abaca12040dc495284032af6f9ed4d7,1000000000000000000000" --account="0x36a9c9f965cdeeee2577d08a47de2c18cf1ed8043c620e8aad6f19fd0ffcaf4e,1000000000000000000000" --account="0x46abfdfd83567ce447b3e41c7e4ad5a9855852c118eb600a2becea28ee891263,1000000000000000000000" --account="0xe36523a60dfe3e2de6898cfb0a38ebe2935b4a332603fb33737779d050c25011,1000000000000000000000" --allowUnlimitedContractSize --gasPrice 200000
+			- install ganache-cli and truffle
 			
+				npm install -g ganache-cli@6.1.8
+				npm install -g truffle@5.0.13
+					( seeing a lot of warnings here is ok. re-run command to make sure everything installed )
+					( also, please ensure you use versions as specified in the above npm commands )
+					
+			- configure ganache-cli, which is your in memory blockchain emulator. The below command will create
+				specific accounts, with a specific amount of ETH in them, will set a specific gas price, and allow 
+				long contracts
+			
+				ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,9000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000" --account="0xd82573a88c9e278f52a3a926f346bd8099226d8c517ac2b1779f5dc4ef5d1029,1000000000000000000000" --account="0x7afe0a5008b6c9fd97a66283ccfb8b17588b43bf21b543fb6b10fb251e0c992f,1000000000000000000000" --account="0x3739ba130bcc6cb20291ddde46b587224abaca12040dc495284032af6f9ed4d7,1000000000000000000000" --account="0x36a9c9f965cdeeee2577d08a47de2c18cf1ed8043c620e8aad6f19fd0ffcaf4e,1000000000000000000000" --account="0x46abfdfd83567ce447b3e41c7e4ad5a9855852c118eb600a2becea28ee891263,1000000000000000000000" --account="0xe36523a60dfe3e2de6898cfb0a38ebe2935b4a332603fb33737779d050c25011,1000000000000000000000" --allowUnlimitedContractSize --gasPrice 200000
+		
 		- Observe the accounts and keys:
 			
 			Available Accounts
@@ -254,19 +272,24 @@
 				(7) 0x46abfdfd83567ce447b3e41c7e4ad5a9855852c118eb600a2becea28ee891263 - bob
 				(8) 0xe36523a60dfe3e2de6898cfb0a38ebe2935b4a332603fb33737779d050c25011 - joe
 		
-		- update metamask
-			- Go back to the chrome extension
-			- In top right, click circular button for account
+		- update metamask with the above accounts
+			- Go back to the chrome extension MetaMask
+			- In top right, click circular button for account, near localhost:8545
 			- Import account
-			- Paste one of the private keys from above
+			- Paste one of the private keys from above ( example:  0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8 )
 			- Import
 			
 			- Your ETH account should show a lot of ETH now
 			
 			( Do the same for all pk's, and give them friendly names by clicking on their icon )
-			( Call the one with most money dmv )
+			( Enusre to name them with the mapping i've mentioned above : dmv, police_officer_1, police_officer_2 )
 				
 	- Sublime text
+	
+		- Sublime text is an editor to help highlight code / syntax for different languages.
+			Since Solidity is still new, ( used to write smart contracts ), support is not the greatest.
+			However, Sublime has an extension to do code highlighting for Solidity, to make it easier to read.
+			This step is optional, however, useful.
 
 		- Download sublime from here:
 			https://download.sublimetext.com/Sublime%20Text%20Build%203207%20x64%20Setup.exe
@@ -284,31 +307,23 @@
 				Package control: Install package
 			- Highlight result, and click enter
 			- Search for Etherium
-			- Select and click enter
-			
-	- Remix
-		Remix IDE is a solidity IDE located here : https://remix.ethereum.org
-		
-		- Click Settings
-			- Under general settings:
-				-> Check Enable personal mode
-		- Click run
-			-> cick the "+" next to account
-				-> Provide the following passphrase:
-					metamask
+			- Select and click enter on Etherium Solidity Option
 					
-				
-				
-				
-				
-	- Remix alternative ( Truffle )
+	
+	- Truffle
 
-		- You've installed truffle, so it's possible to create smart contracts
+		- Truffle is useful in creating, compiling, and deploying your smart contracts to ganache.
+			This is not the only tool, but it is arguably a very useful tool to make testing and
+			using smart contracts easy.
+			
 		- Open console 2, and open bash.exe from git
-			( Already explained above )
+			( Run this command )
+			C:\dev\software\Git\bin\bash.exe
 			
 		- run these commands:
 			
+			mkdir /c/dev/projects/
+			cd /c/dev/projects/
 			mkdir online_services
 			cd online_services
 			mkdir vehicle_registration_renewal
@@ -331,41 +346,81 @@
 			  Compile:        truffle compile
 			  Migrate:        truffle migrate
 			  Test contracts: truffle test
-			  
+		
+		- show listing for current directly, and you should see a lot of things that were added by
+			truffle. Of such, some are:
+			
+				build
+				test
+				contracts
+				migrations
+				truffle-config.js
+				
 		- Continue preparation
 		
-			- Create a sample contract
+			- Create a sample contract, by running these bash commands:
 			
-				- touch contracts/VehicleRegistrationRenewal.sol
-				- vim VehicleRegistrationRenewal.sol
+				touch contracts/VehicleRegistrationRenewal.sol
+				vim contracts/VehicleRegistrationRenewal.sol
 				
-				pragma solidity ^0.5.0;
+				- paste this into vim
+				
+					pragma solidity ^0.5.0;
 
-				contract VehicleRegistrationRenewal {
+					contract VehicleRegistrationRenewal {
+					
+						struct Registration {
+							uint car_vin;
+							uint car_year;
+							string car_model;
+							uint expiring_year;
+						}
 
-					string public car;
-					string public person;
+						mapping(address => Registration) public registrations;
 
-					// constructor 
-					constructor() public {
-						car = "";
-						person = "";
 					}
-
-				}
 		
-			- truffle prepare for migration
+			- use truffle to prepare your contract for migration, by running these bash commands
 			
-				( ensure you are in migrations dir )
+				touch migrations/2_deploy_contracts.js
+				vim migrations/2_deploy_contracts.js
 				
-				touch 2_deploy_contracts.js
-				
-				const VehicleRegistrationRenewal = artifacts.require("VehicleRegistrationRenewal");
-				module.exports = function(deployer) {
-				  deployer.deploy(VehicleRegistrationRenewal);
-				};
+				- paste this data into vim
+					const VehicleRegistrationRenewal = artifacts.require("VehicleRegistrationRenewal");
+					module.exports = function(deployer) {
+					  deployer.deploy(VehicleRegistrationRenewal);
+					};
 
-			- edit the truffle config
+				- Note: In the migrations directory, you will notice you have 1_initial_migration.js. For every other migration you want to do, you have to add a new migrations file, as such:
+					2_deploy_contracts.js
+					3_deploy_contracts.js
+					4_deploy_contracts.js
+					
+					( The name here is important ) Also, you do not have to create multiple *_deploy_contracts.js . You can just use one migration to
+						add all of your contracts. Here is an example of how several contracts can be added to your migrations code within 2_deploy_contracts.js:
+						
+						
+						const VehicleRegistrationRenewal = artifacts.require("VehicleRegistrationRenewal");
+						const AddressChange = artifacts.require("AddressChange");
+						const DrivingLicenseRenew = artifacts.require("DrivingLicenseRenew");
+						const PracticeExam = artifacts.require("PracticeExam");
+						const ReadLid = artifacts.require("ReadLid");
+						const VirtualRecord = artifacts.require("VirtualRecord");
+						const SellDonateCar = artifacts.require("SellDonateCar");
+						const Titling = artifacts.require("Titling");
+
+						module.exports = function(deployer) {
+						  deployer.deploy(AddressChange);
+						  deployer.deploy(DrivingLicenseRenew);
+						  deployer.deploy(VehicleRegistrationRenewal);
+						  deployer.deploy(PracticeExam);
+						  deployer.deploy(ReadLid);
+						  deployer.deploy(VirtualRecord);
+						  deployer.deploy(SellDonateCar);
+						  deployer.deploy(Titling);
+						};
+						
+			- edit the truffle config, so that we can deploy to ganache or any other etherium node of our choice
 			
 				vim truffle-config.js
 				
@@ -377,12 +432,14 @@
 						port: 8545,            // Standard Ethereum port (default: none)
 						network_id: "*",       // Any network (default: none)
 					}
+					
+					-> Note: Recall, when we used MetaMask, we connected to the same host / port.
 				
-			- migrate the contract and observe ganache-cli
+			- Now, lets migrate the contract and observe ganache-cli as this happends, by running this bash command
 				
 				truffle migrate
 				
-			- you should now see the contarct in dev
+			- you should now see the contract in dev
 			
 				   > transaction hash:    0xbf310eb3ecfc3931f145bbd67c52d62ada1a3bfea954067223cd58b2ea6f7df4
 				   > Blocks: 0            Seconds: 0
@@ -396,45 +453,79 @@
 				   > value sent:          0 ETH
 				   > total cost:          0.0054706 ETH
 		
-	- Useful commands:
+			- Now that the contract is deployed, you can observe it via truffle console. To start the truffle console, enter
+				this truffle command:
+				
+				truffle console
+				
+				- You will now be in an interactive prompt, to interact with deployed contracts. Enter these commands, one by one:
+				
+					VehicleRegistrationRenewal.deployed().then(function(instance) { app = instance })
+					app.address 
+					
+					- The output should yeild '0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be'
+				- You can now interact with the contract, using web3:	
+					
+					web3.eth.getCoinbase(function(err, account) { acct = account} )
+					app.registrations(acct)
+					
+					- The output should yield something like: 
+						Result {
+						  '0': <BN: 0>,
+						  '1': <BN: 0>,
+						  '2': '',
+						  '3': <BN: 0>,
+						  car_vin: <BN: 0>,
+						  car_year: <BN: 0>,
+						  car_model: '',
+						  expiring_year: <BN: 0> }
+						  
+					( See the resemblence from your Solidity contract? Note, DB -> Big Number, just alike how we have uints in the solidity contract. )
+					
+				- To get out of the truffle console, type this bash command:
+				
+					.exit
 		
-		# start ganache-cli
-		ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,9000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000" --account="0xd82573a88c9e278f52a3a926f346bd8099226d8c517ac2b1779f5dc4ef5d1029,1000000000000000000000" --account="0x7afe0a5008b6c9fd97a66283ccfb8b17588b43bf21b543fb6b10fb251e0c992f,1000000000000000000000" --allowUnlimitedContractSize --gasPrice 200000
+=====================================================================================================================
+This section will cover useful commands that you can just copy paste, and do repetative tasks
+=====================================================================================================================
+
+	# start ganache-cli
+	ganache-cli --account="0x3593127e18940aad2989c8bed297762aa1f2400be86367e717d6bc7e1ebb7ca8,9000000000000000000000"  --account="0x2709ffa0ad64c495bbc4c92e1eea076414f60020b0deb95490081a93a7360760,1000000000000000000000" --account="0x3b64975e4ce582cae8a652fec9f11c58fbe9a00983f8d6fbd3544c2bc751bcff,1000000000000000000000" --account="0xd82573a88c9e278f52a3a926f346bd8099226d8c517ac2b1779f5dc4ef5d1029,1000000000000000000000" --account="0x7afe0a5008b6c9fd97a66283ccfb8b17588b43bf21b543fb6b10fb251e0c992f,1000000000000000000000" --account="0x3739ba130bcc6cb20291ddde46b587224abaca12040dc495284032af6f9ed4d7,1000000000000000000000" --account="0x36a9c9f965cdeeee2577d08a47de2c18cf1ed8043c620e8aad6f19fd0ffcaf4e,1000000000000000000000" --account="0x46abfdfd83567ce447b3e41c7e4ad5a9855852c118eb600a2becea28ee891263,1000000000000000000000" --account="0xe36523a60dfe3e2de6898cfb0a38ebe2935b4a332603fb33737779d050c25011,1000000000000000000000" --allowUnlimitedContractSize --gasPrice 200000
+	
+	# clear meta mask account, to remove all transactions
+		open meta mask extension in chrome
+		-> navigate to settings
+		-> advanced
+		-> reset account
+	
+	# start lite server ( given you are making a ui using npm )
+	npm run dev
+	
+	# create a stub contract
+	truffle init
+	
+	# compile the contract
+	truffle compile
+	
+	# send it over the network ( --reset flag will wipe the other contracts, so they are invalid )
+	truffle migrate --reset
+	
+	# run the unit tests
+	truffle test
+	
+	# clean and build and test and deploy
+	rm -rf build && truffle compile && truffle migrate --reset && truffle test
+	
+	# truffle console for viewving your deployed contract
+	# in bash, run these commands:
 		
-		# clear meta mask 
-			meta mask extension
-			-> circle
-			-> settings
-			-> advanced
-			-> reset account
-		
-		# start lite server
-		npm run dev
-		
-		# create a stub contract
-		truffle init
-		
-		# compile the contract
-		truffle compile
-		
-		# send it over the network
-		truffle migrate --reset
-		
-		# run the unit tests
-		truffle test
-		
-		# clean and build
-		rm -rf build && truffle compile && truffle migrate --reset && truffle test
-		
-		# truffle console
 		truffle console
-			VehicleRegistrationRenewal.deployed().then(function(instance) { app = instance })
-			app.address 
-				( should yeild '0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be' alike above )
-			web3.eth.getCoinbase(function(err, account) { acct = account} )
-			app.registrations(acct)
+		VehicleRegistrationRenewal.deployed().then(function(instance) { app = instance })
+		app.address 
+			( should yeild '0xfE33c897A7F35e9Bcc58Ad2962DFA37cb2d474be' alike above )
+		web3.eth.getCoinbase(function(err, account) { acct = account} )
+		app.registrations(acct)
 			
-		# check account loaded
-		truffle console
 		
 	
